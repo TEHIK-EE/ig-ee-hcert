@@ -82,11 +82,13 @@ Description: "Tervisetõendi baasprofiil"
 * section[suspendReason].text 1..1
 * section[suspendReason].text ^short = "Vabatekst tervisetõendi peatamise põhjusega"
 * section[suspendReason].text.status = #additional
-* contained ^slicing.discriminator[0].type = #value
-* contained ^slicing.discriminator[0].path = "code"
+* contained ^slicing.discriminator[0].type = #type
+* contained ^slicing.discriminator[0].path = "$this"
+* contained ^slicing.discriminator[1].type = #value
+* contained ^slicing.discriminator[1].path = "code"
 * contained ^slicing.ordered = false
 * contained ^slicing.rules = #open
-* contained contains author 1..1 and decision 0..1 and medicalRestriction 0..*
+* contained contains decision 0..1 and medicalRestriction 0..* and author 1..1
 * contained[author] only PractitionerRole
 * contained[author] ^short = "Tervisetõendi autor"
 * contained[author].practitioner 1..1
