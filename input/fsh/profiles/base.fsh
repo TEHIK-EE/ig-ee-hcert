@@ -46,7 +46,7 @@ Description: "Tervisetõendi baasprofiil"
 * section ^slicing.discriminator.path = #code
 * section ^slicing.rules = #open
 * section ^slicing.description = "Slice based on the section.code value"
-* section contains decision 0..1 and medicalRestriction 0..* and shortenedReason 0..1 and rejectReason 0..1 and changeReason 0..1 and cancelReason 0..1 and suspendReason 0..1
+* section contains decision 0..1 and medicalRestriction 0..1 and shortenedReason 0..1 and rejectReason 0..1 and changeReason 0..1 and cancelReason 0..1 and suspendReason 0..1
 * section[decision] ^short = "Tervisetõendi otsus"
 * section[decision].code = EEHealthCertificateSection#decision
 * section[decision].entry 1..1
@@ -54,7 +54,7 @@ Description: "Tervisetõendi baasprofiil"
 * section[decision].entry ^short = "Viide contained Observation ressursile otsuse koodiga"
 * section[medicalRestriction] ^short = "Meditsiinilised piirangud"
 * section[medicalRestriction].code = EEHealthCertificateSection#medical-restrictions
-* section[medicalRestriction].entry 1..1
+* section[medicalRestriction].entry 0..*
 * section[medicalRestriction].entry only Reference(Observation)
 * section[medicalRestriction].entry ^short = "Viide contained Observation ressursile (Meditsiiniline piirang)"
 * section[shortenedReason] ^short = "Lühema tervisekontrolli aja põhjus"
@@ -82,14 +82,15 @@ Description: "Tervisetõendi baasprofiil"
 * section[suspendReason].text 1..1
 * section[suspendReason].text ^short = "Vabatekst tervisetõendi peatamise põhjusega"
 * section[suspendReason].text.status = #additional
-* contained ^slicing.discriminator[0].type = #value
-* contained ^slicing.discriminator[0].path = "code"
+* contained ^slicing.discriminator[0].type = #type
+* contained ^slicing.discriminator[0].path = "$this"
+* contained ^slicing.discriminator[1].type = #value
+* contained ^slicing.discriminator[1].path = "code"
 * contained ^slicing.ordered = false
 * contained ^slicing.rules = #open
-* contained contains author 1..1 and decision 0..1 and medicalRestriction 0..*
+* contained contains decision 0..1 and medicalRestriction 0..* and author 1..1
 * contained[author] only PractitionerRole
 * contained[author] ^short = "Tervisetõendi autor"
-* contained[author].code = http://terminology.hl7.org/CodeSystem/practitioner-role#doctor "Doctor"
 * contained[author].practitioner 1..1
 * contained[author].practitioner ^short = "Viide SPD Practitioner ressursile"
 * contained[author].organization 1..1

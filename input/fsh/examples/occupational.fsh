@@ -2,7 +2,6 @@ Instance: Author
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "author-200"
-* code = http://terminology.hl7.org/CodeSystem/practitioner-role#doctor "Doctor"
 * practitioner = Reference(Practitioner/pract1)
 * organization = Reference(Organization/org1)
 
