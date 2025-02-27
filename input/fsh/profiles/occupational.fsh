@@ -5,10 +5,10 @@ Title: "Töötervishoiu tervisetõend"
 Description: "Töötervishoiu tervisetõendi baasprofiil"
 * ^experimental = true
 * category = EEHealthCertificateUsageArea#occupational
-* section contains riskFactors 0..* and employer 0..1 and healthDeclaration 0..1 and additionalConditions 0..* and employerSuggestions 0..1 and employeeSuggestions 0..1
+* section contains riskFactors 0..1 and employer 0..1 and healthDeclaration 0..1 and additionalConditions 0..1 and employerSuggestions 0..1 and employeeSuggestions 0..1
 * section[riskFactors] ^short = "Tööst olenevad ohutegurid"
 * section[riskFactors].code = EEHealthCertificateSection#risk-factors
-* section[riskFactors].entry 1..1
+* section[riskFactors].entry 1..*
 * section[riskFactors].entry only Reference(Observation)
 * section[riskFactors].entry ^short = "Viide contained Observation ressursile ohuteguriga"
 * section[employer] 1..1
