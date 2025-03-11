@@ -1,27 +1,27 @@
-Instance: EEHealthCertificateSetConsent
+Instance: ee-health-certificate-get-consent
 InstanceOf: OperationDefinition
 Usage: #definition
-Description: "Tervisetõendi ligipääsude muutmine. Ühe operatsiooniga saab muuta ligipääsu kas arstile (doctor) ja/või esindajale (representative). Lubatud väärtused on 'closed' või 'open'."
+Description: "Tervisetõendi ligipääsude päring"
 * version = "5.0.0"
-* name = "EEHealthCertificateSetConsent"
-* title = "Tervisetõendi ligipääsude muutmine"
+* name = "EEHealthCertificateGetConsent"
+* title = "Tervisetõendi ligipääsude päring"
 * status = #active
 * kind = #operation
 * experimental = false
 * affectsState = false
-* code = #set-consent
+* code = #get-consent
 * resource = #Composition
 * system = false
 * type = false
 * instance = true
 * parameter[+].name = #doctor
-* parameter[=].use = #in
+* parameter[=].use = #out
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].documentation = "Konfidentsiaalsus arstile"
 * parameter[=].type = #string
 * parameter[+].name = #representative
-* parameter[=].use = #in
+* parameter[=].use = #out
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].documentation = "Konfidentsiaalsus eestkostjale"

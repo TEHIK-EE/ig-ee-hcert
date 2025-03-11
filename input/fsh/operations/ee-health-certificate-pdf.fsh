@@ -1,4 +1,4 @@
-Instance: EEHealthCertificatePdf
+Instance: ee-health-certificate-pdf
 InstanceOf: OperationDefinition
 Usage: #definition
 Description: "FHIR operatsioon PDF dokumendi generereerimiseks tervisetõend (Composition) ressursi põhjal"
