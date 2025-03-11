@@ -89,10 +89,7 @@ menu:
     Profiilid: profiles.html
   Artefaktid: artifacts.html
   Sisukord: toc.html
-  Muu:
-    Kontaktid: contact.html
-    Allalaadimised: download.html
-    "FHIR Spec": new-tab {{site.data.fhir.path}}index.html
+  Allalaadimised: download.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
