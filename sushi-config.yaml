@@ -49,8 +49,6 @@ publisher:
 pages:
   index.md:
     title: Sissejuhatus
-  contact.md:
-    title: Kontaktid
   download.md:
     title: Allalaadimised
   profiles.md:
