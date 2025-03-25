@@ -1,5 +1,6 @@
 ValueSet: EEHealthCertificateStatusVS
 Title: "Tervisetõendi staatus"
+Description: "Staatuste loend millega opereerib HCERT teenus"
 Id: ee-health-certificate-status
 * ^experimental = false
 * include http://hl7.org/fhir/composition-status#preliminary
@@ -11,53 +12,9 @@ Id: ee-health-certificate-status
 * include http://hl7.org/fhir/composition-status#cancelled
   * ^designation[0].language = #et
   * ^designation[0].value = "Tühistatud"
-
-CodeSystem: EEHealthCertificateUsageArea
-Id: ee-health-certificate-usage-area
-Title: "Tervisetõendi kasutusala"
-* ^experimental = false
-* ^caseSensitive = false
-* #occupational "Töötervishoiu tervisekontroll"
-* #driver "Mootorsõidukijuhi tervisekontroll"
-* #diver "Tuukrite tervisekontroll"
-* #blaster "Lõhkaja, lõhkemeistri ja pürotehniku tervisekontroll"
-* #railway "Raudteetöötaja tervisekontroll"
-* #foreign-intelligence "Välisluureameti ametniku ja töötaja tervisekontroll"
-* #police "Politseiametniku tervisekontroll"
-* #prison-service "Vanglateenistuse ametniku tervisekontroll"
-* #security-police "Kaitsepolitseiameti ametniku ja töötaja tervisekontroll"
-* #maritime "Meretööga seotud isikute tervisekontroll"
-* #security-guard "Turvateenistuja tervisenõuded ja tervisekontroll"
-* #radiation "Kiirgustöötaja tervisekontroll"
-* #rescue "Päästeteenistujate tervisekontroll"
-* #volunteer-rescue "Vabatahtliku merepäästja, päästja ja abidemineerija tervisekontroll"
-* #volunteer-police "Abipolitseiniku ja abipolitseinikuks astuda soovija tervisekontroll"
-* #military "Kaitseväeteenistuse Tervisekontroll"
-
-ValueSet: EEHealthCertificateUsageAreaVS
-Id: ee-health-certificate-usage-area
-Title: "Tervisetõendi kasutusala"
-* ^experimental = false
-* include codes from system EEHealthCertificateUsageArea
-
-CodeSystem: EEHealthCertificateSection
-Id: ee-health-certificate-section
-Title: "Tervisetõendi sektsioon"
-* ^experimental = false
-* ^caseSensitive = false
-* #decision "Tervisetõendi otsus"
-* #shortened-reason "Lühema tervisekontrolli aja põhjus"
-* #reject-reason "Eitava otsuse põhjendus"
-* #change-reason "Tervisetõendi muutmise põhjus"
-* #cancel-reason "Tervisetõendi tühistamise põhjus"
-* #suspend-reason "Tervisetõendi peatamise põhjus"
-* #risk-factors "Tööst olenevad ohutegurid"
-* #employer "Tööandja"
-* #health-declaration "Tervisedeklaratsioon"
-* #medical-restrictions "Meditsiinilised piirangud"
-* #work-additional-conditions "Püsiva töövõime säilitamiseks vajalikud lisatingimused"
-* #employer-suggestions "Ettepanekud tööandjale"
-* #employee-suggestions "Ettepanekud töötajale"
+* include http://hl7.org/fhir/composition-status#entered-in-error
+  * ^designation[0].language = #et
+  * ^designation[0].value = "Peatatud"
 
 CodeSystem: EEHealthCertificateDecision
 Id: ee-health-certificate-decision

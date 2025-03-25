@@ -13,3 +13,14 @@ Published value sets SHOULD conform to the ShareableValueSet profile, which says
 
 # auto generated dt elements by same builder
 TYPE_SPECIFIC_CHECKS_DT_MARKDOWN_HTML
+
+# not that relevant for contained resource
+All_observations_should_have_a_performer
+All_observations_should_have_a_subject
+All_observations_should_have_an_effectiveDateTime_or_an_effectivePeriod
+
+# experimental doesn't brake anything currently
+SD_ED_EXPERIMENTAL_BINDING
+
+# examples for contained resource profile are in parent profile examples
+The Implementation Guide contains no examples for this profile

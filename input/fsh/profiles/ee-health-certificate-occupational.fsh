@@ -3,64 +3,67 @@ Parent: EEHealthCertificate
 Id: ee-health-certificate-occupational
 Title: "Töötervishoiu tervisetõend"
 Description: "Töötervishoiu tervisetõendi baasprofiil"
-* ^experimental = true
-* category = EEHealthCertificateUsageArea#occupational
-* section contains riskFactors 0..1 and employer 0..1 and healthDeclaration 0..1 and additionalConditions 0..1 and employerSuggestions 0..1 and employeeSuggestions 0..1
+* ^experimental = false
+* category = $HDC#occupational
+* section contains riskFactors 0..1 and employer 0..1 and additionalConditions 0..1 and employerSuggestions 0..1 and employeeSuggestions 0..1
 * section[riskFactors] ^short = "Tööst olenevad ohutegurid"
-* section[riskFactors].code = EEHealthCertificateSection#risk-factors
+* section[riskFactors].code = $HC_SECTION#risk-factors
 * section[riskFactors].entry 1..*
-* section[riskFactors].entry only Reference(Observation)
+* section[riskFactors].entry only Reference(EEHealthCertificateWorkRelatedRiskFactor)
 * section[riskFactors].entry ^short = "Viide contained Observation ressursile ohuteguriga"
+* section[riskFactors].modifierExtension ..0
+
 * section[employer] 1..1
 * section[employer] ^short = "Tööandja"
-* section[employer].code = EEHealthCertificateSection#employer
+* section[employer].code = $HC_SECTION#employer
 * section[employer].entry 1..1
 * section[employer].entry only Reference(Observation)
+* section[employer].entry ^type.targetProfile = MPIPatientOccupation
 * section[employer].entry ^short = "Viide contained Observation ressursile töösuhega"
 * section[employer].text 1..1
 * section[employer].text ^short = "Tööandja asutuse registri number"
 * section[employer].text.status = #additional
-* section[healthDeclaration] 0..1 MS
-* section[healthDeclaration] ^short = "Tervisedeklaratsioon"
-* section[healthDeclaration].code = EEHealthCertificateSection#health-declaration
-* section[healthDeclaration].entry 1..1
-* section[healthDeclaration].entry only Reference(QuestionnaireResponse)
-* section[healthDeclaration].entry ^short = "Viide QuestionnaireResponse ressursile"
+* section[employer].modifierExtension ..0
+
 * section[additionalConditions] ^short = "Püsiva töövõime säilitamiseks vajalikud lisatingimused"
-* section[additionalConditions].code = EEHealthCertificateSection#work-additional-conditions
+* section[additionalConditions].code = $HC_SECTION#work-additional-conditions
 * section[additionalConditions].entry 1..*
-* section[additionalConditions].entry only Reference(Observation)
+* section[additionalConditions].entry only Reference(EEHealthCertificateWorkAdditionalCondition)
 * section[additionalConditions].entry ^short = "Viide contained Observation ressursile lisatingimusega"
 * section[additionalConditions].text 1..1
 * section[additionalConditions].text ^short = "Vabatekst"
 * section[additionalConditions].text.status = #additional
+* section[additionalConditions].modifierExtension ..0
+
 * section[employerSuggestions] ^short = "Ettepanekud tööandjale"
-* section[employerSuggestions].code = EEHealthCertificateSection#employer-suggestions
+* section[employerSuggestions].code = $HC_SECTION#employer-suggestions
 * section[employerSuggestions].text 1..1
 * section[employerSuggestions].text ^short = "Vabatekst"
 * section[employerSuggestions].text.status = #additional
+* section[employerSuggestions].modifierExtension ..0
+
 * section[employeeSuggestions] ^short = "Ettepanekud töötajale"
-* section[employeeSuggestions].code = EEHealthCertificateSection#employee-suggestions
+* section[employeeSuggestions].code = $HC_SECTION#employee-suggestions
 * section[employeeSuggestions].text 1..1
 * section[employeeSuggestions].text ^short = "Vabatekst"
 * section[employeeSuggestions].text.status = #additional
+* section[employeeSuggestions].modifierExtension ..0
+
 * contained contains riskFactor 0..* and employment 0..1 and additionalCondition 0..*
+
 * contained[medicalRestriction].value[x] from EEHealthCertificateOccupationalMedicalRestrictionVS (required)
-* contained[riskFactor] only HcertObservation
+
+* contained[riskFactor] only EEHealthCertificateWorkRelatedRiskFactor
 * contained[riskFactor] ^short = "Tööst olenevad ohutegurid"
-* contained[riskFactor].code = http://snomed.info/sct#80943009 "Risk factor"
-* contained[riskFactor].value[x] 1..1
-* contained[riskFactor].value[x] only CodeableConcept
-* contained[riskFactor].value[x] from https://fhir.ee/ValueSet/toost-olenevad-ohutegurid (required)
-* contained[employment] only HcertObservation
-* contained[employment] ^short = "Töösuhe"
-* contained[employment].code = http://snomed.info/sct#364703007 "Employment detail"
-* contained[additionalCondition] only HcertObservation
+
+* contained[employment] only Observation
+* contained[employment] ^short = "Töötamine"
+* contained[employment] ^type.profile = MPIPatientOccupation
+* contained[employment].code = $SCT#184104002 "Patient occupation"
+
+* contained[additionalCondition] only EEHealthCertificateWorkAdditionalCondition
 * contained[additionalCondition] ^short = "Püsiva töövõime säilitamiseks vajalikud lisatingimused"
-* contained[additionalCondition].code = http://snomed.info/sct#225891002 "Fit for work with certain limitations"
-* contained[additionalCondition].value[x] 1..1
-* contained[additionalCondition].value[x] only CodeableConcept
-* contained[additionalCondition].value[x] from EEHealthCertificateOccupationalAdditionalConditionVS (required)
+
 
 Profile: EEHealthCertificateOccupationalEmployer
 Parent: EEHealthCertificateOccupational
@@ -68,5 +71,4 @@ Id: ee-health-certificate-occupational-employer
 Title: "Töötervishoiu tervisetõend tööandjale"
 Description: "Töötervishoiu tervisetõendi profiil tööandjale kuvamiseks"
 * ^experimental = true
-* section[healthDeclaration] ..0
 * section[employeeSuggestions] ..0
