@@ -18,16 +18,12 @@ Antud sait on välja töötatud [FHIR Shorthand](https://build.fhir.org/ig/HL7/f
 Täiendava informatsiooni FHIR Shorthand kohta saab leida [Confluence-is](https://confluence.hl7.org/display/FHIRI/FHIR+Shorthand), [GitHub-is](https://github.com/HL7/fhir-shorthand) ja [Zulip](https://chat.fhir.org) kanalis: #shorthand.
 
 
-[//]: # (### IG metadata)
+### IG metadata
 
-[//]: # ()
-[//]: # ({% include ip-statements.xhtml %})
+{% include ip-statements.xhtml %}
 
-[//]: # ()
-[//]: # ({% include cross-version-analysis.xhtml %})
+{% include cross-version-analysis.xhtml %}
 
-[//]: # ()
-[//]: # ({% include dependency-table.xhtml %})
+{% include dependency-table.xhtml %}
 
-[//]: # ()
-[//]: # ({% include globals-table.xhtml %})
+{% include globals-table.xhtml %}
