@@ -46,8 +46,7 @@ Description: "Observation ressurss mis kirjeldab meditsiinilisi piiranguid. Kasu
 * note ^short = "Kommentaar koos piirangu täpsustusega"
 
 
-//FIXME name
-Profile: EEHealthCertificateDecisionProfile
+Profile: EEHealthCertificateDecision
 Parent: EEHealthCertificateContainedObservation
 Id: ee-health-certificate-decision
 Title: "Tervisetõendi otsus"
@@ -56,7 +55,7 @@ Description: "Observation ressurss mis kirjeldab tervisetõendi otsuse. Kasutatu
 * code = $SCT#419183001 "Practitioner decision status"
 * value[x] 1..1
 * value[x] ^short = "Otsus"
-* value[x] from EEHealthCertificateDecisionVS (required)
+* value[x] from DecisionVS (required)
 
 
 Profile: EEHealthCertificateWorkAdditionalCondition
@@ -68,7 +67,7 @@ Description: "Observation ressurss mis kirjeldab püsiva töövõime säilitamis
 * code = $SCT#225891002 "Fit for work with certain limitations"
 * value[x] 1..1
 * value[x] ^short = "Lisatingimus"
-* value[x] from EEHealthCertificateOccupationalAdditionalConditionVS (required)
+* value[x] from WorkAdditionalConditionVS (required)
 
 Profile: EEHealthCertificateWorkRelatedRiskFactor
 Parent: EEHealthCertificateContainedObservation
@@ -79,4 +78,4 @@ Description: "Observation ressurss mis kirjeldab tööst olenevad ohutegurid. Ka
 * code = $SCT#80943009 "Risk factor"
 * value[x] 1..1
 * value[x] ^short = "Ohutegur"
-* value[x] from RiskFactorsVS (required)
+* value[x] from RiskFactorVS (required)

@@ -53,7 +53,7 @@ Description: "Tervisetõendi baasprofiil"
 * section[decision] ^short = "Tervisetõendi otsus"
 * section[decision].code = $HC_SECTION#decision
 * section[decision].entry 1..1
-* section[decision].entry only Reference(EEHealthCertificateDecisionProfile)
+* section[decision].entry only Reference(EEHealthCertificateDecision)
 * section[decision].entry ^short = "Viide contained Observation ressursile otsuse koodiga"
 * section[decision].modifierExtension ..0
 
@@ -130,7 +130,7 @@ Description: "Tervisetõendi baasprofiil"
 * contained[author].modifierExtension ..0
 * contained[author].contained ..0
 
-* contained[decision] only EEHealthCertificateDecisionProfile
+* contained[decision] only EEHealthCertificateDecision
 * contained[decision] ^short = "Tervisetõendi otsus"
 
 * contained[medicalRestriction] only EEHealthCertificateMedicalRestriction

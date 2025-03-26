@@ -1,10 +1,10 @@
 Instance: DecisionDriverExample
-InstanceOf: EEHealthCertificateDecisionProfile
+InstanceOf: EEHealthCertificateDecision
 Usage: #inline
 * id = "decision-222"
 * status = #final
 * code = $SCT#419183001 "Practitioner decision status"
-* valueCodeableConcept = EEHealthCertificateDecision#no
+* valueCodeableConcept = DecisionCS#no
 
 Instance: DriverHealthCertExample
 InstanceOf: EEHealthCertificateDriver

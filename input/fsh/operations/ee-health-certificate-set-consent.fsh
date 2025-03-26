@@ -2,7 +2,6 @@ Instance: ee-health-certificate-set-consent
 InstanceOf: OperationDefinition
 Usage: #definition
 Description: "Tervisetõendi ligipääsude muutmine. Ühe operatsiooniga saab muuta ligipääsu kas arstile (doctor) ja/või esindajale (representative). Lubatud väärtused on 'closed' või 'open'."
-* version = "5.0.0"
 * name = "EEHealthCertificateSetConsent"
 * title = "Tervisetõendi ligipääsude muutmine"
 * status = #active

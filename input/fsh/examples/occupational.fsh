@@ -9,12 +9,12 @@ Usage: #inline
 * component[job].valueCodeableConcept = OccupationCS#22122501 "Pediaater"
 
 Instance: DecisionExample
-InstanceOf: EEHealthCertificateDecisionProfile
+InstanceOf: EEHealthCertificateDecision
 Usage: #inline
 * id = "decision-200"
 * status = #final
 * code = $SCT#419183001 "Practitioner decision status"
-* valueCodeableConcept = EEHealthCertificateDecision#yes
+* valueCodeableConcept = DecisionCS#yes
 
 Instance: MedicalRestrictionExample
 InstanceOf: EEHealthCertificateMedicalRestriction
@@ -22,7 +22,7 @@ Usage: #inline
 * id = "restriction-200"
 * status = #final
 * code = $SCT#246175000 "Limitation"
-* valueCodeableConcept = EEHealthCertificateRestriction#no-night-work
+* valueCodeableConcept = RestrictionsCS#no-night-work
 * note.text = "Öösel võib hulluks minna"
 
 Instance: RiskFactorExample
@@ -31,8 +31,7 @@ Usage: #inline
 * id = "riskFactor-200"
 * status = #final
 * code = $SCT#80943009 "Risk factor"
-* valueCodeableConcept = WorkRelatedRestrictionsCS#A1 "põrutused, üldvibratsioon ja seda põhjustavad seadmed"
-
+* valueCodeableConcept = RiskFactorCS#A1 "põrutused, üldvibratsioon ja seda põhjustavad seadmed"
 
 Instance: AdditionalConditionExample
 InstanceOf: EEHealthCertificateWorkAdditionalCondition
@@ -40,7 +39,7 @@ Usage: #inline
 * id = "additional-200"
 * status = #final
 * code = $SCT#225891002 "Fit for work with certain limitations"
-* valueCodeableConcept = EEHealthCertificateOccupationalAdditionalCondition#safety-gear "Isikukaitsevahendid"
+* valueCodeableConcept = WorkAdditionalConditionCS#safety-gear "Isikukaitsevahendid"
 
 Instance: OccupationalHealthCertExample
 InstanceOf: EEHealthCertificateOccupational

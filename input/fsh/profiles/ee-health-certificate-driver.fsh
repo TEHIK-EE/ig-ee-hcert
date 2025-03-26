@@ -5,4 +5,4 @@ Title: "Mootosõidukijuhi tervisetõend"
 Description: "Mootosõidukijuhi tervisetõend"
 * ^experimental = false
 * category = $HDC#driver
-* contained[medicalRestriction].value[x] from EEHealthCertificateDriverMedicalRestrictionVS (required)
+* contained[medicalRestriction].value[x] from DriverMedicalRestrictionVS (required)
