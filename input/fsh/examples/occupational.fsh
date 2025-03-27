@@ -4,7 +4,7 @@ Usage: #inline
 * id = "600"
 * status = #final
 * code = $SCT#184104002
-* subject = Reference(PatientExample)
+* subject = Reference(Patient/200)
 * effectivePeriod.start = "2013-04-02T09:30:10+01:00"
 * component[job].valueCodeableConcept = OccupationCS#22122501 "Pediaater"
 
