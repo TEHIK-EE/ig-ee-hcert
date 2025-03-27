@@ -1,8 +1,8 @@
 Profile: EEHealthCertificateContainedObservation
 Parent: Observation
 Id: ee-health-certificate-contained-observation
-Title: "Health certificate contained Observation"
-Description: "Observation profile with limited fields to use in Health certificate contained resources"
+Title: "Tervisetõendi contained Observation"
+Description: "Abstraaktne profiil Tervisetõendi contained Observation ressurside kirjeldamiseks"
 * ^experimental = false
 * ^abstract = true
 * referenceRange ..0

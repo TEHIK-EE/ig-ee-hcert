@@ -95,15 +95,15 @@ Description: "Tervisetõendi baasprofiil"
 * section[changeReason].modifierExtension ..0
 * section[changeReason].entry ..0
 
-* section[cancelReason] ^short = "Tervisetõendi tühistamise põhjus"
+* section[cancelReason] ^short = "Tervisetõendi tühistamise põhjus. Read-only sektsioon, põhjus määratakse operatsiooniga."
 * section[cancelReason].code = $HC_SECTION#cancel-reason
 * section[cancelReason].text 1..1
+* section[cancelReason].text ^short = "Vabatekst tervisetõendi tühistamise põhjusega"
+* section[cancelReason].text.status = #additional
 * section[cancelReason].modifierExtension ..0
 * section[cancelReason].entry ..0
 
-* section[suspendReason].text ^short = "Tervisetõendi peatamise põhjus"
-* section[suspendReason].text.status = #additional
-* section[suspendReason] ^short = "Tervisetõendi peatamise põhjus"
+* section[suspendReason] ^short = "Tervisetõendi peatamise põhjus. Read-only sektsioon, põhjus määratakse operatsiooniga."
 * section[suspendReason].code = $HC_SECTION#suspend-reason
 * section[suspendReason].text 1..1
 * section[suspendReason].text ^short = "Vabatekst tervisetõendi peatamise põhjusega"
