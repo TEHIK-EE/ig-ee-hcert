@@ -1,133 +1,102 @@
-Instance: Author
-InstanceOf: PractitionerRole
+Instance: EmploymentExample
+InstanceOf: https://fhir.ee/mpi/StructureDefinition/ee-mpi-socialhistory-occupation
 Usage: #inline
-* id = "author-200"
-* practitioner = Reference(Practitioner/pract1)
-* organization = Reference(Organization/org1)
-
-Instance: Employment
-InstanceOf: HcertObservation
-Usage: #inline
-* id = "employment-800"
+* id = "600"
 * status = #final
-* code = http://snomed.info/sct#364703007 "Employment detail"
-* subject = Reference(Patient/pat1)
-* effectiveDateTime = "2013-04-02T09:30:10+01:00"
-* component[+]
-  * code[0] = http://snomed.info/sct#160922003 "Job details"
-  * valueCodeableConcept[0] = https://fhir.ee/CodeSystem/occupation#75130001 "Võimeister"
+* code = $SCT#184104002
+* subject = Reference(Patient/200)
+* effectivePeriod.start = "2013-04-02T09:30:10+01:00"
+* component[job].valueCodeableConcept = OccupationCS#22122501 "Pediaater"
 
-Instance: Decision
-InstanceOf: HcertObservation
+Instance: DecisionExample
+InstanceOf: EEHealthCertificateDecision
 Usage: #inline
-* id = "decision-200"
+* id = "700"
 * status = #final
-* code = http://snomed.info/sct#419183001 "Practitioner decision status"
-* subject = Reference(Patient/pat1)
-* effectiveDateTime = "2013-04-02T09:30:10+01:00"
-* valueCodeableConcept = EEHealthCertificateDecision#yes
+* code = $SCT#419183001 "Practitioner decision status"
+* valueCodeableConcept = DecisionCS#2
 
-Instance: MedicalRestriction
-InstanceOf: HcertObservation
+Instance: MedicalRestrictionExample
+InstanceOf: EEHealthCertificateMedicalRestriction
 Usage: #inline
-* id = "restriction-200"
+* id = "800"
 * status = #final
-* code = http://snomed.info/sct#246175000 "Limitation"
-* subject = Reference(Patient/pat1)
-* effectiveDateTime = "2013-04-02T09:30:10+01:00"
-* valueCodeableConcept = EEHealthCertificateRestriction#no-night-work
+* code = $SCT#246175000 "Limitation"
+* valueCodeableConcept = RestrictionsCS#891 //Ei sobi töötama üksinda
 * note.text = "Öösel võib hulluks minna"
 
-Instance: RiskFactor
-InstanceOf: HcertObservation
+Instance: RiskFactorExample
+InstanceOf: EEHealthCertificateWorkRelatedRiskFactor
 Usage: #inline
-* id = "riskFactor-200"
+* id = "900"
 * status = #final
-* code = http://snomed.info/sct#80943009 "Risk factor"
-* subject = Reference(Patient/pat1)
-* effectiveDateTime = "2013-04-02T09:30:10+01:00"
-* valueCodeableConcept = https://fhir.ee/CodeSystem/toost-olenevad-ohutegurid#A1 "põrutused, üldvibratsioon ja seda põhjustavad seadmed"
+* code = $SCT#80943009 "Risk factor"
+* valueCodeableConcept = RiskFactorCS#A1 "põrutused, üldvibratsioon ja seda põhjustavad seadmed"
 
-
-Instance: AdditionalCondition
-InstanceOf: HcertObservation
+Instance: AdditionalConditionExample
+InstanceOf: EEHealthCertificateWorkAdditionalCondition
 Usage: #inline
-* id = "additional-200"
+* id = "1000"
 * status = #final
-* code = http://snomed.info/sct#225891002 "Fit for work with certain limitations"
-* subject = Reference(Patient/pat1)
-* effectiveDateTime = "2013-04-02T09:30:10+01:00"
-* valueCodeableConcept = EEHealthCertificateOccupationalAdditionalCondition#safety-gear "Isikukaitsevahendid"
+* code = $SCT#225891002 "Fit for work with certain limitations"
+* valueCodeableConcept = WorkAdditionalConditionCS#personal-protective-equipment
 
 Instance: OccupationalHealthCertExample
 InstanceOf: EEHealthCertificateOccupational
-Title: "Töötervishoiu tervisetõendi näidis"
+Title: "Töötervishoiu tervisetõend"
 Usage: #example
-* id = "section-100"
+* id = "1100"
 * identifier[0]
   * system = "https://fhir.ee/hcert/health-certificate-number"
   * value = "DOC-12345"
-* status = http://hl7.org/fhir/composition-status#preliminary
-* type = http://snomed.info/sct#772786005 "Medical Certificate"
-* subject = Reference(Patient/pat1)
+* status = StatusCS#preliminary
+* type.coding = $SCT#772786005 "Medical certificate (record artifact)"
+* subject = Reference(PatientExample)
 * date = "2024-11-05T11:45:29.0437162+00:00"
-* author = Reference(Author)
+* author = Reference(PractitionerRoleExample)
 * title = "Töötervishoiu tervisekontroll"
 * event.period.start = "2024-11-05T00:00:00.000+00:00"
 * event.period.end = "2025-11-05T00:00:00.000+00:00"
-* contained[author] = Author
-* contained[+] = Employment
-* contained[+] = Decision
-* contained[+] = MedicalRestriction
-* contained[+] = RiskFactor
-* contained[+] = AdditionalCondition
+* contained[author] = PractitionerRoleExample
+* contained[+] = EmploymentExample
+* contained[+] = DecisionExample
+* contained[+] = MedicalRestrictionExample
+* contained[+] = RiskFactorExample
+* contained[+] = AdditionalConditionExample
 * section[employer]
-  * entry = Reference(Employment)
-  * code = EEHealthCertificateSection#employer
+  * entry = Reference(EmploymentExample)
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">10006966</div>"
 * section[decision]
-  * entry = Reference(Decision)
-  * code = EEHealthCertificateSection#decision
+  * entry = Reference(DecisionExample)
 * section[medicalRestriction]
-  * entry = Reference(MedicalRestriction)
-  * code = EEHealthCertificateSection#medical-restrictions
+  * entry = Reference(MedicalRestrictionExample)
 * section[shortenedReason]
-  * code = EEHealthCertificateSection#shortened-reason
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Arst ei usalda isiku uuringute tulemustele</div>"
 * section[rejectReason]
-  * code = EEHealthCertificateSection#reject-reason
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Raske füüsiline töö, ei sobi selja probleemide tõttu</div>"
 * section[changeReason]
-  * code = EEHealthCertificateSection#change-reason
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Kirjavea parandus</div>"
 * section[cancelReason]
-  * code = EEHealthCertificateSection#cancel-reason
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vale otsus</div>"
 * section[suspendReason]
-  * code = EEHealthCertificateSection#suspend-reason
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ootab lisauringute tulemusi</div>"
 * section[riskFactors]
-  * code = EEHealthCertificateSection#risk-factors
-  * entry = Reference(RiskFactor)
+  * entry = Reference(RiskFactorExample)
 * section[healthDeclaration]
-  * code = EEHealthCertificateSection#health-declaration
-  * entry = Reference(QuestionnaireResponse/qre-200)
+  * entry = Reference(HealthDeclarationExample)
 * section[additionalConditions]
-  * code = EEHealthCertificateSection#work-additional-conditions
-  * entry = Reference(AdditionalCondition)
+  * entry = Reference(AdditionalConditionExample)
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tekst mis kirjeldab lisatingumusi</div>"
 * section[employerSuggestions]
-  * code = EEHealthCertificateSection#employer-suggestions
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Töötajale on vaja parem valgustus</div>"
 * section[employeeSuggestions]
-  * code = EEHealthCertificateSection#employee-suggestions
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tööandja peab paigaldama uut valgustust</div>"

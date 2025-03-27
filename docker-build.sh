@@ -4,6 +4,6 @@ this="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 if [ ! -f "$this/input-cache/publisher.jar" ]; then
     cd $this && $this/_updatePublisher.sh -y
 fi
-docker pull docker.kodality.com/fsh-builder
-docker run --rm -it -v $this:/workdir -v ~/.fhir:/root/.fhir \
-  docker.kodality.com/fsh-builder /bin/bash -c "cd /workdir && ./_genonce.sh $1"
+docker pull hl7fhir/ig-publisher-base:latest
+docker run --rm -it -v $this:/workdir -v ~/.fhir:/home/publisher/.fhir \
+  hl7fhir/ig-publisher-base:latest /bin/bash -c "cd /workdir && ./_genonce.sh -tx https://term.test.tehik.ee/fhir/ $1"

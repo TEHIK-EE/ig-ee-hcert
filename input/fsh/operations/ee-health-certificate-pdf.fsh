@@ -2,7 +2,6 @@ Instance: ee-health-certificate-pdf
 InstanceOf: OperationDefinition
 Usage: #definition
 Description: "FHIR operatsioon PDF dokumendi generereerimiseks tervisetõend (Composition) ressursi põhjal"
-* version = "5.0.0"
 * name = "EEHealthCertificatePdf"
 * title = "Tervisetõendi PDF genereerimine"
 * status = #active

@@ -1,35 +1,34 @@
-Instance: DecisionDriver
-InstanceOf: HcertObservation
+Instance: DecisionDriverExample
+InstanceOf: EEHealthCertificateDecision
 Usage: #inline
-* id = "decision-222"
+* id = "400"
 * status = #final
-* code = http://snomed.info/sct#419183001 "Practitioner decision status"
-* subject = Reference(Patient/pat1)
-* effectiveDateTime = "2013-04-02T09:30:10+01:00"
-* valueCodeableConcept = EEHealthCertificateDecision#no
+* code = $SCT#419183001 "Practitioner decision status"
+* valueCodeableConcept = DecisionCS#1
 
 Instance: DriverHealthCertExample
 InstanceOf: EEHealthCertificateDriver
-Title: "Mootorsõiduki juhtimise tervisetõendi näidis"
+Title: "Mootorsõiduki juhtimise tervisetõend"
 Usage: #example
-* id = "section-300"
+* id = "500"
 * identifier[0]
   * system = "https://fhir.ee/hcert/health-certificate-number"
   * value = "HCERT-321"
-* status = http://hl7.org/fhir/composition-status#final
-* type = http://snomed.info/sct#772786005 "Medical Certificate"
-* subject = Reference(Patient/pat1)
+* status = StatusCS#preliminary
+* category = $HDC#driver-group-I
+* type.coding = $SCT#772786005 "Medical certificate (record artifact)"
+* subject = Reference(PatientExample)
 * date = "2024-11-05T11:45:29.0437162+00:00"
-* author = Reference(Author)
+* author = Reference(PractitionerRoleExample)
 * title = "Mootorsõiduki juhtimise tervisetõend"
 * event.period.start = "2024-11-05T00:00:00.000+00:00"
 * event.period.end = "2025-11-05T00:00:00.000+00:00"
-* contained[author] = Author
-* contained[+] = DecisionDriver
+* contained[author] = PractitionerRoleExample
+* contained[+] = DecisionDriverExample
 * section[decision]
-  * entry = Reference(DecisionDriver)
-  * code = EEHealthCertificateSection#decision
+  * entry = Reference(DecisionDriverExample)
 * section[rejectReason]
-  * code = EEHealthCertificateSection#reject-reason
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ei tunne värve</div>"
+* section[healthDeclaration]
+  * entry = Reference(HealthDeclarationExample)

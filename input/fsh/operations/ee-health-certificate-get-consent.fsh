@@ -2,7 +2,6 @@ Instance: ee-health-certificate-get-consent
 InstanceOf: OperationDefinition
 Usage: #definition
 Description: "Tervisetõendi ligipääsude päring"
-* version = "5.0.0"
 * name = "EEHealthCertificateGetConsent"
 * title = "Tervisetõendi ligipääsude päring"
 * status = #active
