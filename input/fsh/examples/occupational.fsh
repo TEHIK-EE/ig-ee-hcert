@@ -1,7 +1,7 @@
 Instance: EmploymentExample
 InstanceOf: https://fhir.ee/mpi/StructureDefinition/ee-mpi-socialhistory-occupation
 Usage: #inline
-* id = "800"
+* id = "600"
 * status = #final
 * code = $SCT#184104002
 * subject = Reference(Patient/pat1)
@@ -11,7 +11,7 @@ Usage: #inline
 Instance: DecisionExample
 InstanceOf: EEHealthCertificateDecision
 Usage: #inline
-* id = "200"
+* id = "700"
 * status = #final
 * code = $SCT#419183001 "Practitioner decision status"
 * valueCodeableConcept = DecisionCS#2
@@ -19,7 +19,7 @@ Usage: #inline
 Instance: MedicalRestrictionExample
 InstanceOf: EEHealthCertificateMedicalRestriction
 Usage: #inline
-* id = "200"
+* id = "800"
 * status = #final
 * code = $SCT#246175000 "Limitation"
 * valueCodeableConcept = RestrictionsCS#891 //Ei sobi töötama üksinda
@@ -28,7 +28,7 @@ Usage: #inline
 Instance: RiskFactorExample
 InstanceOf: EEHealthCertificateWorkRelatedRiskFactor
 Usage: #inline
-* id = "200"
+* id = "900"
 * status = #final
 * code = $SCT#80943009 "Risk factor"
 * valueCodeableConcept = RiskFactorCS#A1 "põrutused, üldvibratsioon ja seda põhjustavad seadmed"
@@ -36,7 +36,7 @@ Usage: #inline
 Instance: AdditionalConditionExample
 InstanceOf: EEHealthCertificateWorkAdditionalCondition
 Usage: #inline
-* id = "200"
+* id = "1000"
 * status = #final
 * code = $SCT#225891002 "Fit for work with certain limitations"
 * valueCodeableConcept = WorkAdditionalConditionCS#personal-protective-equipment
@@ -45,7 +45,7 @@ Instance: OccupationalHealthCertExample
 InstanceOf: EEHealthCertificateOccupational
 Title: "Töötervishoiu tervisetõend"
 Usage: #example
-* id = "100"
+* id = "1100"
 * identifier[0]
   * system = "https://fhir.ee/hcert/health-certificate-number"
   * value = "DOC-12345"

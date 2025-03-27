@@ -19,7 +19,7 @@ Title: "Arst Paavo Lepzig"
 Instance: PractitionerRoleExample
 InstanceOf: PractitionerRole
 Usage: #example
-* id = "author-200"
+* id = "100"
 * practitioner = Reference(PractitionerExample)
 * organization = Reference(OrganizationExample)
 
@@ -27,7 +27,7 @@ Instance: PatientExample
 InstanceOf: EEMPIPatientVerified
 Usage: #example
 Title: "Patsient Taavi Kask"
-* id = "300"
+* id = "200"
 * active = true
 * identifier[0]
   * system = "https://fhir.ee/sid/pid/est/ni"
@@ -42,7 +42,7 @@ Instance: HealthDeclarationExample
 InstanceOf: QuestionnaireResponse
 Usage: #example
 Title: "Tervisedeklaratsioon"
-* id = "500"
+* id = "300"
 * status = #completed
 * questionnaire = "https://fhir.ee/qre/Questionnaire-123"
 * subject = Reference(PatientExample)
