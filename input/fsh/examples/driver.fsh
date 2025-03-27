@@ -1,7 +1,7 @@
 Instance: DecisionDriverExample
 InstanceOf: EEHealthCertificateDecision
 Usage: #inline
-* id = "decision-222"
+* id = "200"
 * status = #final
 * code = $SCT#419183001 "Practitioner decision status"
 * valueCodeableConcept = DecisionCS#1
@@ -10,7 +10,7 @@ Instance: DriverHealthCertExample
 InstanceOf: EEHealthCertificateDriver
 Title: "Mootorsõiduki juhtimise tervisetõend"
 Usage: #example
-* id = "health-certificate-300"
+* id = "700"
 * identifier[0]
   * system = "https://fhir.ee/hcert/health-certificate-number"
   * value = "HCERT-321"

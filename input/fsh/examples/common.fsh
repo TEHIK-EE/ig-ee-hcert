@@ -1,15 +1,15 @@
 Instance: OrganizationExample
 InstanceOf: Organization
 Usage: #example
-Title: "Asutus Karulaugu Perearstikeskus"
-* id = "org1"
-* name = "Karulaugu Perearstikeskus"
+Title: "Asutus PÕHJA-EESTI REGIONAALHAIGLA"
+* id = "90006399"
+* name = "PÕHJA-EESTI REGIONAALHAIGLA"
 
 Instance: PractitionerExample
 InstanceOf: Practitioner
 Usage: #example
 Title: "Arst Paavo Lepzig"
-* id = "pract1"
+* id = "36109255737"
 * identifier[0].system = "https://fhir.ee/sid/pro/est/pho"
 * identifier[=].value = "D12345"
 * active = true
@@ -27,7 +27,7 @@ Instance: PatientExample
 InstanceOf: EEMPIPatientVerified
 Usage: #example
 Title: "Patsient Taavi Kask"
-* id = "mpi-123"
+* id = "300"
 * active = true
 * identifier[0]
   * system = "https://fhir.ee/sid/pid/est/ni"
@@ -42,7 +42,7 @@ Instance: HealthDeclarationExample
 InstanceOf: QuestionnaireResponse
 Usage: #example
 Title: "Tervisedeklaratsioon"
-* id = "health-declaration-200"
+* id = "500"
 * status = #completed
 * questionnaire = "https://fhir.ee/qre/Questionnaire-123"
 * subject = Reference(PatientExample)
