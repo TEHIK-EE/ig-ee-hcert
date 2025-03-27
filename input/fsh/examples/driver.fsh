@@ -4,7 +4,7 @@ Usage: #inline
 * id = "decision-222"
 * status = #final
 * code = $SCT#419183001 "Practitioner decision status"
-* valueCodeableConcept = DecisionCS#no
+* valueCodeableConcept = DecisionCS#1
 
 Instance: DriverHealthCertExample
 InstanceOf: EEHealthCertificateDriver
@@ -14,7 +14,8 @@ Usage: #example
 * identifier[0]
   * system = "https://fhir.ee/hcert/health-certificate-number"
   * value = "HCERT-321"
-* status = http://hl7.org/fhir/composition-status#final
+* status = StatusCS#final
+* category = $HDC#driver-group-I
 * type.coding = $SCT#772786005 "Medical certificate (record artifact)"
 * subject = Reference(PatientExample)
 * date = "2024-11-05T11:45:29.0437162+00:00"

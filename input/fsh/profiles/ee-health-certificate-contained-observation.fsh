@@ -5,7 +5,7 @@ Title: "Health certificate contained Observation"
 Description: "Observation profile with limited fields to use in Health certificate contained resources"
 * ^experimental = false
 * ^abstract = true
-* referenceRange ..0 //related to https://github.com/HL7/fhir-ig-publisher/issues/1018
+* referenceRange ..0
 * implicitRules ..0
 * contained ..0
 * modifierExtension ..0
@@ -56,6 +56,7 @@ Description: "Observation ressurss mis kirjeldab tervisetõendi otsuse. Kasutatu
 * value[x] 1..1
 * value[x] ^short = "Otsus"
 * value[x] from DecisionVS (required)
+* note 0..0
 
 
 Profile: EEHealthCertificateWorkAdditionalCondition
@@ -68,6 +69,7 @@ Description: "Observation ressurss mis kirjeldab püsiva töövõime säilitamis
 * value[x] 1..1
 * value[x] ^short = "Lisatingimus"
 * value[x] from WorkAdditionalConditionVS (required)
+* note 0..0
 
 Profile: EEHealthCertificateWorkRelatedRiskFactor
 Parent: EEHealthCertificateContainedObservation
@@ -79,3 +81,4 @@ Description: "Observation ressurss mis kirjeldab tööst olenevad ohutegurid. Ka
 * value[x] 1..1
 * value[x] ^short = "Ohutegur"
 * value[x] from RiskFactorVS (required)
+* note 0..0

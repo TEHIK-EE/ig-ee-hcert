@@ -26,7 +26,7 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 * section[employer].modifierExtension ..0
 
 * section[additionalConditions] ^short = "Püsiva töövõime säilitamiseks vajalikud lisatingimused"
-* section[additionalConditions].code = $HC_SECTION#work-additional-conditions
+* section[additionalConditions].code = $HC_SECTION#work-additional-restrictions
 * section[additionalConditions].entry 1..*
 * section[additionalConditions].entry only Reference(EEHealthCertificateWorkAdditionalCondition)
 * section[additionalConditions].entry ^short = "Viide contained Observation ressursile lisatingimusega"

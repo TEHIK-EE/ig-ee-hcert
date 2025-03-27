@@ -1,5 +1,5 @@
 Instance: EmploymentExample
-InstanceOf: MPIPatientOccupation
+InstanceOf: https://fhir.ee/mpi/StructureDefinition/ee-mpi-socialhistory-occupation
 Usage: #inline
 * id = "employment-800"
 * status = #final
@@ -14,7 +14,7 @@ Usage: #inline
 * id = "decision-200"
 * status = #final
 * code = $SCT#419183001 "Practitioner decision status"
-* valueCodeableConcept = DecisionCS#yes
+* valueCodeableConcept = DecisionCS#2
 
 Instance: MedicalRestrictionExample
 InstanceOf: EEHealthCertificateMedicalRestriction
@@ -22,7 +22,7 @@ Usage: #inline
 * id = "restriction-200"
 * status = #final
 * code = $SCT#246175000 "Limitation"
-* valueCodeableConcept = RestrictionsCS#no-night-work
+* valueCodeableConcept = RestrictionsCS#891 //Ei sobi töötama üksinda
 * note.text = "Öösel võib hulluks minna"
 
 Instance: RiskFactorExample
@@ -39,7 +39,7 @@ Usage: #inline
 * id = "additional-200"
 * status = #final
 * code = $SCT#225891002 "Fit for work with certain limitations"
-* valueCodeableConcept = WorkAdditionalConditionCS#safety-gear "Isikukaitsevahendid"
+* valueCodeableConcept = WorkAdditionalConditionCS#personal-protective-equipment
 
 Instance: OccupationalHealthCertExample
 InstanceOf: EEHealthCertificateOccupational
@@ -49,7 +49,7 @@ Usage: #example
 * identifier[0]
   * system = "https://fhir.ee/hcert/health-certificate-number"
   * value = "DOC-12345"
-* status = http://hl7.org/fhir/composition-status#preliminary
+* status = StatusCS#preliminary
 * type.coding = $SCT#772786005 "Medical certificate (record artifact)"
 * subject = Reference(PatientExample)
 * date = "2024-11-05T11:45:29.0437162+00:00"
