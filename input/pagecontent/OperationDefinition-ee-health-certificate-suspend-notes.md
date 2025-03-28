@@ -7,7 +7,7 @@
   "parameter": [
     {
       "name": "reason",
-      "valueString": "tühistamise põhjus XXX"
+      "valueString": "peatamise põhjus XXX"
     }
   ]
 }
@@ -25,7 +25,7 @@
     ]
   },
   ...
-  "status": "cancelled",
+  "status": "entered-in-error",
   ...
   "section": [
     ...
@@ -34,13 +34,13 @@
         "coding": [
           {
             "system": "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
-            "code": "cancel-reason"
+            "code": "suspend-reason"
           }
         ]
       },
       "text": {
         "status": "additional",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">tühistamise põhjus XXX</div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">peatamise põhjus XXX</div>"
       }
     },
     ...
