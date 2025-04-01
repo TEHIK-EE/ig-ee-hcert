@@ -39,10 +39,15 @@ Description: "Tervisetõendi baasprofiil"
 * attester ..0
 * custodian ..0
 * relatesTo ..0
+* event 1..1
 * event ^short = "Tervisetõendi kehtivus"
 * event.modifierExtension ..0
 * event.period 1..1
-* event.period ^short = "Algus- ja lõpuaeg"
+* event.period
+* event.period.start 1..1
+* event.period.start ^short = "Alguskuupäev"
+* event.period.end 1..1
+* event.period.end ^short = "Lõppkuupäev"
 * event.detail ..0
 
 // sections
@@ -114,8 +119,8 @@ Description: "Tervisetõendi baasprofiil"
 // contained resources
 * contained ^slicing.discriminator[0].type = #type
 * contained ^slicing.discriminator[0].path = "$this"
-* contained ^slicing.discriminator[1].type = #value
-* contained ^slicing.discriminator[1].path = "code"
+* contained ^slicing.discriminator[1].type = #profile
+* contained ^slicing.discriminator[1].path = "$this"
 * contained ^slicing.ordered = false
 * contained ^slicing.rules = #open
 * contained contains decision 0..1 and medicalRestriction 0..* and author 1..1

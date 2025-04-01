@@ -1,9 +1,9 @@
 Instance: EmploymentExample
-InstanceOf: https://fhir.ee/mpi/StructureDefinition/ee-mpi-socialhistory-occupation
+InstanceOf: EEMPISocialHistoryOccupation
 Usage: #inline
 * id = "600"
 * status = #final
-* code = $SCT#184104002
+* code = $SCT#184104002 "Patient occupation"
 * subject = Reference(Patient/200)
 * effectivePeriod.start = "2013-04-02T09:30:10+01:00"
 * component[job].valueCodeableConcept = OccupationCS#22122501 "Pediaater"
@@ -55,14 +55,14 @@ Usage: #example
 * date = "2024-11-05T11:45:29.0437162+00:00"
 * author = Reference(PractitionerRoleExample)
 * title = "Töötervishoiu tervisekontroll"
-* event.period.start = "2024-11-05T00:00:00.000+00:00"
+* event.period.start = "2024-05-05T00:00:00.000+00:00"
 * event.period.end = "2025-11-05T00:00:00.000+00:00"
 * contained[author] = PractitionerRoleExample
-* contained[+] = EmploymentExample
-* contained[+] = DecisionExample
+* contained[employment] = EmploymentExample
+* contained[decision] = DecisionExample
 * contained[+] = MedicalRestrictionExample
-* contained[+] = RiskFactorExample
-* contained[+] = AdditionalConditionExample
+* contained[riskFactor] = RiskFactorExample
+* contained[additionalCondition] = AdditionalConditionExample
 * section[employer]
   * entry = Reference(EmploymentExample)
   * text.status = #additional

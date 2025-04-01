@@ -41,6 +41,7 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 * section[employerSuggestions].text ^short = "Vabatekst"
 * section[employerSuggestions].text.status = #additional
 * section[employerSuggestions].modifierExtension ..0
+* section[employerSuggestions].entry ..0
 
 * section[employeeSuggestions] ^short = "Ettepanekud töötajale"
 * section[employeeSuggestions].code = $HC_SECTION#employee-suggestions
@@ -48,8 +49,9 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 * section[employeeSuggestions].text ^short = "Vabatekst"
 * section[employeeSuggestions].text.status = #additional
 * section[employeeSuggestions].modifierExtension ..0
+* section[employeeSuggestions].entry ..0
 
-* contained contains riskFactor 0..* and employment 0..1 and additionalCondition 0..*
+* contained contains riskFactor 0..* and employment 1..1 and additionalCondition 0..*
 
 * contained[medicalRestriction].value[x] from OccupationalMedicalRestrictionVS (required)
 
@@ -59,7 +61,6 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 * contained[employment] only Observation
 * contained[employment] ^short = "Töötamine"
 * contained[employment] ^type.profile = MPIPatientOccupation
-* contained[employment].code = $SCT#184104002 "Patient occupation"
 
 * contained[additionalCondition] only EEHealthCertificateWorkAdditionalCondition
 * contained[additionalCondition] ^short = "Püsiva töövõime säilitamiseks vajalikud lisatingimused"
