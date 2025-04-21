@@ -1,12 +1,15 @@
 Instance: EmploymentExample
-InstanceOf: EEMPISocialHistoryOccupation
-Usage: #inline
+InstanceOf: EEHealthCertificateOccupationalEmployment
+Title: "Patsiendi töötamine"
+Usage: #example
 * id = "600"
 * status = #final
 * code = $SCT#184104002 "Patient occupation"
-* subject = Reference(Patient/200)
-* effectivePeriod.start = "2013-04-02T09:30:10+01:00"
+* performer.display = "Suurepärane OÜ"
+* performer.identifier.system = "https://fhir.ee/sid/org/est/br"
+* performer.identifier.value = "12345678"
 * component[job].valueCodeableConcept = OccupationCS#22122501 "Pediaater"
+* component[rate].valueQuantity = 0.75 '1'
 
 Instance: DecisionExample
 InstanceOf: EEHealthCertificateDecision

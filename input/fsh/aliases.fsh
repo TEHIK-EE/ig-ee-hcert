@@ -6,6 +6,7 @@ Alias: MpiPatientVerified = https://fhir.ee/mpi/StructureDefinition/ee-mpi-patie
 Alias: MPIPatientOccupation = https://fhir.ee/mpi/StructureDefinition/ee-mpi-socialhistory-occupation
 
 Alias: OccupationCS = https://fhir.ee/CodeSystem/occupation
+Alias: OccupationVS = https://fhir.ee/ValueSet/occupation
 
 Alias: RiskFactorCS = https://fhir.ee/CodeSystem/toost-olenevad-ohutegurid
 Alias: RiskFactorVS = https://fhir.ee/ValueSet/toost-olenevad-ohutegurid

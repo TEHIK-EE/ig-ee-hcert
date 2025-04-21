@@ -18,7 +18,6 @@ Description: "Abstraaktne profiil Tervisetõendi contained Observation ressursid
 * encounter ..0
 * effective[x] ..0
 * issued ..0
-* performer ..0
 * dataAbsentReason ..0
 * interpretation ..0
 * bodySite ..0
@@ -26,7 +25,6 @@ Description: "Abstraaktne profiil Tervisetõendi contained Observation ressursid
 * method ..0
 * specimen ..0
 * device ..0
-* component ..0
 * identifier ..0
 * instantiates[x] ..0
 
@@ -37,7 +35,7 @@ Profile: EEHealthCertificateMedicalRestriction
 Parent: EEHealthCertificateContainedObservation
 Id: ee-health-certificate-medical-restriction
 Title: "Meditsiiniline piirang"
-Description: "Observation ressurss mis kirjeldab meditsiinilisi piiranguid. Kasutatud contained ressurisina."
+Description: "Observation ressurss mis kirjeldab meditsiinilisi piiranguid. Kasutatud contained ressurisina"
 * ^experimental = false
 * code = $SCT#246175000 "Limitation"
 * value[x] 1..1
@@ -50,7 +48,7 @@ Profile: EEHealthCertificateDecision
 Parent: EEHealthCertificateContainedObservation
 Id: ee-health-certificate-decision
 Title: "Tervisetõendi otsus"
-Description: "Observation ressurss mis kirjeldab tervisetõendi otsuse. Kasutatud contained ressurisina."
+Description: "Observation ressurss mis kirjeldab tervisetõendi otsuse. Kasutatud contained ressurisina"
 * ^experimental = false
 * code = $SCT#419183001 "Practitioner decision status"
 * value[x] 1..1
@@ -63,7 +61,7 @@ Profile: EEHealthCertificateWorkAdditionalCondition
 Parent: EEHealthCertificateContainedObservation
 Id: ee-health-certificate-work-additional-condition
 Title: "Püsiva töövõime säilitamiseks vajalikud lisatingimused"
-Description: "Observation ressurss mis kirjeldab püsiva töövõime säilitamiseks vajalikud lisatingimused. Kasutatud contained ressurisina."
+Description: "Observation ressurss mis kirjeldab püsiva töövõime säilitamiseks vajalikud lisatingimused. Kasutatud contained ressurisina"
 * ^experimental = false
 * code = $SCT#225891002 "Fit for work with certain limitations"
 * value[x] 1..1

@@ -14,11 +14,10 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 * section[riskFactors].modifierExtension ..0
 
 * section[employer] 1..1
-* section[employer] ^short = "Tööandja"
+* section[employer] ^short = "Töötamine"
 * section[employer].code = $HC_SECTION#employer
 * section[employer].entry 1..1
-* section[employer].entry only Reference(Observation)
-* section[employer].entry ^type.targetProfile = MPIPatientOccupation
+* section[employer].entry only Reference(EEHealthCertificateOccupationalEmployment)
 * section[employer].entry ^short = "Viide contained Observation ressursile töösuhega"
 * section[employer].text 1..1
 * section[employer].text ^short = "Tööandja asutuse registri number"
@@ -58,9 +57,8 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 * contained[riskFactor] only EEHealthCertificateWorkRelatedRiskFactor
 * contained[riskFactor] ^short = "Tööst olenevad ohutegurid"
 
-* contained[employment] only Observation
+* contained[employment] only EEHealthCertificateOccupationalEmployment
 * contained[employment] ^short = "Töötamine"
-* contained[employment] ^type.profile = MPIPatientOccupation
 
 * contained[additionalCondition] only EEHealthCertificateWorkAdditionalCondition
 * contained[additionalCondition] ^short = "Püsiva töövõime säilitamiseks vajalikud lisatingimused"
