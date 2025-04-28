@@ -8,7 +8,7 @@ Description: "Tervisetõendi peatamise operatsioon"
 * kind = #operation
 * experimental = false
 * affectsState = true
-* code = #cancel
+* code = #suspend
 * resource = #Composition
 * system = false
 * type = false
