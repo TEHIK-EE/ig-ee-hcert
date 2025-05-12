@@ -37,7 +37,7 @@ Id: ee-health-certificate-medical-restriction
 Title: "Meditsiiniline piirang"
 Description: "Observation ressurss mis kirjeldab meditsiinilisi piiranguid. Kasutatud contained ressurisina"
 * ^experimental = false
-* code = $SCT#246175000 "Limitation"
+* code = $SCT#146861000181105 "Restriction"
 * value[x] 1..1
 * value[x] ^short = "Meditsiiniline piirang"
 * note 0..1 MS
