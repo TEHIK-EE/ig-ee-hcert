@@ -24,7 +24,7 @@ InstanceOf: EEHealthCertificateMedicalRestriction
 Usage: #inline
 * id = "800"
 * status = #final
-* code = $SCT#246175000 "Limitation"
+* code = $SCT#146861000181105 "Restriction"
 * valueCodeableConcept = RestrictionsCS#891 //Ei sobi töötama üksinda
 * note.text = "Öösel võib hulluks minna"
 
