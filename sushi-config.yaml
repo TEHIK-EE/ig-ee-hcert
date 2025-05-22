@@ -46,6 +46,8 @@ dependencies:
 pages:
   index.md:
     title: Sissejuhatus
+  api.md:
+    title: API kirjeldus
   download.md:
     title: Allalaadimised
   profiles.md:
@@ -82,6 +84,7 @@ menu:
   Esileht: index.html
   Juhend:
     Profiilid: profiles.html
+    API: api.html
   Artefaktid: artifacts.html
   Sisukord: toc.html
   Allalaadimised: download.html
