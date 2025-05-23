@@ -33,9 +33,11 @@ Tühistatud: FHIR status: entered-in-error
 
 ### Tervisetõendi loomine
 
-Tervisetõendi loomine on kasutusala spetsiifiline, vastavalt kasutusalale tuleb saada Composition ressurss õige [profiiliga](profiles.html).
-Profiil määrab mis ressursi väljad on kohustuslikud ja nende eesmärk.
+Tervisetõendi loomine on kasutusala spetsiifiline, vastavalt kasutusalale tuleb saata Composition ressurss õige [profiiliga](profiles.html).
+Profiil määrab mis ressursi väljad on kohustuslikud, nende eesmärki ja struktuuri.
 
+
+[Artifaktide](artifacts.html) leheküljel on toodud ka ressurside [näidised](artifacts.html#example-example-instances).
 
 #### Päring
 
@@ -68,6 +70,8 @@ Location: [base]/Composition/500/_history/1
 
 {% fragment Composition/500 JSON %}
 
+
+
 ### Tervisetõendi pärimine
 
 #### Päring
@@ -79,6 +83,8 @@ Location: [base]/Composition/500/_history/1
 - **HTTP status**: 200 OK
 
 {% fragment Composition/500 JSON %}
+
+
 
 ### Tervisetõendi ajalugu pärimine
 
@@ -94,7 +100,7 @@ Location: [base]/Composition/500/_history/1
 
 ### Tervisetõendi kustutamine
 
-Tõendi kustutamine on võimalik vaid **Mustand** olekust.
+Tõendi kustutamine on võimalik vaid **Mustand** olekust. Kustutatud ressurss on kättesaadav ajaloost aga id järgi laadides ega otsinguga pole kättesaadav.
 
 #### Päring
 
@@ -104,13 +110,19 @@ Tõendi kustutamine on võimalik vaid **Mustand** olekust.
 
 - **HTTP status**: 204 No Content
 
+
+
 ### Tervisetõendi peatamine
 
 Tõendi peatamine tehakse [$suspend](OperationDefinition-ee-health-certificate-suspend.html) operatsiooniga.
 
+
+
 ### Tervisetõendi tühistamine
 
 Tõendi tühistamine tehakse [$cancel](OperationDefinition-ee-health-certificate-suspend.html) operatsiooniga.
+
+
 
 ### Tervisetõendi otsing
 
@@ -223,6 +235,8 @@ Otsing on implementeeritud FHIR standardi järgi: https://hl7.org/fhir/search.ht
 ### Tervisetõendi ligipääsu pärimine
 
 Tõendi ligipääsu pärimine tehakse [$get-consent](OperationDefinition-ee-health-certificate-get-consent.html) operatsiooniga.
+
+
 
 ### Tervisetõendi ligipääsu muutmine
 

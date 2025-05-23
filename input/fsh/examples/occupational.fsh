@@ -1,7 +1,7 @@
 Instance: EmploymentExample
 InstanceOf: EEHealthCertificateOccupationalEmployment
 Title: "Patsiendi töötamine"
-Usage: #example
+Usage: #inline
 * id = "600"
 * status = #final
 * code = $SCT#184104002 "Patient occupation"
@@ -47,6 +47,7 @@ Usage: #inline
 Instance: OccupationalHealthCertExample
 InstanceOf: EEHealthCertificateOccupational
 Title: "Töötervishoiu tervisetõend"
+Description: "Mustand olekus töötervishoiu tervisetõend, osaliselt täidetud ressursi näidis"
 Usage: #example
 * id = "1100"
 * identifier[0]

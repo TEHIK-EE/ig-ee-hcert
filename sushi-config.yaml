@@ -68,8 +68,8 @@ pages:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-# parameters:
-#   excludettl: true
+parameters:
+  excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
@@ -134,12 +134,12 @@ menu:
 # The following are simple examples to demonstrate what this might
 # look like:
 #
-# resources:
-#   Patient/my-example-patient:
-#     name: My Example Patient
-#     description: An example Patient
-#     exampleBoolean: true
-#   Patient/bad-example: omit
+resources:
+  Organization/90006399: omit
+  Practitioner/36109255737: omit
+  QuestionnaireResponse/300: omit
+  PractitionerRole/100: omit
+  Patient/200: omit
 #
 #
 # Groups can control certain aspects of the IG generation.  The IG
