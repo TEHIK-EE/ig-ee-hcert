@@ -1,8 +1,8 @@
-Käesolevas juhendis kirjeldatakse HCERT teenuse poolt toetatud FHIR otspunktid ja operatsioonid. Toodud näidispäringud ja näidisvastused ei kajasta reaalseid andmeid aga vastavad oodatud/toetatud
+Käesolevas juhendis kirjeldatakse HCERT teenuse poolt toetatud FHIR otspunktid ja operatsioonid. Toodud näidispäringud ja näidisvastused ei kajasta reaalseid
+andmeid aga vastavad oodatud/toetatud
 ressursi struktuurile.
 
 Masinloetav FHIR serveri API kirjeldus ehk FHIR CapabilityStatement on kättesaadav **URL**: `GET [base]/metadata` kaudu.
-
 
 ### Olekute diagramm
 
@@ -35,7 +35,6 @@ Tühistatud: FHIR status: entered-in-error
 
 Tervisetõendi loomine on kasutusala spetsiifiline, vastavalt kasutusalale tuleb saata Composition ressurss õige [profiiliga](profiles.html).
 Profiil määrab mis ressursi väljad on kohustuslikud, nende eesmärki ja struktuuri.
-
 
 [Artifaktide](artifacts.html) leheküljel on toodud ka ressurside [näidised](artifacts.html#example-example-instances).
 
@@ -70,8 +69,6 @@ Location: [base]/Composition/500/_history/1
 
 {% fragment Composition/500 JSON %}
 
-
-
 ### Tervisetõendi pärimine
 
 #### Päring
@@ -83,8 +80,6 @@ Location: [base]/Composition/500/_history/1
 - **HTTP status**: 200 OK
 
 {% fragment Composition/500 JSON %}
-
-
 
 ### Tervisetõendi ajalugu pärimine
 
@@ -110,19 +105,13 @@ Tõendi kustutamine on võimalik vaid **Mustand** olekust. Kustutatud ressurss o
 
 - **HTTP status**: 204 No Content
 
-
-
 ### Tervisetõendi peatamine
 
 Tõendi peatamine tehakse [$suspend](OperationDefinition-ee-health-certificate-suspend.html) operatsiooniga.
 
-
-
 ### Tervisetõendi tühistamine
 
 Tõendi tühistamine tehakse [$cancel](OperationDefinition-ee-health-certificate-suspend.html) operatsiooniga.
-
-
 
 ### Tervisetõendi otsing
 
@@ -143,6 +132,7 @@ Otsing on implementeeritud FHIR standardi järgi: https://hl7.org/fhir/search.ht
 | author:PractitionerRole.practitioner | Autori isikukoodi                                                                                                         | author:PractitionerRole.practitioner=Practitioner/38912042211           |
 | author:PractitionerRole.organization | Autori asutuse kood (Äriregistri kood)                                                                                    | author:PractitionerRole.organization=Organization/1234567               |
 | entry                                | Tervisedeklaratsiooni id                                                                                                  | entry=QuestionnaireResponse/1234                                        |
+| period                               | Kehtivus. Rakendus kontrollib kas antud kuupäev kuulub tõendi kehtivuse perioodi alla                                     | period=2025-01-12                                                       |
 
 #### Päring
 
@@ -231,12 +221,9 @@ Otsing on implementeeritud FHIR standardi järgi: https://hl7.org/fhir/search.ht
 }
 ```
 
-
 ### Tervisetõendi ligipääsu pärimine
 
 Tõendi ligipääsu pärimine tehakse [$get-consent](OperationDefinition-ee-health-certificate-get-consent.html) operatsiooniga.
-
-
 
 ### Tervisetõendi ligipääsu muutmine
 
