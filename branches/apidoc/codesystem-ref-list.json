@@ -1,0 +1,31 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/composition-status",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "CompositionStatus",
+      "title" : "Composition Status",
+      "description" : "The workflow/clinical status of the composition.",
+      "oids" : [
+        "2.16.840.1.113883.4.642.4.242",
+        "2.16.840.1.113883.4.642.2.123",
+        "2.16.840.1.113883.4.642.1.237"
+      ],
+      "uses" : {
+      },
+      "ValueSet-ee-health-certificate-status.html" : "Tervisetõendi staatus"
+    },
+    {
+      "url" : "https://fhir.ee/CodeSystem/occupation",
+      "version" : "0.2.2",
+      "status" : "active",
+      "name" : "EEOccupation",
+      "title" : "Classification of Occupations",
+      "description" : "Estonian Edition of International Standard Classification of Occupations. Based on ISCO-88",
+      "uses" : {
+      },
+      "https://fhir.ee/packages/terminology/0.2.2/site/ValueSet-occupation.html" : "Occupation"
+    }
+  ]
+}
