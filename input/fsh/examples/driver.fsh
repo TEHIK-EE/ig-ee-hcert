@@ -9,6 +9,7 @@ Usage: #inline
 Instance: DriverHealthCertExample
 InstanceOf: EEHealthCertificateDriver
 Title: "Mootorsõiduki juhtimise tervisetõend"
+Description: "Mustand olekus mootorsõiduki juhtimise tervisetõend, osaliselt täidetud ressursi näidis"
 Usage: #example
 * id = "500"
 * identifier[0]

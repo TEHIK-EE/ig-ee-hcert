@@ -1,4 +1,4 @@
-#### Request body
+#### Sample request body
 
 ```json
 
@@ -13,7 +13,9 @@
 }
 ```
 
-#### Response body
+#### Sample response
+- **HTTP status**: 200 OK
+
 ```json
 
 {
