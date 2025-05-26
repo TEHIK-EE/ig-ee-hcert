@@ -5,8 +5,8 @@ Alias: $SCT = http://snomed.info/sct
 Alias: MpiPatientVerified = https://fhir.ee/mpi/StructureDefinition/ee-mpi-patient-verified
 Alias: MPIPatientOccupation = https://fhir.ee/mpi/StructureDefinition/ee-mpi-socialhistory-occupation
 
-Alias: OccupationCS = https://fhir.ee/CodeSystem/occupation
-Alias: OccupationVS = https://fhir.ee/ValueSet/occupation
+Alias: OccupationCS = https://fhir.ee/CodeSystem/ametite-klassifikaator
+Alias: OccupationVS = https://fhir.ee/ValueSet/ametite-klassifikaator
 
 Alias: RiskFactorCS = https://fhir.ee/CodeSystem/toost-olenevad-ohutegurid
 Alias: RiskFactorVS = https://fhir.ee/ValueSet/toost-olenevad-ohutegurid
