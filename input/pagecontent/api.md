@@ -228,3 +228,37 @@ Tõendi ligipääsu pärimine tehakse [$get-consent](OperationDefinition-ee-heal
 ### Tervisetõendi ligipääsu muutmine
 
 Tõendi ligipääsu muutmine tehakse [$set-consent](OperationDefinition-ee-health-certificate-set-consent.html) operatsiooniga.
+
+
+### Vead
+
+API tagastab vead [OperationOutcome](https://hl7.org/fhir/R5/operationoutcome.html) ressursina mille sees võib olla mitu `issue` elementi koos vigadega.
+HCERT enda vead tulevad süsteemiga `https://hcert.tehik.ee/issue`, vastus aga võib sisalda ka teiste teenuste (teise süsteemiga) vead.
+
+Näide `OperationOutcome`-ist:
+
+```json
+{
+  "resourceType": "OperationOutcome",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<dt>HCERT-008</dt><dd>Could not find unique patient by https://tehik.ee/mpi/external-reference|123</dd>\n</div>"
+  },
+  "issue": [
+    {
+      "id": "4355b879-d490-47ee-be13-21239616bde6",
+      "severity": "error",
+      "code": "invalid",
+      "details": {
+        "coding": [
+          {
+            "system": "https://hcert.tehik.ee/issue",
+            "code": "HCERT-008"
+          }
+        ],
+        "text": "Could not find unique patient by https://tehik.ee/mpi/external-reference|123"
+      }
+    }
+  ]
+}
+```
