@@ -1,0 +1,70 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://fhir.ee/ValueSet/ametite-klassifikaator",
+      "version" : "2025-03-27",
+      "status" : "active",
+      "name" : "AmetiteKlassifikaator",
+      "title" : "Ametite klassifikaator",
+      "description" : "„Ametite klassifikaator“ (AK) on Eesti-sisene klassifikaator, mis põhineb Rahvusvahelise Tööorganisatsiooni (ILO) hallataval klassifikaatoril International Standard Classification of Occupations ISCO-08.\nKlassifikaatorit kasutatakse selleks, et esitada, võrrelda ja vahetada statistilisi ja administratiivandmeid nii Eestis, Euroopa Liidus kui ka laiemal rahvusvahelisel tasemel.\nAmetite klassifikaatoris on ametid liigitatud selgelt määratletud rühmadesse töö sisu, tööga seotud ülesannete ja nõutava kvalifikatsiooni alusel.\nHierarhilises klassifikaatoris on viis taset. Esimene kuni neljas tase järgivad täpselt rahvusvahelist alusklassifikaatorit, kus iga ametirühma kohta on esitatud lühikirjeldus ja peamiste tööülesannete lühike loetelu. Viies tase, mis sisaldab ametinimetusi, on loodud Eesti vajadustest lähtudes ja täieneb pidevalt.\nKlassifikaatori struktuur:\n1. tase — 10 pearühma;\n2. tase — 43 allpearühma;\n3. tase — 131 allrühma;\n4. tase — 436 ametirühma;\n5. tase — pidevalt täienev ametinimetuste loend.\n\nKlassifikaator on leitav [Statistikaameti kodulehelt](https://klassifikaatorid.stat.ee/item/stat.ee/b8fdb2b9-8269-41ca-b29e-5454df555147/57)",
+      "systems" : ["https://fhir.ee/CodeSystem/ametite-klassifikaator"],
+      "oids" : ["1.3.6.1.4.1.28284.6.2.3.1", "1.3.6.1.4.1.28284.6.2.3.1.4"],
+      "sources" : ["1.3.6.1.4.1.28284.6.2.3.1", "1.3.6.1.4.1.28284.6.2.3.1.4"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-certificate-occupational-employment.html" : "Töötervishoiu tervisetõendi patsiendi töötamine"
+    },
+    {
+      "url" : "https://fhir.ee/ValueSet/arsti-otsus",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "ArstiOtsus",
+      "title" : "Arsti otsus",
+      "description" : "Arsti otsus patsiendi poolt taotletud tervisetõendile - patsiendi terviseseisundi vastavus kehtestatud tervisenõuetele. Lisaks kasutatakse antud loendit E-labori projektis laboritest analüüside tellimisel.",
+      "systems" : ["https://fhir.ee/CodeSystem/arsti-otsus"],
+      "oids" : ["1.3.6.1.4.1.28284.6.2.1.259", "1.3.6.1.4.1.28284.6.2.1.259.1"],
+      "sources" : ["1.3.6.1.4.1.28284.6.2.1.259", "1.3.6.1.4.1.28284.6.2.1.259.1"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-certificate-decision.html" : "Tervisetõendi otsus"
+    },
+    {
+      "url" : "https://fhir.ee/ValueSet/toost-olenevad-ohutegurid",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "ToostOlenevadOhutegurid",
+      "title" : "Tööst olenevad ohutegurid",
+      "description" : "Rasedakaart - raseda töökohast olenevad ohutegurid: füüsikalised, keemilised, bioloogilised, füsioloogilised ja psüholoogilised, ja kantserogeenset ja mutageenset ohtu põhjustavad tööprotsessid.",
+      "systems" : ["https://fhir.ee/CodeSystem/toost-olenevad-ohutegurid"],
+      "oids" : ["1.3.6.1.4.1.28284.6.2.3.22.1", "1.3.6.1.4.1.28284.6.2.3.22"],
+      "sources" : ["1.3.6.1.4.1.28284.6.2.3.22.1", "1.3.6.1.4.1.28284.6.2.3.22"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-certificate-work-related-risk-factor.html" : "Tööst olenevad ohutegurid"
+    },
+    {
+      "url" : "https://fhir.ee/hcert/ValueSet/ee-health-certificate-driver-category",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "EEHealthCertificateDriverCategoryVS",
+      "title" : "Mootosõidukijuhi tervisetõend kasutusala",
+      "description" : "Tervisetõend kasutusala mis on mõeldud kasutamiseks mootosõidukijuhi tervisetõendis",
+      "systems" : ["https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-certificate-driver.html" : "Mootosõidukijuhi tervisetõend"
+    },
+    {
+      "url" : "https://fhir.ee/hcert/ValueSet/ee-health-certificate-status",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "EEHealthCertificateStatusVS",
+      "title" : "Tervisetõendi staatus",
+      "description" : "Staatuste loend millega opereerib HCERT teenus",
+      "systems" : ["http://hl7.org/fhir/composition-status"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-certificate.html" : "Tervisetõend"
+    }
+  ]
+}

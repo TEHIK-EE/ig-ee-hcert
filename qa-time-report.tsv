@@ -1,0 +1,26 @@
+Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-ee.fhir.hcert.json	8508	-	0	0	0	0	0	0	9	67	0	0	0	0	0	0	0	1	0	0	58	79	0	0	0	2	0	0
+fsh-generated/resources/Composition-1100.json	10331	22	0	0	0	0	0	0	2	2404	0	0	0	0	0	0	0	0	0	0	42	33	0	0	0	0	0	0
+fsh-generated/resources/Composition-500.json	2905	8	0	0	1	0	0	0	1	688	0	0	0	0	0	0	0	0	0	0	16	20	0	0	0	0	0	0
+fsh-generated/resources/OperationDefinition-ee-health-certificate-cancel.json	862	13	0	0	0	0	0	0	0	9	0	0	0	0	0	0	0	0	0	0	12	13	0	0	0	0	0	0
+fsh-generated/resources/OperationDefinition-ee-health-certificate-get-consent.json	909	8	0	0	0	0	0	0	0	7	0	0	0	0	0	0	0	0	0	0	11	13	0	0	0	0	0	0
+fsh-generated/resources/OperationDefinition-ee-health-certificate-pdf.json	939	5	0	0	0	0	0	0	1	5	0	0	0	0	0	0	0	0	0	0	11	13	0	0	0	1	0	1
+fsh-generated/resources/OperationDefinition-ee-health-certificate-set-consent.json	1056	4	0	0	0	0	0	0	0	7	0	0	0	0	0	0	0	0	0	0	12	12	0	0	0	0	0	0
+fsh-generated/resources/OperationDefinition-ee-health-certificate-suspend.json	857	5	0	0	0	0	0	0	1	4	0	0	0	0	0	0	0	0	0	0	11	13	0	0	0	0	0	0
+fsh-generated/resources/Organization-90006399.json	99	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	8	9	0	0	0	0	0	0
+fsh-generated/resources/Patient-200.json	430	6	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	11	10	0	0	0	0	0	0
+fsh-generated/resources/Practitioner-36109255737.json	284	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	9	10	0	0	0	0	0	0
+fsh-generated/resources/PractitionerRole-100.json	191	4	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	9	15	0	0	0	0	0	0
+fsh-generated/resources/QuestionnaireResponse-300.json	197	4	0	0	0	0	0	0	0	11	0	0	0	0	0	0	0	0	0	0	15	8	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-ee-health-certificate-contained-observation.json	3599	8	0	62	0	0	0	0	0	27	0	0	1	0	0	0	0	1	0	0	215	984	0	0	0	8	0	1
+fsh-generated/resources/StructureDefinition-ee-health-certificate-decision.json	1391	7	0	37	1	0	0	0	0	1020	0	0	0	0	0	0	0	1	0	0	168	1799	0	0	0	6	0	2
+fsh-generated/resources/StructureDefinition-ee-health-certificate-driver.json	1299	6	0	1149	0	0	0	0	0	526	0	0	0	0	0	0	0	3	0	0	585	1542	0	0	0	19	1	3
+fsh-generated/resources/StructureDefinition-ee-health-certificate-medical-restriction.json	1396	4	0	41	0	0	0	0	0	13	0	0	0	0	0	0	0	1	0	0	160	336	0	0	0	17	0	1
+fsh-generated/resources/StructureDefinition-ee-health-certificate-occupational-employer.json	883	4	0	360	0	0	0	0	0	148	0	0	1	0	0	0	0	6	0	0	673	1263	0	0	0	39	1	3
+fsh-generated/resources/StructureDefinition-ee-health-certificate-occupational-employment.json	4071	5	0	48	0	0	0	0	0	1035	0	0	0	0	0	0	0	1	0	0	277	1006	0	0	0	21	0	1
+fsh-generated/resources/StructureDefinition-ee-health-certificate-occupational.json	9882	8	0	0	0	0	0	0	0	558	0	0	0	0	0	0	0	4	0	0	787	1168	0	0	0	45	0	4
+fsh-generated/resources/StructureDefinition-ee-health-certificate-work-additional-condition.json	1557	4	0	39	0	0	0	0	0	499	0	0	0	0	0	0	0	1	0	0	157	222	0	0	0	12	0	0
+fsh-generated/resources/StructureDefinition-ee-health-certificate-work-related-risk-factor.json	1449	4	0	39	0	0	0	0	0	934	0	0	0	0	0	0	0	0	0	0	152	189	0	0	0	9	1	1
+fsh-generated/resources/StructureDefinition-ee-health-certificate.json	18055	13	0	0	0	0	0	0	0	56	0	0	0	0	0	0	0	2	0	0	656	678	0	0	0	35	0	2
+fsh-generated/resources/ValueSet-ee-health-certificate-driver-category.json	714	5	0	0	0	0	0	0	0	513	0	0	0	0	0	0	0	0	0	0	11	3343	0	0	0	0	0	0
+fsh-generated/resources/ValueSet-ee-health-certificate-status.json	1319	4	0	0	1	0	0	0	1	4	0	0	0	0	0	0	0	0	0	0	12	105	0	0	0	0	0	0
