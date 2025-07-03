@@ -121,7 +121,7 @@ Otsing on implementeeritud FHIR standardi järgi: https://hl7.org/fhir/search.ht
 
 | Parameeter                           | Kirjeldus                                                                                                                 | Väärtustatud näidis                                                     |   
 |--------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| _count                               | Mitu tulemust tagastada lehel, vaikimisi 10. Ülemine piir on 100                                                          | _count=5                                                                |
+| _count                               | Mitu tulemust tagastada lehel, vaikimisi 20.                                                                              | _count=5                                                                |
 | _page                                | Lehe number mida tagastada                                                                                                | _page=1                                                                 |
 | _sort                                | Väli mille järgi sorteerida ja suund, võib olla mitu                                                                      | _sort=-date                                                             |
 | subject:Patient.identifier           | Patsiendi identifikaator kujul "system\|value", eraldaja sümbol peab olema URL encode-itud. Võimalusel kasutada _subject_ | subject:Patient.identifier=https://fhir.ee/sid/pid/est/ni%7C37412251234 |
@@ -228,7 +228,6 @@ Tõendi ligipääsu pärimine tehakse [$get-consent](OperationDefinition-ee-heal
 ### Tervisetõendi ligipääsu muutmine
 
 Tõendi ligipääsu muutmine tehakse [$set-consent](OperationDefinition-ee-health-certificate-set-consent.html) operatsiooniga.
-
 
 ### Vead
 
