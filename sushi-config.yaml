@@ -134,12 +134,12 @@ menu:
 # The following are simple examples to demonstrate what this might
 # look like:
 #
-resources:
-  Organization/90006399: omit
-  Practitioner/36109255737: omit
-  QuestionnaireResponse/300: omit
-  PractitionerRole/100: omit
-  Patient/200: omit
+# resources:
+#   Patient/my-example-patient:
+#     name: My Example Patient
+#     description: An example Patient
+#     exampleBoolean: true
+#   Patient/bad-example: omit
 #
 #
 # Groups can control certain aspects of the IG generation.  The IG
@@ -149,19 +149,16 @@ resources:
 # create IG.definition.grouping entries and associate the individual
 # resource entries with the corresponding groupIds.
 #
-# groups:
-#   GroupA:
-#     name: Group A
-#     description: The Alpha Group
-#     resources:
-#     - StructureDefinition/animal-patient
-#     - StructureDefinition/arm-procedure
-#   GroupB:
-#     name: Group B
-#     description: The Beta Group
-#     resources:
-#     - StructureDefinition/bark-control
-#     - StructureDefinition/bee-sting
+groups:
+  ExternalExamples:
+    name: "Example: Example Instances from external systems"
+    description: "Example resources that are referenced in this IG, but are from external systems."
+    resources:
+      - Organization/90006399
+      - Practitioner/36109255737
+      - QuestionnaireResponse/300
+      - PractitionerRole/100
+      - Patient/200
 #
 #
 # The ImplementationGuide resource defines several other properties

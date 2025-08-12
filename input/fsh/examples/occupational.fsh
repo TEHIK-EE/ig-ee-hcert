@@ -19,14 +19,24 @@ Usage: #inline
 * code = $SCT#419183001 "Practitioner decision status"
 * valueCodeableConcept = DecisionCS#2
 
-Instance: MedicalRestrictionExample
+Instance: MedicalRestrictionExample1
 InstanceOf: EEHealthCertificateMedicalRestriction
 Usage: #inline
 * id = "800"
 * status = #final
 * code = $SCT#146861000181105 "Restriction"
-* valueCodeableConcept = RestrictionsCS#891 //Ei sobi töötama üksinda
-* note.text = "Öösel võib hulluks minna"
+* component.code = RestrictionsCS#586 // Vältida käsitsi raskuste teisaldamist üle
+* component.valueQuantity = 10 'kg'
+* note.text = "Raskemad asjad tõsta ainult abivahenditega"
+
+Instance: MedicalRestrictionExample2
+InstanceOf: EEHealthCertificateMedicalRestriction
+Usage: #inline
+* id = "802"
+* status = #final
+* code = $SCT#146861000181105 "Restriction"
+* component.code = RestrictionsCS#750 // Ei sobi töö järgmiste töökeskkonna ohuteguritega
+* component.valueCodeableConcept = RiskFactorsCS#114 "Kantserogeensed ained"
 
 Instance: RiskFactorExample
 InstanceOf: EEHealthCertificateWorkRelatedRiskFactor
@@ -34,7 +44,7 @@ Usage: #inline
 * id = "900"
 * status = #final
 * code = $SCT#80943009 "Risk factor"
-* valueCodeableConcept = RiskFactorCS#A1 "põrutused, üldvibratsioon ja seda põhjustavad seadmed"
+* valueCodeableConcept = WorkRelatedRiskFactorsCS#A1 "põrutused, üldvibratsioon ja seda põhjustavad seadmed"
 
 Instance: AdditionalConditionExample
 InstanceOf: EEHealthCertificateWorkAdditionalCondition
@@ -64,7 +74,8 @@ Usage: #example
 * contained[author] = PractitionerRoleExample
 * contained[employment] = EmploymentExample
 * contained[decision] = DecisionExample
-* contained[+] = MedicalRestrictionExample
+* contained[+] = MedicalRestrictionExample1
+* contained[+] = MedicalRestrictionExample2
 * contained[riskFactor] = RiskFactorExample
 * contained[additionalCondition] = AdditionalConditionExample
 * section[employer]
@@ -74,7 +85,8 @@ Usage: #example
 * section[decision]
   * entry = Reference(DecisionExample)
 * section[medicalRestriction]
-  * entry = Reference(MedicalRestrictionExample)
+  * entry[+] = Reference(MedicalRestrictionExample1)
+  * entry[+] = Reference(MedicalRestrictionExample2)
 * section[shortenedReason]
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Arst ei usalda isiku uuringute tulemustele</div>"

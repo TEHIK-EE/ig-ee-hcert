@@ -8,8 +8,11 @@ Alias: MPIPatientOccupation = https://fhir.ee/mpi/StructureDefinition/ee-mpi-soc
 Alias: OccupationCS = https://fhir.ee/CodeSystem/ametite-klassifikaator
 Alias: OccupationVS = https://fhir.ee/ValueSet/ametite-klassifikaator
 
-Alias: RiskFactorCS = https://fhir.ee/CodeSystem/toost-olenevad-ohutegurid
-Alias: RiskFactorVS = https://fhir.ee/ValueSet/toost-olenevad-ohutegurid
+Alias: WorkRelatedRiskFactorsCS = https://fhir.ee/CodeSystem/toost-olenevad-ohutegurid
+Alias: WorkRelatedRiskFactorsVS = https://fhir.ee/ValueSet/toost-olenevad-ohutegurid
+
+Alias: RiskFactorsCS = https://fhir.ee/CodeSystem/ohutegurid
+Alias: RiskFactorsVS = https://fhir.ee/ValueSet/ohutegurid
 
 Alias: $HC_SECTION = https://fhir.ee/CodeSystem/tervisetoendi-sektsioon
 

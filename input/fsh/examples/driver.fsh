@@ -6,6 +6,16 @@ Usage: #inline
 * code = $SCT#419183001 "Practitioner decision status"
 * valueCodeableConcept = DecisionCS#1
 
+
+Instance: MedicalRestrictionDriverExample
+InstanceOf: EEHealthCertificateMedicalRestriction
+Usage: #inline
+* id = "820"
+* status = #final
+* code = $SCT#146861000181105 "Restriction"
+* component.code = RestrictionsCS#00.98 // Isik võib vajada juhtimiseks sõiduki kohandamist
+* note.text = "Vajalik käsijuhtimisseade"
+
 Instance: DriverHealthCertExample
 InstanceOf: EEHealthCertificateDriver
 Title: "Mootorsõiduki juhtimise tervisetõend"
@@ -26,8 +36,11 @@ Usage: #example
 * event.period.end = "2025-11-05T00:00:00.000+00:00"
 * contained[author] = PractitionerRoleExample
 * contained[+] = DecisionDriverExample
+* contained[+] = MedicalRestrictionDriverExample
 * section[decision]
   * entry = Reference(DecisionDriverExample)
+* section[medicalRestriction]
+  * entry = Reference(MedicalRestrictionDriverExample)
 * section[rejectReason]
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ei tunne värve</div>"
