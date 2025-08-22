@@ -52,7 +52,7 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 
 * contained contains riskFactor 0..* and employment 1..1 and additionalCondition 0..*
 
-* contained[medicalRestriction].value[x] from OccupationalMedicalRestrictionVS (required)
+* contained[medicalRestriction].component.code from OccupationalMedicalRestrictionVS (required)
 
 * contained[riskFactor] only EEHealthCertificateWorkRelatedRiskFactor
 * contained[riskFactor] ^short = "Tööst olenevad ohutegurid"
