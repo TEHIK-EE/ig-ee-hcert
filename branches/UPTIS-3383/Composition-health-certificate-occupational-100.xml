@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="health-certificate-occupational-100"/>
+  <meta>
+    <profile value="https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-occupational"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Composition health-certificate-occupational-100</b></p><a name="health-certificate-occupational-100"> </a><a name="hchealth-certificate-occupational-100"> </a><a name="health-certificate-occupational-100-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ee-health-certificate-occupational.html">Töötervishoiu tervisetõend</a></p></div><p><b>identifier</b>: <code>https://fhir.ee/hcert/health-certificate-number</code>/DOC-12345</p><p><b>status</b>: Preliminary</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 772786005}">Medical certificate (record artifact)</span></p><p><b>category</b>: <span title="Codes:{https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala occupational}">occupational</span></p><p><b>date</b>: 2024-11-05 11:45:29+0000</p><p><b>author</b>: <a href="#hchealth-certificate-occupational-100/author-200">PractitionerRole</a></p><p><b>title</b>: Töötervishoiu tervisekontroll</p><h3>Events</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Period</b></td></tr><tr><td style="display: none">*</td><td>2024-11-05 00:00:00+0000 --&gt; 2025-11-05 00:00:00+0000</td></tr></table><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: PractitionerRole #author-200</b></p><a name="health-certificate-occupational-100/author-200"> </a><a name="hchealth-certificate-occupational-100/author-200"> </a><a name="health-certificate-occupational-100/author-200-en-US"> </a><p><b>practitioner</b>: <a href="Practitioner-pract1.html">Practitioner Paavo Lepzig </a></p><p><b>organization</b>: <a href="Organization-org1.html">Organization Karulaugu Perearstikeskus</a></p></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Observation #employment-800</b></p><a name="health-certificate-occupational-100/employment-800"> </a><a name="hchealth-certificate-occupational-100/employment-800"> </a><a name="health-certificate-occupational-100/employment-800-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://fhir.ee/packages/mpi/1.2.1/site/StructureDefinition-ee-mpi-socialhistory-occupation.html">EE MPI SocialHistory Occupation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category social-history}">Social history</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 11341-5}, {http://snomed.info/sct 184104002}">History of Occupation</span></p><p><b>subject</b>: <a href="https://fhir.ee/packages/mpi/1.2.1/site/Patient-pat1.html">Igor Bossenko (official) Male, DoB: 1973-02-10 ( https://fhir.ee/sid/pid/est/ni#Estonian Personal National Identification Code#37302102711)</a></p><p><b>effective</b>: 2013-04-02 09:30:10+0100 --&gt; (ongoing)</p><h3>Components</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 160922003}">Job details</span></td><td><span title="Codes:{https://fhir.ee/CodeSystem/occupation 22122501}">Pediaater</span></td></tr></table></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Observation #decision-200</b></p><a name="health-certificate-occupational-100/decision-200"> </a><a name="hchealth-certificate-occupational-100/decision-200"> </a><a name="health-certificate-occupational-100/decision-200-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ee-health-certificate-decision.html">Tervisetõendi otsus</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 419183001}">Practitioner decision status</span></p><p><b>value</b>: <span title="Codes:{https://fhir.ee/CodeSystem/arsti-otsus 2}">2</span></p></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Observation #restriction-200</b></p><a name="health-certificate-occupational-100/restriction-200"> </a><a name="hchealth-certificate-occupational-100/restriction-200"> </a><a name="health-certificate-occupational-100/restriction-200-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ee-health-certificate-medical-restriction.html">Meditsiiniline piirang</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 246175000}">Limitation</span></p><p><b>value</b>: <span title="Codes:{https://fhir.ee/CodeSystem/tervisetoendi-piirangud 891}">891</span></p><p><b>note</b>: Öösel võib hulluks minna</p></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Observation #riskFactor-200</b></p><a name="health-certificate-occupational-100/riskFactor-200"> </a><a name="hchealth-certificate-occupational-100/riskFactor-200"> </a><a name="health-certificate-occupational-100/riskFactor-200-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ee-health-certificate-work-related-risk-factor.html">Tööst olenevad ohutegurid</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 80943009}">Risk factor</span></p><p><b>value</b>: <span title="Codes:{https://fhir.ee/CodeSystem/toost-olenevad-ohutegurid A1}">põrutused, üldvibratsioon ja seda põhjustavad seadmed</span></p></blockquote><hr/><blockquote><p class="res-header-id"><b>Generated Narrative: Observation #additional-200</b></p><a name="health-certificate-occupational-100/additional-200"> </a><a name="hchealth-certificate-occupational-100/additional-200"> </a><a name="health-certificate-occupational-100/additional-200-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ee-health-certificate-work-additional-condition.html">Püsiva töövõime säilitamiseks vajalikud lisatingimused</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 225891002}">Fit for work with certain limitations</span></p><p><b>value</b>: <span title="Codes:{https://fhir.ee/CodeSystem/tootamiseks-vajalikud-lisapiirangud personal-protective-equipment}">personal-protective-equipment</span></p></blockquote></div>
+  </text>
+  <contained>
+    <PractitionerRole>
+      <id value="author-200"/>
+      <practitioner>
+        <reference value="Practitioner/pract1"/>
+      </practitioner>
+      <organization>
+        <reference value="Organization/org1"/>
+      </organization>
+    </PractitionerRole>
+  </contained>
+  <contained>
+    <Observation>
+      <id value="employment-800"/>
+      <meta>
+        <profile value="https://fhir.ee/mpi/StructureDefinition/ee-mpi-socialhistory-occupation"/>
+      </meta>
+      <status value="final"/>
+      <category>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+          <code value="social-history"/>
+          <display value="Social history"/>
+        </coding>
+      </category>
+      <code>
+        <coding>
+          <system value="http://loinc.org"/>
+          <code value="11341-5"/>
+        </coding>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="184104002"/>
+        </coding>
+      </code>
+      <subject>
+        <reference value="Patient/pat1"/>
+      </subject>
+      <effectivePeriod>
+        <start value="2013-04-02T09:30:10+01:00"/>
+      </effectivePeriod>
+      <component>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="160922003"/>
+            <display value="Job details"/>
+          </coding>
+        </code>
+        <valueCodeableConcept>
+          <coding>
+            <system value="https://fhir.ee/CodeSystem/occupation"/>
+            <code value="22122501"/>
+            <display value="Pediaater"/>
+          </coding>
+        </valueCodeableConcept>
+      </component>
+    </Observation>
+  </contained>
+  <contained>
+    <Observation>
+      <id value="decision-200"/>
+      <meta>
+        <profile value="https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-decision"/>
+      </meta>
+      <status value="final"/>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="419183001"/>
+          <display value="Practitioner decision status"/>
+        </coding>
+      </code>
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://fhir.ee/CodeSystem/arsti-otsus"/>
+          <code value="2"/>
+        </coding>
+      </valueCodeableConcept>
+    </Observation>
+  </contained>
+  <contained>
+    <Observation>
+      <id value="restriction-200"/>
+      <meta>
+        <profile value="https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-medical-restriction"/>
+      </meta>
+      <status value="final"/>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="246175000"/>
+          <display value="Limitation"/>
+        </coding>
+      </code>
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://fhir.ee/CodeSystem/tervisetoendi-piirangud"/>
+          <code value="891"/>
+        </coding>
+      </valueCodeableConcept>
+      <note>
+        <text value="Öösel võib hulluks minna"/>
+      </note>
+    </Observation>
+  </contained>
+  <contained>
+    <Observation>
+      <id value="riskFactor-200"/>
+      <meta>
+        <profile value="https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-work-related-risk-factor"/>
+      </meta>
+      <status value="final"/>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="80943009"/>
+          <display value="Risk factor"/>
+        </coding>
+      </code>
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://fhir.ee/CodeSystem/toost-olenevad-ohutegurid"/>
+          <code value="A1"/>
+          <display value="põrutused, üldvibratsioon ja seda põhjustavad seadmed"/>
+        </coding>
+      </valueCodeableConcept>
+    </Observation>
+  </contained>
+  <contained>
+    <Observation>
+      <id value="additional-200"/>
+      <meta>
+        <profile value="https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-work-additional-condition"/>
+      </meta>
+      <status value="final"/>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="225891002"/>
+          <display value="Fit for work with certain limitations"/>
+        </coding>
+      </code>
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://fhir.ee/CodeSystem/tootamiseks-vajalikud-lisapiirangud"/>
+          <code value="personal-protective-equipment"/>
+        </coding>
+      </valueCodeableConcept>
+    </Observation>
+  </contained>
+  <identifier>
+    <system value="https://fhir.ee/hcert/health-certificate-number"/>
+    <value value="DOC-12345"/>
+  </identifier>
+  <status value="preliminary"/>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="772786005"/>
+      <display value="Medical certificate (record artifact)"/>
+    </coding>
+  </type>
+  <category>
+    <coding>
+      <system value="https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala"/>
+      <code value="occupational"/>
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/mpi-123"/>
+  </subject>
+  <date value="2024-11-05T11:45:29.0437162+00:00"/>
+  <author>
+    <reference value="#author-200"/>
+  </author>
+  <title value="Töötervishoiu tervisekontroll"/>
+  <event>
+    <period>
+      <start value="2024-11-05T00:00:00.000+00:00"/>
+      <end value="2025-11-05T00:00:00.000+00:00"/>
+    </period>
+  </event>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="employer"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">10006966</div>
+    </text>
+    <entry>
+      <reference value="#employment-800"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="decision"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="#decision-200"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="medical-restrictions"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="#restriction-200"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="shortened-reason"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">Arst ei usalda isiku uuringute tulemustele</div>
+    </text>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="reject-reason"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">Raske füüsiline töö, ei sobi selja probleemide tõttu</div>
+    </text>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="change-reason"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">Kirjavea parandus</div>
+    </text>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="cancel-reason"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">Vale otsus</div>
+    </text>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="suspend-reason"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">Ootab lisauringute tulemusi</div>
+    </text>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="risk-factors"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="#riskFactor-200"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="health-declaration"/>
+      </coding>
+    </code>
+    <entry>
+      <reference value="QuestionnaireResponse/health-declaration-200"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="work-additional-restrictions"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">Tekst mis kirjeldab lisatingumusi</div>
+    </text>
+    <entry>
+      <reference value="#additional-200"/>
+    </entry>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="employer-suggestions"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">Töötajale on vaja parem valgustus</div>
+    </text>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"/>
+        <code value="employee-suggestions"/>
+      </coding>
+    </code>
+    <text>
+      <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">Tööandja peab paigaldama uut valgustust</div>
+    </text>
+  </section>
+</Composition>
