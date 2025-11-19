@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="66554120-8a60-4da1-9f56-bf172c9adf5d"/>
+  <meta>
+    <lastUpdated value="2025-11-19T12:11:18.768+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="https://fhir.ee/hcert/ValueSet/ee-health-certificate-status"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id"/>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="http://hl7.org/fhir/R5/codesystem-composition-status.html">codesystem Composition Status v5.0.0 (CodeSystem)</a>
+              <span class="copy-text-inline">
+                <button data-clipboard-text="http://hl7.org/fhir/composition-status|5.0.0" title="Click to Copy URL" class="btn-copy"> </button>
+              </span>
+            </p>
+            <p>This value set contains 4 concepts</p>
+            <table class="codes" data-fhir="generated">
+              <tr>
+                <td>
+                  <b>System</b>
+                </td>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display (en)</b>
+                </td>
+                <td>
+                  <b>JSON</b>
+                </td>
+                <td>
+                  <b>XML</b>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/composition-status-preliminary"> </a>
+                  <code>http://hl7.org/fhir/composition-status</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-preliminary">preliminary</a>
+                </td>
+                <td>Preliminary</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/composition-status&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;preliminary&quot;, &quot;display&quot;: &quot;Preliminary&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/composition-status&quot;&gt;&lt;version value=&quot;5.0.0&quot;&gt;&lt;code value=&quot;preliminary&quot;&gt;&lt;display value=&quot;Preliminary&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/composition-status-final"> </a>
+                  <code>http://hl7.org/fhir/composition-status</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-final">final</a>
+                </td>
+                <td>Final</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/composition-status&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;final&quot;, &quot;display&quot;: &quot;Final&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/composition-status&quot;&gt;&lt;version value=&quot;5.0.0&quot;&gt;&lt;code value=&quot;final&quot;&gt;&lt;display value=&quot;Final&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/composition-status-cancelled"> </a>
+                  <code>http://hl7.org/fhir/composition-status</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-cancelled">cancelled</a>
+                </td>
+                <td>Cancelled</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/composition-status&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;cancelled&quot;, &quot;display&quot;: &quot;Cancelled&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/composition-status&quot;&gt;&lt;version value=&quot;5.0.0&quot;&gt;&lt;code value=&quot;cancelled&quot;&gt;&lt;display value=&quot;Cancelled&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a name="x-http://hl7.org/fhir/composition-status-entered-in-error"> </a>
+                  <code>http://hl7.org/fhir/composition-status</code>
+                </td>
+                <td style="white-space:nowrap">  
+                  <a href="http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-entered-in-error">entered-in-error</a>
+                </td>
+                <td>Entered in Error</td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="{&quot;system&quot;: &quot;http://hl7.org/fhir/composition-status&quot;, &quot;version&quot;: &quot;5.0.0&quot;, &quot;code&quot;: &quot;entered-in-error&quot;, &quot;display&quot;: &quot;Entered in Error&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+                <td>
+                  <span class="copy-text-inline">
+                    <button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://hl7.org/fhir/composition-status&quot;&gt;&lt;version value=&quot;5.0.0&quot;&gt;&lt;code value=&quot;entered-in-error&quot;&gt;&lt;display value=&quot;Entered in Error&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.ee/hcert/ValueSet/ee-health-certificate-status"/>
+        <version value="1.0.0"/>
+        <name value="EEHealthCertificateStatusVS"/>
+        <title value="Tervisetõendi staatus"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2025-11-19T12:11:18+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="EE"/>
+            <display value="Estonia"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:70f750bc-c2aa-4c3f-8b5c-e86512d552cf"/>
+          <timestamp value="2025-11-19T12:12:38+00:00"/>
+          <total value="4"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/composition-status|5.0.0"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/composition-status"/>
+            <code value="preliminary"/>
+            <display value="Preliminary"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/composition-status"/>
+            <code value="final"/>
+            <display value="Final"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/composition-status"/>
+            <code value="cancelled"/>
+            <display value="Cancelled"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/composition-status"/>
+            <code value="entered-in-error"/>
+            <display value="Entered in Error"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>
