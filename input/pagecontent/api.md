@@ -36,6 +36,12 @@ Tühistatud: FHIR status: entered-in-error
 Tervisetõendi loomine on kasutusala spetsiifiline, vastavalt kasutusalale tuleb saata Composition ressurss õige [profiiliga](profiles.html).
 Profiil määrab mis ressursi väljad on kohustuslikud, nende eesmärki ja struktuuri.
 
+> Tervidetõendi loomisel tuleb määrata tervisedeklaratsiooni id (HDECL QuestionnaireResponse ressurss) `Composition.sections.entry` sektsioonis. HDECL
+> tervisedelaratsiooni koostamine on kirjeldatud [HDECL juurutusjuhendis](https://github.tehik.ee/ig-ee-hdecl/).
+>
+> Juhul, kui tervisedeklaratsioon on koostatud paberil või kasutaja enda infosüsteemis, on võimalik sellele viidata kasutades
+`Composition.sections.entry.identifier` välja, mille süsteemiks on `https://fhir.ee/hcert/health-declaration-external-document-number`.
+
 [Artifaktide](artifacts.html) leheküljel on toodud ka ressurside [näidised](artifacts.html#example-example-instances).
 
 #### Päring
