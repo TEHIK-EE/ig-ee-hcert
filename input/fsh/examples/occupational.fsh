@@ -105,7 +105,8 @@ Usage: #example
 * section[riskFactors]
   * entry = Reference(RiskFactorExample)
 * section[healthDeclaration]
-  * entry = Reference(HealthDeclarationExample)
+  * entry.identifier.value = "HD-67890"
+  * entry.identifier.system = "https://fhir.ee/hcert/health-declaration-external-document-number"
 * section[additionalConditions]
   * entry = Reference(AdditionalConditionExample)
   * text.status = #additional

@@ -67,7 +67,15 @@ Description: "Tervisetõendi baasprofiil"
 * section[healthDeclaration].entry 1..1
 * section[healthDeclaration].modifierExtension ..0
 * section[healthDeclaration].entry only Reference(QuestionnaireResponse)
-* section[healthDeclaration].entry ^short = "Viide QuestionnaireResponse ressursile"
+* section[healthDeclaration].entry ^short = "Viide tervisedelaratsioonile"
+* section[healthDeclaration].entry.reference ^short = "Kanooniline viide tervisedeklaratsioonile (HDECL QuestionnaireResponse ressursile)"
+* section[healthDeclaration].entry.identifier ..1
+* section[healthDeclaration].entry.identifier ^short = "Tervisedeklaratsiooni dokumendi number kui HDECL QuestionnaireResponse ressursile ei saa viidata"
+* section[healthDeclaration].entry.identifier.use 0..0
+* section[healthDeclaration].entry.identifier.system = "https://fhir.ee/hcert/health-declaration-external-document-number"
+* section[healthDeclaration].entry.identifier.system 1..1
+* section[healthDeclaration].entry.identifier.value ^short = "Tervisedeklaratsiooni dokumendi number välises infosüsteemis"
+* section[healthDeclaration].entry.identifier.value 1..1
 
 * section[medicalRestriction] ^short = "Meditsiinilised piirangud"
 * section[medicalRestriction].code = $HC_SECTION#medical-restrictions

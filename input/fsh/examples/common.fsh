@@ -36,7 +36,7 @@ Title: "Patsient Taavi Kask"
 * identifier[0]
   * system = "https://fhir.ee/sid/pid/est/ni"
   * value = "39406240016"
-* name
+* name[official]
   * use = #official
   * given = "Taavi"
   * family = "Kask"
