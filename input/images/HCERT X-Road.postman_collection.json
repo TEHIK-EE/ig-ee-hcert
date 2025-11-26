@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "71fd1a6f-795b-48bc-9026-c89927fb4f3c",
+		"name": "HCERT X-Road",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5159090"
+	},
+	"item": [
+		{
+			"name": "1. Auth",
+			"item": [
+				{
+					"name": "1.1 Get token as government official",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"token\", pm.response.json().accessToken);",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-road-client",
+								"value": "{{X_ROAD_ENV}}/{{X_ROAD_CLIENT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user\": {\n    \"personalCode\": \"36201182245\"\n  },\n  \"organization\": \"70009770\", // should match with xroad client organization\n  \"representedParty\": \"70001969\", // not necessary if value equals organization \n  \"role\": \"gov-official\",\n  \"application\": \"teis-app\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{X_ROAD_SERVER_URL}}/r1/{{X_ROAD_ENV}}/{{X_ROAD_AUTH_SERVICE}}/v2/token",
+							"host": [
+								"{{X_ROAD_SERVER_URL}}"
+							],
+							"path": [
+								"r1",
+								"{{X_ROAD_ENV}}",
+								"{{X_ROAD_AUTH_SERVICE}}",
+								"v2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.2 Get token as employer (org legal representative)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"token\", pm.response.json().accessToken);",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-road-client",
+								"value": "{{X_ROAD_ENV}}/{{X_ROAD_CLIENT}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user\": {\n    \"personalCode\": \"36201182245\"\n  },\n  \"organization\": \"70009770\", // should match with xroad client organization\n  \"representedParty\": \"70001969\", // not necessary if value equals organization \n  \"role\": \"org-legal-representative\",\n  \"application\": \"teis-app\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{X_ROAD_SERVER_URL}}/r1/{{X_ROAD_ENV}}/{{X_ROAD_AUTH_SERVICE}}/v2/token",
+							"host": [
+								"{{X_ROAD_SERVER_URL}}"
+							],
+							"path": [
+								"r1",
+								"{{X_ROAD_ENV}}",
+								"{{X_ROAD_AUTH_SERVICE}}",
+								"v2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2. Occupational",
+			"item": [
+				{
+					"name": "Search all final certificates for organization",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-road-client",
+								"value": "{{X_ROAD_ENV}}/GOV/70009770/tis",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user\": {\n    \"personalCode\": \"36201182245\"\n  },\n  \"organization\": \"70009770\", // should match with xroad client organization\n  \"representedParty\": \"70001969\", // not necessary if value equals organization \n  \"role\": \"org-legal-representative\",\n  \"application\": \"teis-app\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8443/fhir/Composition?category=occupational&status=final,cancelled&section-code-text=employer$12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8443",
+							"path": [
+								"fhir",
+								"Composition"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "occupational"
+								},
+								{
+									"key": "status",
+									"value": "final,cancelled"
+								},
+								{
+									"key": "section-code-text",
+									"value": "employer$12345"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3. Driver",
+			"item": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "X_ROAD_SERVER_URL",
+			"value": "https://10.0.13.90"
+		},
+		{
+			"key": "X_ROAD_ENV",
+			"value": "ee-dev"
+		},
+		{
+			"key": "X_ROAD_CLIENT",
+			"value": "GOV/70009770/tto-tis-klient"
+		},
+		{
+			"key": "X_ROAD_AUTH_SERVICE",
+			"value": "GOV/70009770/tis/auth"
+		},
+		{
+			"key": "X_ROAD_HCERT_SERVICE",
+			"value": "GOV/70009770/tis/fhir"
+		},
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}

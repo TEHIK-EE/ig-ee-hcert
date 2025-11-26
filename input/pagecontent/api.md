@@ -1,6 +1,7 @@
-Käesolevas juhendis kirjeldatakse HCERT teenuse poolt toetatud FHIR otspunktid ja operatsioonid. Toodud näidispäringud ja näidisvastused ei kajasta reaalseid
-andmeid aga vastavad oodatud/toetatud
-ressursi struktuurile.
+Käesolevas juhendis kirjeldatakse HCERT teenuse poolt toetatud FHIR otspunktid ja operatsioonid. 
+Toodud näidispäringud ja näidisvastused ei kajasta reaalseid andmeid aga vastavad oodatud/toetatud ressursi struktuurile.
+
+> API kasutamise juhised ja näidis Postman kollektsioon on leitav [siit](dev.html).
 
 Masinloetav FHIR serveri API kirjeldus ehk FHIR CapabilityStatement on kättesaadav **URL**: `GET [base]/metadata` kaudu.
 
