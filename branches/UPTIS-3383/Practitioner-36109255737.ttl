@@ -1,0 +1,27 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.ee/hcert/Practitioner/36109255737> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "36109255737"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 36109255737</b></p><a name=\"36109255737\"> </a><a name=\"hc36109255737\"> </a><a name=\"36109255737-en-US\"> </a><p><b>identifier</b>: <code>https://fhir.ee/sid/pro/est/pho</code>/D12345</p><p><b>active</b>: true</p><p><b>name</b>: Paavo Lepzig </p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://fhir.ee/sid/pro/est/pho"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "D12345" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Lepzig" ] ;
+     fhir:given ( [ fhir:v "Paavo" ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

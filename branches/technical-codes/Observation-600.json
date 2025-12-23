@@ -1,0 +1,56 @@
+{
+  "resourceType" : "Observation",
+  "id" : "600",
+  "meta" : {
+    "profile" : ["https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-occupational-employment"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation 600</b></p><a name=\"600\"> </a><a name=\"hc600\"> </a><a name=\"600-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ee-health-certificate-occupational-employment.html\">Töötervishoiu tervisetõendi patsiendi töötamine</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 184104002}\">Patient occupation</span></p><p><b>performer</b>: Suurepärane OÜ (Identifier: <code>https://fhir.ee/sid/org/est/br</code>/12345678)</p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 160922003}\">Job details</span></p><p><b>value</b>: <span title=\"Codes:{https://fhir.ee/CodeSystem/occupation 22122501}\">Pediaater</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 224374003}\">Regularity of work</span></p><p><b>value</b>: 0.75 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p></blockquote></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "184104002",
+      "display" : "Patient occupation"
+    }]
+  },
+  "performer" : [{
+    "identifier" : {
+      "system" : "https://fhir.ee/sid/org/est/br",
+      "value" : "12345678"
+    },
+    "display" : "Suurepärane OÜ"
+  }],
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "160922003",
+        "display" : "Job details"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://fhir.ee/CodeSystem/occupation",
+        "code" : "22122501",
+        "display" : "Pediaater"
+      }]
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "224374003",
+        "display" : "Regularity of work"
+      }]
+    },
+    "valueQuantity" : {
+      "value" : 0.75,
+      "system" : "http://unitsofmeasure.org",
+      "code" : "1"
+    }
+  }]
+}
