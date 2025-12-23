@@ -1,6 +1,8 @@
 Antud juhend selgitab põhireeglid HCERT andmete pärimiseks ja sõnumite koostamiseks.
 
-Testimiseks laadige alla Postman [kollektsiooni](HCERT%20X-Road.postman_collection.json) näidetega ja häälestage kollektsiooni/keskkonna muutujad
+Testimiseks laadige alla Postman [kollektsiooni](HCERT%20X-Road.postman_collection.json) näidetega. Postman kollektsioonis on ka mõned juhised ja muutujate selgitused.
+
+Mõned olulisemad muutujad:
 
 | Muutuja           | Teie X-tee alamsüsteemi seadistus | Näidis                      |
 |-------------------|-----------------------------------|-----------------------------|
@@ -23,7 +25,7 @@ Autoriseerimise käigus valideeritakse kasutaja väidetav roll ning kuuluvus asu
 
 #### Tokeni pärimine
 
-Postman kollektsioonis 1. Auth -> 1.1 Get token... päringud.
+Postman kollektsioonis "... token ..." päringud AUTH teenuse pihta.
 
 Näiteks arsti autoriseerimise päring: POST `{{AUTH_URL}}/v2/token` järgmise "application/json" sisuga
 
@@ -51,7 +53,7 @@ Vastus:
 }
 ```
 
-**Detailne juhend on leitav [teabekeskusest](https://teabekeskus.tehik.ee/et/teenused/tis-teenused/tis-andmevahetus/autoriseerimise-teenus).**
+**Autoriseerimise detailne juhend on leitav [teabekeskusest](https://teabekeskus.tehik.ee/et/teenused/tis-teenused/tis-andmevahetus/autoriseerimise-teenus).**
 
 #### Tokeni cache-mine
 

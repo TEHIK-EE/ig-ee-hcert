@@ -118,7 +118,7 @@ Tõendi peatamine tehakse [$suspend](OperationDefinition-ee-health-certificate-s
 
 ### Tervisetõendi tühistamine
 
-Tõendi tühistamine tehakse [$cancel](OperationDefinition-ee-health-certificate-suspend.html) operatsiooniga.
+Tõendi tühistamine tehakse [$cancel](OperationDefinition-ee-health-certificate-cancel.html) operatsiooniga.
 
 ### Tervisetõendi otsing
 
