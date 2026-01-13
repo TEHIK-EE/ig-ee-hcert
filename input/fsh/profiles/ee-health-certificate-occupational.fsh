@@ -6,7 +6,7 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 * ^experimental = false
 * category = $HDC#occupational
 * section contains riskFactors 0..1 and employer 0..1 and additionalConditions 0..1 and employerSuggestions 0..1 and employeeSuggestions 0..1
-* section[riskFactors] ^short = "Tööst olenevad ohutegurid"
+* section[riskFactors] ^short = "Töölaadi ja töökeskkonnaga seotud ohutegurid"
 * section[riskFactors].code = $HC_SECTION#risk-factors
 * section[riskFactors].entry 1..*
 * section[riskFactors].entry only Reference(EEHealthCertificateWorkRelatedRiskFactor)
@@ -52,16 +52,20 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 
 * contained contains riskFactor 0..* and employment 1..1 and additionalCondition 0..*
 
+* contained[medicalRestriction] ^short = "Töötervishoiu tervisetõendi piirangud"
 * contained[medicalRestriction].component.code from OccupationalMedicalRestrictionVS (required)
 
 * contained[riskFactor] only EEHealthCertificateWorkRelatedRiskFactor
-* contained[riskFactor] ^short = "Tööst olenevad ohutegurid"
+* contained[riskFactor] ^short = "Töölaadi ja töökeskkonnaga seotud ohutegurid"
 
 * contained[employment] only EEHealthCertificateOccupationalEmployment
 * contained[employment] ^short = "Töötamine"
 
 * contained[additionalCondition] only EEHealthCertificateWorkAdditionalCondition
 * contained[additionalCondition] ^short = "Püsiva töövõime säilitamiseks vajalikud lisatingimused"
+
+* contained[decision] ^short = "Töötervishoiu tervisetõendi otsus"
+* contained[decision].value[x] from OccupationalDecisionVS (required)
 
 
 Profile: EEHealthCertificateOccupationalEmployer

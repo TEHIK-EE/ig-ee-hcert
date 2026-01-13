@@ -17,7 +17,7 @@ Usage: #inline
 * id = "700"
 * status = #final
 * code = $SCT#419183001 "Practitioner decision status"
-* valueCodeableConcept = DecisionCS#2
+* valueCodeableConcept = $SCT#160910001 //"Ei sobi töötama"
 
 Instance: MedicalRestrictionExample1
 InstanceOf: EEHealthCertificateMedicalRestriction
@@ -44,7 +44,7 @@ Usage: #inline
 * id = "900"
 * status = #final
 * code = $SCT#80943009 "Risk factor"
-* valueCodeableConcept = WorkRelatedRiskFactorsCS#A1 "põrutused, üldvibratsioon ja seda põhjustavad seadmed"
+* valueCodeableConcept = WorkRelatedRiskFactorsCS#558 "Raskuste käsitsi teisaldamine"
 
 Instance: AdditionalConditionExample
 InstanceOf: EEHealthCertificateWorkAdditionalCondition
@@ -73,7 +73,7 @@ Usage: #example
 * event.period.end = "2025-11-05T00:00:00.000+00:00"
 * contained[author] = PractitionerRoleExample
 * contained[employment] = EmploymentExample
-* contained[decision] = DecisionExample
+* contained[+] = DecisionExample
 * contained[+] = MedicalRestrictionExample1
 * contained[+] = MedicalRestrictionExample2
 * contained[riskFactor] = RiskFactorExample

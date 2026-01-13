@@ -4,7 +4,7 @@ Usage: #inline
 * id = "400"
 * status = #final
 * code = $SCT#419183001 "Practitioner decision status"
-* valueCodeableConcept = DecisionCS#1
+* valueCodeableConcept = $SCT#171353001 //"Sobib mootorsõidukit juhtima"
 
 
 Instance: MedicalRestrictionDriverExample
