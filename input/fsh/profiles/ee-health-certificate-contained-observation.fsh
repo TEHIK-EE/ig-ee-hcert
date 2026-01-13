@@ -61,8 +61,6 @@ Description: "Observation ressurss mis kirjeldab tervisetõendi otsuse. Kasutatu
 * ^experimental = false
 * code = $SCT#419183001 "Practitioner decision status"
 * value[x] 1..1
-* value[x] ^short = "Otsus"
-* value[x] from DecisionVS (required)
 * note 0..0
 
 
@@ -81,7 +79,7 @@ Description: "Observation ressurss mis kirjeldab püsiva töövõime säilitamis
 Profile: EEHealthCertificateWorkRelatedRiskFactor
 Parent: EEHealthCertificateContainedObservation
 Id: ee-health-certificate-work-related-risk-factor
-Title: "Tööst olenevad ohutegurid"
+Title: "Töölaadi ja töökeskkonnaga seotud ohutegurid"
 Description: "Observation ressurss mis kirjeldab tööst olenevad ohutegurid. Kasutatud contained ressurisina."
 * ^experimental = false
 * code = $SCT#80943009 "Risk factor"
