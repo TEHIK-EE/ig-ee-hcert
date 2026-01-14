@@ -76,6 +76,8 @@ Description: "Tervisetõendi baasprofiil"
 * section[healthDeclaration].entry.identifier.system 1..1
 * section[healthDeclaration].entry.identifier.value ^short = "Tervisedeklaratsiooni dokumendi number välises infosüsteemis"
 * section[healthDeclaration].entry.identifier.value 1..1
+* section[healthDeclaration].entry.display 0..1
+* section[healthDeclaration].entry.display ^short = "Read-only väli, määratakse ainult andmete migreerimisel. Tervisedeklaratsiooni viide tekstiga, kui deklaratsioon on tehtud paberil"
 
 * section[medicalRestriction] ^short = "Meditsiinilised piirangud"
 * section[medicalRestriction].code = $HC_SECTION#medical-restrictions
