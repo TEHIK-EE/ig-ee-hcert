@@ -11,9 +11,6 @@ Alias: OccupationVS = https://fhir.ee/ValueSet/ametite-klassifikaator
 Alias: WorkRelatedRiskFactorsCS = https://fhir.ee/CodeSystem/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid
 Alias: WorkRelatedRiskFactorsVS = https://fhir.ee/ValueSet/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid
 
-Alias: RiskFactorsCS = https://fhir.ee/CodeSystem/ohutegurid
-Alias: RiskFactorsVS = https://fhir.ee/ValueSet/ohutegurid
-
 Alias: $HC_SECTION = https://fhir.ee/CodeSystem/tervisetoendi-sektsioon
 
 Alias: WorkAdditionalConditionCS = https://fhir.ee/CodeSystem/tootamiseks-vajalikud-lisatingimused

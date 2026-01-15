@@ -36,7 +36,7 @@ Usage: #inline
 * status = #final
 * code = $SCT#146861000181105 "Restriction"
 * component.code = RestrictionsCS#750 // Ei sobi töö järgmiste töökeskkonna ohuteguritega
-* component.valueCodeableConcept = RiskFactorsCS#114 "Kantserogeensed ained"
+* component.valueCodeableConcept = WorkRelatedRiskFactorsCS#114 "Kantserogeenid"
 
 Instance: RiskFactorExample
 InstanceOf: EEHealthCertificateWorkRelatedRiskFactor
