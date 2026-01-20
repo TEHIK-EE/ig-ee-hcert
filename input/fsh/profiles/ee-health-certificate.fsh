@@ -85,7 +85,7 @@ Description: "Tervisetõendi baasprofiil"
 * section[medicalRestriction].entry only Reference(EEHealthCertificateMedicalRestriction)
 * section[medicalRestriction].entry ^short = "Viide contained Observation ressursile (Meditsiiniline piirang)"
 * section[medicalRestriction].text 0..1
-* section[medicalRestriction].text ^short = "Vabatekst"
+* section[medicalRestriction].text ^short = "Üldine kommentaar"
 * section[medicalRestriction].text.status = #additional
 * section[medicalRestriction].modifierExtension ..0
 
