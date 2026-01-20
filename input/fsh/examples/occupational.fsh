@@ -87,6 +87,8 @@ Usage: #example
 * section[medicalRestriction]
   * entry[+] = Reference(MedicalRestrictionExample1)
   * entry[+] = Reference(MedicalRestrictionExample2)
+  * text.status = #additional
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tekst, mis kirjeldab piirangud</div>"
 * section[shortenedReason]
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Arst ei usalda isiku uuringute tulemustele</div>"
@@ -104,13 +106,15 @@ Usage: #example
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ootab lisauringute tulemusi</div>"
 * section[riskFactors]
   * entry = Reference(RiskFactorExample)
+  * text.status = #additional
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tekst, mis kirjeldab ohutegurid</div>"
 * section[healthDeclaration]
   * entry.identifier.value = "HD-67890"
   * entry.identifier.system = "https://fhir.ee/hcert/health-declaration-external-document-number"
 * section[additionalConditions]
   * entry = Reference(AdditionalConditionExample)
   * text.status = #additional
-  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tekst mis kirjeldab lisatingumusi</div>"
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tekst, mis kirjeldab lisatingumusi</div>"
 * section[employerSuggestions]
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Töötajale on vaja parem valgustus</div>"

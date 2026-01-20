@@ -41,6 +41,8 @@ Usage: #example
   * entry = Reference(DecisionDriverExample)
 * section[medicalRestriction]
   * entry = Reference(MedicalRestrictionDriverExample)
+  * text.status = #additional
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tekst, mis kirjeldab piirangud</div>"
 * section[rejectReason]
   * text.status = #additional
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ei tunne värve</div>"

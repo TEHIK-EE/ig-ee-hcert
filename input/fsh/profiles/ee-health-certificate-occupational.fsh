@@ -11,6 +11,9 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 * section[riskFactors].entry 1..*
 * section[riskFactors].entry only Reference(EEHealthCertificateWorkRelatedRiskFactor)
 * section[riskFactors].entry ^short = "Viide contained Observation ressursile ohuteguriga"
+* section[riskFactors].text 0..1
+* section[riskFactors].text ^short = "Üldine kommentaar"
+* section[riskFactors].text.status = #additional
 * section[riskFactors].modifierExtension ..0
 
 * section[employer] 1..1
@@ -29,8 +32,8 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 * section[additionalConditions].entry 1..*
 * section[additionalConditions].entry only Reference(EEHealthCertificateWorkAdditionalCondition)
 * section[additionalConditions].entry ^short = "Viide contained Observation ressursile lisatingimusega"
-* section[additionalConditions].text 1..1
-* section[additionalConditions].text ^short = "Vabatekst"
+* section[additionalConditions].text 0..1
+* section[additionalConditions].text ^short = "Üldine kommentaar"
 * section[additionalConditions].text.status = #additional
 * section[additionalConditions].modifierExtension ..0
 
