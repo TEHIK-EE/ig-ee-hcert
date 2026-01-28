@@ -1,0 +1,46 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://fhir.ee/ValueSet/ametite-klassifikaator",
+      "version" : "2025-03-27",
+      "status" : "active",
+      "name" : "AmetiteKlassifikaator",
+      "title" : "Ametite klassifikaator",
+      "description" : "„Ametite klassifikaator“ (AK) on Eesti-sisene klassifikaator, mis põhineb Rahvusvahelise Tööorganisatsiooni (ILO) hallataval klassifikaatoril International Standard Classification of Occupations ISCO-08.\nKlassifikaatorit kasutatakse selleks, et esitada, võrrelda ja vahetada statistilisi ja administratiivandmeid nii Eestis, Euroopa Liidus kui ka laiemal rahvusvahelisel tasemel.\nAmetite klassifikaatoris on ametid liigitatud selgelt määratletud rühmadesse töö sisu, tööga seotud ülesannete ja nõutava kvalifikatsiooni alusel.\nHierarhilises klassifikaatoris on viis taset. Esimene kuni neljas tase järgivad täpselt rahvusvahelist alusklassifikaatorit, kus iga ametirühma kohta on esitatud lühikirjeldus ja peamiste tööülesannete lühike loetelu. Viies tase, mis sisaldab ametinimetusi, on loodud Eesti vajadustest lähtudes ja täieneb pidevalt.\nKlassifikaatori struktuur:\n1. tase — 10 pearühma;\n2. tase — 43 allpearühma;\n3. tase — 131 allrühma;\n4. tase — 436 ametirühma;\n5. tase — pidevalt täienev ametinimetuste loend.\n\nKlassifikaator on leitav [Statistikaameti kodulehelt](https://klassifikaatorid.stat.ee/item/stat.ee/b8fdb2b9-8269-41ca-b29e-5454df555147/57)",
+      "systems" : ["https://fhir.ee/CodeSystem/ametite-klassifikaator"],
+      "oids" : ["1.3.6.1.4.1.28284.6.2.3.1", "1.3.6.1.4.1.28284.6.2.3.1.4"],
+      "sources" : ["1.3.6.1.4.1.28284.6.2.3.1", "1.3.6.1.4.1.28284.6.2.3.1.4"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-certificate-occupational-employment.html" : "Töötamine"
+    },
+    {
+      "url" : "https://fhir.ee/ValueSet/mootorsoidukijuhi-medits-piirang",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "MootorsoidukijuhiMeditsPiirang",
+      "title" : "Mootorsõidukijuhi meditsiinilised piirangud",
+      "description" : "Mootorsõidukijuhi meditsiinilised piirangud, mis nn loetletud juhilubadele lahtrisse 12. \"lisateave/piirang(ud)\" kantavad koodid, mida arst määrab tervisetõendi otsusega (jah, piirangutega).",
+      "systems" : [
+        "https://fhir.ee/CodeSystem/mootorsoidukijuhi-medits-piirang"
+      ],
+      "oids" : ["1.3.6.1.4.1.28284.6.2.1.260.2", "1.3.6.1.4.1.28284.6.2.1.260"],
+      "sources" : ["1.3.6.1.4.1.28284.6.2.1.260.2", "1.3.6.1.4.1.28284.6.2.1.260"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-certificate-driver.html" : "Mootosõidukijuhi tervisetõend"
+    },
+    {
+      "url" : "https://fhir.ee/hcert/ValueSet/ee-health-certificate-driver-category",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "EEHealthCertificateDriverCategoryVS",
+      "title" : "Mootosõidukijuhi tervisetõend kasutusala",
+      "description" : "Tervisetõendi kasutusala mis on mõeldud kasutamiseks mootosõidukijuhi tervisetõendis",
+      "systems" : ["https://fhir.ee/CodeSystem/labivaatuse-tyyp"],
+      "uses" : {
+      },
+      "StructureDefinition-ee-health-certificate-driver.html" : "Mootosõidukijuhi tervisetõend"
+    }
+  ]
+}

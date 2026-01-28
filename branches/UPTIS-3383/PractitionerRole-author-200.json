@@ -1,0 +1,14 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "author-200",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole author-200</b></p><a name=\"author-200\"> </a><a name=\"hcauthor-200\"> </a><a name=\"author-200-en-US\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-36109255737.html\">Practitioner Paavo Lepzig </a></p><p><b>organization</b>: <a href=\"Organization-90006399.html\">Organization PÕHJA-EESTI REGIONAALHAIGLA</a></p></div>"
+  },
+  "practitioner" : {
+    "reference" : "Practitioner/36109255737"
+  },
+  "organization" : {
+    "reference" : "Organization/90006399"
+  }
+}
