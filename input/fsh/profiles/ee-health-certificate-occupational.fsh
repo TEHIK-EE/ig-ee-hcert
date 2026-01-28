@@ -1,8 +1,8 @@
 Profile: EEHealthCertificateOccupational
 Parent: EEHealthCertificate
 Id: ee-health-certificate-occupational
-Title: "Töötervishoiu tervisetõend"
-Description: "Töötervishoiu tervisetõendi baasprofiil"
+Title: "Töötervishoiu tervisekontrolli otsus"
+Description: "Töötervishoiu tervisekontrolli otsuse baasprofiil"
 * ^experimental = false
 * category = $HDC#occupational
 * section contains riskFactors 0..1 and employer 0..1 and additionalConditions 0..1 and employerSuggestions 0..1 and employeeSuggestions 0..1
@@ -27,7 +27,7 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 * section[employer].text.status = #additional
 * section[employer].modifierExtension ..0
 
-* section[additionalConditions] ^short = "Püsiva töövõime säilitamiseks vajalikud lisatingimused"
+* section[additionalConditions] ^short = "Töötamiseks vajalik lisatingimus"
 * section[additionalConditions].code = $HC_SECTION#work-additional-restrictions
 * section[additionalConditions].entry 1..*
 * section[additionalConditions].entry only Reference(EEHealthCertificateWorkAdditionalCondition)
@@ -55,7 +55,7 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 
 * contained contains riskFactor 0..* and employment 1..1 and additionalCondition 0..*
 
-* contained[medicalRestriction] ^short = "Töötervishoiu tervisetõendi piirangud"
+* contained[medicalRestriction] ^short = "Meditsiinilised piirangud"
 * contained[medicalRestriction].component.code from OccupationalMedicalRestrictionVS (required)
 
 * contained[riskFactor] only EEHealthCertificateWorkRelatedRiskFactor
@@ -65,16 +65,16 @@ Description: "Töötervishoiu tervisetõendi baasprofiil"
 * contained[employment] ^short = "Töötamine"
 
 * contained[additionalCondition] only EEHealthCertificateWorkAdditionalCondition
-* contained[additionalCondition] ^short = "Püsiva töövõime säilitamiseks vajalikud lisatingimused"
+* contained[additionalCondition] ^short = "Töötamiseks vajalik lisatingimus"
 
-* contained[decision] ^short = "Töötervishoiu tervisetõendi otsus"
+* contained[decision] ^short = "Otsus"
 * contained[decision].value[x] from OccupationalDecisionVS (required)
 
 
 Profile: EEHealthCertificateOccupationalEmployer
 Parent: EEHealthCertificateOccupational
 Id: ee-health-certificate-occupational-employer
-Title: "Töötervishoiu tervisetõend tööandjale"
-Description: "Töötervishoiu tervisetõendi profiil tööandjale kuvamiseks"
+Title: "Töötervishoiu tervisekontrolli otsus tööandjale"
+Description: "Töötervishoiu tervisekontrolli otsuse profiil tööandjale kuvamiseks"
 * ^experimental = true
 * section[employeeSuggestions] ..0

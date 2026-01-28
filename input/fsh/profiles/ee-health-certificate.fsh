@@ -55,7 +55,7 @@ Description: "Tervisetõendi baasprofiil"
 * section ^slicing.discriminator.path = #code
 * section ^slicing.rules = #open
 * section contains decision 0..1 and healthDeclaration 1..1 and medicalRestriction 0..1 and shortenedReason 0..1 and rejectReason 0..1 and changeReason 0..1 and cancelReason 0..1 and suspendReason 0..1
-* section[decision] ^short = "Tervisetõendi otsus"
+* section[decision] ^short = "Otsus"
 * section[decision].code = $HC_SECTION#decision
 * section[decision].entry 1..1
 * section[decision].entry only Reference(EEHealthCertificateDecision)
@@ -149,7 +149,7 @@ Description: "Tervisetõendi baasprofiil"
 * contained[author].contained ..0
 
 * contained[decision] only EEHealthCertificateDecision
-* contained[decision] ^short = "Tervisetõendi otsus"
+* contained[decision] ^short = "Otsus"
 
 * contained[medicalRestriction] only EEHealthCertificateMedicalRestriction
 * contained[medicalRestriction] ^short = "Meditsiinilised piirangud"

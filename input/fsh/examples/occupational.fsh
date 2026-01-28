@@ -56,8 +56,8 @@ Usage: #inline
 
 Instance: OccupationalHealthCertExample
 InstanceOf: EEHealthCertificateOccupational
-Title: "Töötervishoiu tervisetõend"
-Description: "Mustand olekus töötervishoiu tervisetõend, osaliselt täidetud ressursi näidis"
+Title: "Töötervishoiu tervisekontrolli otsus"
+Description: "Mustand olekus töötervishoiu tervisekontrolli otsus, osaliselt täidetud ressursi näidis"
 Usage: #example
 * id = "1100"
 * identifier[0]
@@ -68,7 +68,7 @@ Usage: #example
 * subject = Reference(PatientExample)
 * date = "2024-11-05T11:45:29.0437162+00:00"
 * author = Reference(PractitionerRoleExample)
-* title = "Töötervishoiu tervisekontroll"
+* title = "Töötervishoiu tervisekontrolli otsus"
 * event.period.start = "2024-05-05T00:00:00.000+00:00"
 * event.period.end = "2025-11-05T00:00:00.000+00:00"
 * contained[author] = PractitionerRoleExample

@@ -6,8 +6,8 @@ Description: "Mootosõidukijuhi tervisetõend"
 * ^experimental = false
 * category from EEHealthCertificateDriverCategoryVS (required)
 
-* contained[medicalRestriction] ^short = "Mootorsõidukijuhi meditsiinilised piirangud"
+* contained[medicalRestriction] ^short = "Meditsiinilised piirangud"
 * contained[medicalRestriction].component.code from DriverMedicalRestrictionVS (required)
 
-* contained[decision] ^short = "Mootorsõidukijuhi tervisetõendi otsus"
+* contained[decision] ^short = "Otsus"
 * contained[decision].value[x] from DriverDecisionVS (required)
