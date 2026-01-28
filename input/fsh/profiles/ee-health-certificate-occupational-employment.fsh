@@ -1,8 +1,8 @@
 Profile: EEHealthCertificateOccupationalEmployment
 Parent: EEHealthCertificateContainedObservation
 Id: ee-health-certificate-occupational-employment
-Title: "Töötervishoiu tervisetõendi patsiendi töötamine"
-Description: "Töötervishoiu tervisetõendi profiil patsiendi töötamise kirjeldamiseks. Kasutatud contained ressurisina"
+Title: "Töötamine"
+Description: "Töötervishoiu tervisekontrolli otsuse profiil patsiendi töötamise kirjeldamiseks. Kasutatud contained ressurisina"
 * status = #final
 * code.coding 1..1
 * code.coding = $SCT#184104002 "Patient occupation"

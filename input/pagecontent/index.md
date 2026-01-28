@@ -1,7 +1,7 @@
 
 ### Sissejuhatus
 
-HCERT (Health Certificate) ehk Tervisetõendi teenus on keskne rakendus, mille kaudu väljastatakse, säilitatakse ja hallatakse erinevate kasutusalade tervisetõendeid (näiteks töötervishoiu tõendid, mootorsõidukijui tõendid, relvaloa tõendid jpt.). 
+HCERT (Health Certificate) ehk Tervisetõendi teenus on keskne rakendus, mille kaudu väljastatakse, säilitatakse ja hallatakse erinevate kasutusalade tervisetõendeid (näiteks töötervishoiu tervisekontrolli otsused, mootorsõidukijui tõendid, relvaloa tõendid jpt.). 
 Ülidsema tervisekontrolli digitaliseerimise projekti tutvustuse leiab lehelt: https://www.tehik.ee/tootervishoiu-tervisekontrolli-digitaliseerimine.
  
 
