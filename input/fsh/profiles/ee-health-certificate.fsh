@@ -149,7 +149,5 @@ Description: "Tervisetõendi baasprofiil"
 * contained[author].contained ..0
 
 * contained[decision] only EEHealthCertificateDecision
-* contained[decision] ^short = "Otsus"
 
 * contained[medicalRestriction] only EEHealthCertificateMedicalRestriction
-* contained[medicalRestriction] ^short = "Meditsiinilised piirangud"
