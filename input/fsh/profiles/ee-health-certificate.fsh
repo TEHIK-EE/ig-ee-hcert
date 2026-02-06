@@ -39,16 +39,15 @@ Description: "Tervisetõendi baasprofiil"
 * attester ..0
 * custodian ..0
 * relatesTo ..0
-* event 1..1
-* event ^short = "Tervisetõendi kehtivus"
-* event.modifierExtension ..0
-* event.period 1..1
-* event.period
+* event 0..1
+* event.modifierExtension 0..0
+* event.period 0..1
+* event.period ^short = "Tervisetõendi kehtivus"
 * event.period.start 1..1
 * event.period.start ^short = "Alguskuupäev"
 * event.period.end 1..1
 * event.period.end ^short = "Lõppkuupäev"
-* event.detail ..0
+* event.detail 0..0
 
 // sections
 * section ^slicing.discriminator.type = #value
@@ -149,5 +148,7 @@ Description: "Tervisetõendi baasprofiil"
 * contained[author].contained ..0
 
 * contained[decision] only EEHealthCertificateDecision
+* contained[decision] ^short = "Otsus"
 
 * contained[medicalRestriction] only EEHealthCertificateMedicalRestriction
+* contained[medicalRestriction] ^short = "Meditsiinilised piirangud"
