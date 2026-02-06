@@ -5,6 +5,7 @@ Title: "Töötervishoiu tervisekontrolli otsus"
 Description: "Töötervishoiu tervisekontrolli otsuse baasprofiil"
 * ^experimental = false
 * category = $HDC#occupational
+* event.period ^short = "Töötervishoiu tervisekontrolli otsuse kehtivus"
 * section contains riskFactors 0..1 and employer 0..1 and additionalConditions 0..1 and employerSuggestions 0..1 and employeeSuggestions 0..1
 * section[riskFactors] ^short = "Töölaadi ja töökeskkonnaga seotud ohutegurid"
 * section[riskFactors].code = $HC_SECTION#risk-factors
@@ -70,6 +71,12 @@ Description: "Töötervishoiu tervisekontrolli otsuse baasprofiil"
 * contained[decision] ^short = "Otsus"
 * contained[decision].value[x] from OccupationalDecisionVS (required)
 
+* obeys ee-hcert-occupational-period-required
+
+Invariant: ee-hcert-occupational-period-required
+Description: "Töötervishoiu tervisekontrolli otsuse kehtivusaeg on kohustuslik, kui tegemist on positiivse otsusega."
+Severity: #error
+Expression: "contained.where($this.ofType(Observation)).where(code.coding.where(system='http://snomed.info/sct' and code='419183001').exists()).value.ofType(CodeableConcept).coding.where(system='http://snomed.info/sct' and (code='160926000' or code='225891002')).exists() implies event.period.exists()"
 
 Profile: EEHealthCertificateOccupationalEmployer
 Parent: EEHealthCertificateOccupational
