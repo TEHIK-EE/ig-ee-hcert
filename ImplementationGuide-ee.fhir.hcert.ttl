@@ -1,0 +1,997 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.ee/hcert/ImplementationGuide/ee.fhir.hcert> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ee.fhir.hcert"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ee.fhir.hcert</b></p><a name=\"ee.fhir.hcert\"> </a><a name=\"hcee.fhir.hcert\"> </a><h2>HCERT</h2><p>The official URL for this implementation guide is: </p><pre>https://fhir.ee/hcert/ImplementationGuide/ee.fhir.hcert</pre></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://fhir.ee/hcert/ImplementationGuide/ee.fhir.hcert"^^xsd:anyURI ;
+     fhir:l <https://fhir.ee/hcert/ImplementationGuide/ee.fhir.hcert>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "HCERT"] ; # 
+  fhir:title [ fhir:v "Tervisetõendi teenus (HCERT)"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2026-02-06T08:35:48+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "TEHIK"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "TEHIK" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://tehik.ee" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "abi@tehik.ee" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "EE" ] ;
+       fhir:display [ fhir:v "Estonia" ]
+     ] )
+  ] ) ; # 
+  fhir:packageId [ fhir:v "ee.fhir.hcert"] ; # 
+  fhir:license [ fhir:v "MIT"] ; # 
+  fhir:fhirVersion ( [ fhir:v "5.0.0"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment>
+       ] ;
+       fhir:value [
+         a fhir:Markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+       ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r5" ] ;
+     fhir:version [ fhir:v "7.0.1" ]
+  ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment>
+       ] ;
+       fhir:value [
+         a fhir:Markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+       ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r5" ] ;
+     fhir:version [ fhir:v "5.2.0" ]
+  ] [
+     fhir:id [ fhir:v "ee_fhir_mpi" ] ;
+     fhir:uri [
+       fhir:v "https://fhir.ee/mpi/ImplementationGuide/ee.fhir.mpi"^^xsd:anyURI ;
+       fhir:l <https://fhir.ee/mpi/ImplementationGuide/ee.fhir.mpi>
+     ] ;
+     fhir:packageId [ fhir:v "ee.fhir.mpi" ] ;
+     fhir:version [ fhir:v "1.5.0" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency>
+       ] ;
+       fhir:value [
+         a fhir:Code ;
+         fhir:v "hl7.fhir.uv.tools.r5#0.9.0"
+       ]
+     ] ) ;
+     fhir:grouping ( [
+       fhir:id [ fhir:v "ExternalExamples" ] ;
+       fhir:name [ fhir:v "Example: Example Instances from external systems" ] ;
+       fhir:description [ fhir:v "Example resources that are referenced in this IG, but are from external systems." ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/Practitioner/36109255737> ;
+         fhir:reference [ fhir:v "Practitioner/36109255737" ]
+       ] ;
+       fhir:name [ fhir:v "Arst Paavo Lepzig" ] ;
+       fhir:description [ fhir:v "Arsti näidis" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:groupingId [ fhir:v "ExternalExamples" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Organization"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/Organization/90006399> ;
+         fhir:reference [ fhir:v "Organization/90006399" ]
+       ] ;
+       fhir:name [ fhir:v "Asutus PÕHJA-EESTI REGIONAALHAIGLA" ] ;
+       fhir:description [ fhir:v "Asutuse näidis" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:groupingId [ fhir:v "ExternalExamples" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-medical-restriction> ;
+         fhir:reference [ fhir:v "StructureDefinition/ee-health-certificate-medical-restriction" ]
+       ] ;
+       fhir:name [ fhir:v "Meditsiiniline piirang" ] ;
+       fhir:description [ fhir:v "Observation ressurss mis kirjeldab meditsiinilisi piiranguid koos täpsustusega. Kasutatud contained ressurisina" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Composition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/Composition/500> ;
+         fhir:reference [ fhir:v "Composition/500" ]
+       ] ;
+       fhir:name [ fhir:v "Mootorsõiduki juhtimise tervisetõend" ] ;
+       fhir:description [ fhir:v "Mustand olekus mootorsõiduki juhtimise tervisetõend, osaliselt täidetud ressursi näidis" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-driver"^^xsd:anyURI ;
+         fhir:l <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-driver>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-driver> ;
+         fhir:reference [ fhir:v "StructureDefinition/ee-health-certificate-driver" ]
+       ] ;
+       fhir:name [ fhir:v "Mootosõidukijuhi tervisetõend" ] ;
+       fhir:description [ fhir:v "Mootosõidukijuhi tervisetõend" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/ValueSet/ee-health-certificate-driver-category> ;
+         fhir:reference [ fhir:v "ValueSet/ee-health-certificate-driver-category" ]
+       ] ;
+       fhir:name [ fhir:v "Mootosõidukijuhi tervisetõend kasutusala" ] ;
+       fhir:description [ fhir:v "Tervisetõendi kasutusala mis on mõeldud kasutamiseks mootosõidukijuhi tervisetõendis" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-decision> ;
+         fhir:reference [ fhir:v "StructureDefinition/ee-health-certificate-decision" ]
+       ] ;
+       fhir:name [ fhir:v "Otsus" ] ;
+       fhir:description [ fhir:v "Observation ressurss mis kirjeldab otsuse. Kasutatud contained ressurisina" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/Patient/200> ;
+         fhir:reference [ fhir:v "Patient/200" ]
+       ] ;
+       fhir:name [ fhir:v "Patsient Taavi Kask" ] ;
+       fhir:description [ fhir:v "MPI patsiendi näidis" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:groupingId [ fhir:v "ExternalExamples" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "PractitionerRole"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/PractitionerRole/100> ;
+         fhir:reference [ fhir:v "PractitionerRole/100" ]
+       ] ;
+       fhir:name [ fhir:v "PractitionerRoleExample" ] ;
+       fhir:description [ fhir:v "PractitionerRole ressursi näidis" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:groupingId [ fhir:v "ExternalExamples" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "QuestionnaireResponse"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/QuestionnaireResponse/300> ;
+         fhir:reference [ fhir:v "QuestionnaireResponse/300" ]
+       ] ;
+       fhir:name [ fhir:v "Tervisedeklaratsioon" ] ;
+       fhir:description [ fhir:v "Tervisedeklaratsiooni näidis (mõeldud ainult viitamiseks)" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:groupingId [ fhir:v "ExternalExamples" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource:abstract"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate> ;
+         fhir:reference [ fhir:v "StructureDefinition/ee-health-certificate" ]
+       ] ;
+       fhir:name [ fhir:v "Tervisetõend" ] ;
+       fhir:description [ fhir:v "Tervisetõendi baasprofiil" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource:abstract"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-contained-observation> ;
+         fhir:reference [ fhir:v "StructureDefinition/ee-health-certificate-contained-observation" ]
+       ] ;
+       fhir:name [ fhir:v "Tervisetõendi contained Observation" ] ;
+       fhir:description [ fhir:v "Abstraaktne profiil Tervisetõendi contained Observation ressurside kirjeldamiseks" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "OperationDefinition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/OperationDefinition/ee-health-certificate-set-consent> ;
+         fhir:reference [ fhir:v "OperationDefinition/ee-health-certificate-set-consent" ]
+       ] ;
+       fhir:name [ fhir:v "Tervisetõendi ligipääsude muutmine" ] ;
+       fhir:description [ fhir:v "Tervisetõendi ligipääsude muutmine. Ühe operatsiooniga saab muuta ligipääsu kas arstile (doctor) ja/või esindajale (representative). Lubatud väärtused on 'closed' või 'open'." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "OperationDefinition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/OperationDefinition/ee-health-certificate-get-consent> ;
+         fhir:reference [ fhir:v "OperationDefinition/ee-health-certificate-get-consent" ]
+       ] ;
+       fhir:name [ fhir:v "Tervisetõendi ligipääsude päring" ] ;
+       fhir:description [ fhir:v "Tervisetõendi ligipääsude päring" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "OperationDefinition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/OperationDefinition/ee-health-certificate-pdf> ;
+         fhir:reference [ fhir:v "OperationDefinition/ee-health-certificate-pdf" ]
+       ] ;
+       fhir:name [ fhir:v "Tervisetõendi PDF genereerimine" ] ;
+       fhir:description [ fhir:v "FHIR operatsioon PDF dokumendi generereerimiseks tervisetõend (Composition) ressursi põhjal" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "OperationDefinition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/OperationDefinition/ee-health-certificate-suspend> ;
+         fhir:reference [ fhir:v "OperationDefinition/ee-health-certificate-suspend" ]
+       ] ;
+       fhir:name [ fhir:v "Tervisetõendi peatamine" ] ;
+       fhir:description [ fhir:v "Tervisetõendi peatamise operatsioon" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "OperationDefinition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/OperationDefinition/ee-health-certificate-cancel> ;
+         fhir:reference [ fhir:v "OperationDefinition/ee-health-certificate-cancel" ]
+       ] ;
+       fhir:name [ fhir:v "Tervisetõendi tühistamine" ] ;
+       fhir:description [ fhir:v "Tervisetõendi tühistamise operatsioon" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-work-related-risk-factor> ;
+         fhir:reference [ fhir:v "StructureDefinition/ee-health-certificate-work-related-risk-factor" ]
+       ] ;
+       fhir:name [ fhir:v "Töölaadi ja töökeskkonnaga seotud ohutegurid" ] ;
+       fhir:description [ fhir:v "Observation ressurss mis kirjeldab tööst olenevad ohutegurid. Kasutatud contained ressurisina." ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-occupational-employment> ;
+         fhir:reference [ fhir:v "StructureDefinition/ee-health-certificate-occupational-employment" ]
+       ] ;
+       fhir:name [ fhir:v "Töötamine" ] ;
+       fhir:description [ fhir:v "Töötervishoiu tervisekontrolli otsuse profiil patsiendi töötamise kirjeldamiseks. Kasutatud contained ressurisina" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-work-additional-condition> ;
+         fhir:reference [ fhir:v "StructureDefinition/ee-health-certificate-work-additional-condition" ]
+       ] ;
+       fhir:name [ fhir:v "Töötamiseks vajalik lisatingimus" ] ;
+       fhir:description [ fhir:v "Observation ressurss mis kirjeldab töötamiseks vajalik lisatingimus. Kasutatud contained ressurisina" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-occupational> ;
+         fhir:reference [ fhir:v "StructureDefinition/ee-health-certificate-occupational" ]
+       ] ;
+       fhir:name [ fhir:v "Töötervishoiu tervisekontrolli otsus" ] ;
+       fhir:description [ fhir:v "Töötervishoiu tervisekontrolli otsuse baasprofiil" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "Composition"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/Composition/1100> ;
+         fhir:reference [ fhir:v "Composition/1100" ]
+       ] ;
+       fhir:name [ fhir:v "Töötervishoiu tervisekontrolli otsus" ] ;
+       fhir:description [ fhir:v "Mustand olekus töötervishoiu tervisekontrolli otsus, osaliselt täidetud ressursi näidis" ] ;
+       fhir:isExample [ fhir:v true ] ;
+       fhir:profile ( [
+         fhir:v "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-occupational"^^xsd:anyURI ;
+         fhir:l <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-occupational>
+       ] )
+     ] [
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/resource-information>
+         ] ;
+         fhir:value [
+           a fhir:String ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:l <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-occupational-employer> ;
+         fhir:reference [ fhir:v "StructureDefinition/ee-health-certificate-occupational-employer" ]
+       ] ;
+       fhir:name [ fhir:v "Töötervishoiu tervisekontrolli otsus tööandjale" ] ;
+       fhir:description [ fhir:v "Töötervishoiu tervisekontrolli otsuse profiil tööandjale kuvamiseks" ] ;
+       fhir:isExample [ fhir:v false ]
+     ] ) ;
+     fhir:page [
+       fhir:source [
+         a fhir:Url ;
+         fhir:v "toc.html"^^xsd:anyURI ;
+         fhir:l fhir:toc.html
+       ] ;
+       fhir:name [
+         fhir:v "toc.html"^^xsd:anyURI ;
+         fhir:l fhir:toc.html
+       ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:source [
+           a fhir:Url ;
+           fhir:v "index.html"^^xsd:anyURI ;
+           fhir:l fhir:index.html
+         ] ;
+         fhir:name [
+           fhir:v "index.html"^^xsd:anyURI ;
+           fhir:l fhir:index.html
+         ] ;
+         fhir:title [ fhir:v "Sissejuhatus" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:Url ;
+           fhir:v "dev.html"^^xsd:anyURI ;
+           fhir:l fhir:dev.html
+         ] ;
+         fhir:name [
+           fhir:v "dev.html"^^xsd:anyURI ;
+           fhir:l fhir:dev.html
+         ] ;
+         fhir:title [ fhir:v "Juhend arendajale" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:Url ;
+           fhir:v "api.html"^^xsd:anyURI ;
+           fhir:l fhir:api.html
+         ] ;
+         fhir:name [
+           fhir:v "api.html"^^xsd:anyURI ;
+           fhir:l fhir:api.html
+         ] ;
+         fhir:title [ fhir:v "API kirjeldus" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:Url ;
+           fhir:v "permissions.html"^^xsd:anyURI ;
+           fhir:l fhir:permissions.html
+         ] ;
+         fhir:name [
+           fhir:v "permissions.html"^^xsd:anyURI ;
+           fhir:l fhir:permissions.html
+         ] ;
+         fhir:title [ fhir:v "Õigused API otspunktidele" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:Url ;
+           fhir:v "download.html"^^xsd:anyURI ;
+           fhir:l fhir:download.html
+         ] ;
+         fhir:name [
+           fhir:v "download.html"^^xsd:anyURI ;
+           fhir:l fhir:download.html
+         ] ;
+         fhir:title [ fhir:v "Allalaadimised" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [
+           a fhir:Url ;
+           fhir:v "profiles.html"^^xsd:anyURI ;
+           fhir:l fhir:profiles.html
+         ] ;
+         fhir:name [
+           fhir:v "profiles.html"^^xsd:anyURI ;
+           fhir:l fhir:profiles.html
+         ] ;
+         fhir:title [ fhir:v "Profiilid" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "copyrightyear" ]
+       ] ;
+       fhir:value [ fhir:v "2025+" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "releaselabel" ]
+       ] ;
+       fhir:value [ fhir:v "trial-use" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "excludettl" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "autoload-resources" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/maps" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-pages" ]
+       ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-pages" ]
+       ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "path-liquid" ]
+       ] ;
+       fhir:value [ fhir:v "template/liquid" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "path-liquid" ]
+       ] ;
+       fhir:value [ fhir:v "input/liquid" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "path-qa" ]
+       ] ;
+       fhir:value [ fhir:v "temp/qa" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "path-temp" ]
+       ] ;
+       fhir:value [ fhir:v "temp/pages" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "path-output" ]
+       ] ;
+       fhir:value [ fhir:v "output" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/guide-parameter-code>
+         ] ;
+         fhir:code [ fhir:v "path-tx-cache" ]
+       ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "path-suppressed-warnings" ]
+       ] ;
+       fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "path-history" ]
+       ] ;
+       fhir:value [ fhir:v "https://fhir.ee/hcert/history.html" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "template-html" ]
+       ] ;
+       fhir:value [ fhir:v "template-page.html" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "template-md" ]
+       ] ;
+       fhir:value [ fhir:v "template-page-md.html" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "apply-contact" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "apply-context" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "apply-copyright" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "apply-jurisdiction" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "apply-license" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "apply-publisher" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "apply-version" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "apply-wg" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "active-tables" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "fmm-definition" ]
+       ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "propagate-status" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "excludelogbinaryformat" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [
+           fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/CodeSystem/ig-parameters>
+         ] ;
+         fhir:code [ fhir:v "tabbed-snapshots" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

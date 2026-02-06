@@ -1,0 +1,58 @@
+{
+  "resourceType" : "OperationDefinition",
+  "id" : "ee-health-certificate-cancel",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition ee-health-certificate-cancel</b></p><a name=\"ee-health-certificate-cancel\"> </a><a name=\"hcee-health-certificate-cancel\"> </a><p>URL: [base]/Composition/[id]/$cancel</p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>reason</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R5/datatypes.html#string\">string</a></td><td/><td><div><p>Tühistamise põhjus</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R5/composition.html\">Composition</a></td><td/><td><div><p>Uuendatud ressurss</p>\n</div></td></tr></table></div>"
+  },
+  "url" : "https://fhir.ee/hcert/OperationDefinition/ee-health-certificate-cancel",
+  "version" : "1.0.0",
+  "name" : "EEHealthCertificateCancel",
+  "title" : "Tervisetõendi tühistamine",
+  "status" : "active",
+  "kind" : "operation",
+  "experimental" : false,
+  "date" : "2026-02-06T08:35:48+00:00",
+  "publisher" : "TEHIK",
+  "contact" : [{
+    "name" : "TEHIK",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://tehik.ee"
+    },
+    {
+      "system" : "email",
+      "value" : "abi@tehik.ee"
+    }]
+  }],
+  "description" : "Tervisetõendi tühistamise operatsioon",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "EE",
+      "display" : "Estonia"
+    }]
+  }],
+  "affectsState" : true,
+  "code" : "cancel",
+  "resource" : ["Composition"],
+  "system" : false,
+  "type" : false,
+  "instance" : true,
+  "parameter" : [{
+    "name" : "reason",
+    "use" : "in",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "Tühistamise põhjus",
+    "type" : "string"
+  },
+  {
+    "name" : "return",
+    "use" : "out",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "Uuendatud ressurss",
+    "type" : "Composition"
+  }]
+}

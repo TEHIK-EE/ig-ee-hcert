@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="100"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PractitionerRole 100</b></p><a name="100"> </a><a name="hc100"> </a><a name="100-en-US"> </a><p><b>practitioner</b>: <a href="Practitioner-36109255737.html">Practitioner Paavo Lepzig </a></p><p><b>organization</b>: <a href="Organization-90006399.html">Organization PÕHJA-EESTI REGIONAALHAIGLA</a></p></div>
+  </text>
+  <practitioner>
+    <reference value="Practitioner/36109255737"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/90006399"/>
+  </organization>
+</PractitionerRole>

@@ -1,0 +1,108 @@
+{
+  "resourceType" : "Composition",
+  "id" : "health-certificate-300",
+  "meta" : {
+    "profile" : ["https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-driver"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition health-certificate-300</b></p><a name=\"health-certificate-300\"> </a><a name=\"hchealth-certificate-300\"> </a><a name=\"health-certificate-300-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ee-health-certificate-driver.html\">Mootosõidukijuhi tervisetõend</a></p></div><p><b>identifier</b>: <code>https://fhir.ee/hcert/health-certificate-number</code>/HCERT-321</p><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 772786005}\">Medical certificate (record artifact)</span></p><p><b>category</b>: <span title=\"Codes:{https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala driver-group-I}\">driver-group-I</span></p><p><b>date</b>: 2024-11-05 11:45:29+0000</p><p><b>author</b>: <a href=\"#hchealth-certificate-300/author-200\">PractitionerRole</a></p><p><b>title</b>: Mootorsõiduki juhtimise tervisetõend</p><h3>Events</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td>2024-11-05 00:00:00+0000 --&gt; 2025-11-05 00:00:00+0000</td></tr></table><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole #author-200</b></p><a name=\"health-certificate-300/author-200\"> </a><a name=\"hchealth-certificate-300/author-200\"> </a><a name=\"health-certificate-300/author-200-en-US\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-pract1.html\">Practitioner Paavo Lepzig </a></p><p><b>organization</b>: <a href=\"Organization-org1.html\">Organization Karulaugu Perearstikeskus</a></p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Observation #decision-222</b></p><a name=\"health-certificate-300/decision-222\"> </a><a name=\"hchealth-certificate-300/decision-222\"> </a><a name=\"health-certificate-300/decision-222-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ee-health-certificate-decision.html\">Tervisetõendi otsus</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 419183001}\">Practitioner decision status</span></p><p><b>value</b>: <span title=\"Codes:{https://fhir.ee/CodeSystem/arsti-otsus 1}\">1</span></p></blockquote></div>"
+  },
+  "contained" : [{
+    "resourceType" : "PractitionerRole",
+    "id" : "author-200",
+    "practitioner" : {
+      "reference" : "Practitioner/pract1"
+    },
+    "organization" : {
+      "reference" : "Organization/org1"
+    }
+  },
+  {
+    "resourceType" : "Observation",
+    "id" : "decision-222",
+    "meta" : {
+      "profile" : ["https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-decision"]
+    },
+    "status" : "final",
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "419183001",
+        "display" : "Practitioner decision status"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "https://fhir.ee/CodeSystem/arsti-otsus",
+        "code" : "1"
+      }]
+    }
+  }],
+  "identifier" : [{
+    "system" : "https://fhir.ee/hcert/health-certificate-number",
+    "value" : "HCERT-321"
+  }],
+  "status" : "final",
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "772786005",
+      "display" : "Medical certificate (record artifact)"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+      "code" : "driver-group-I"
+    }]
+  }],
+  "subject" : [{
+    "reference" : "Patient/mpi-123"
+  }],
+  "date" : "2024-11-05T11:45:29.0437162+00:00",
+  "author" : [{
+    "reference" : "#author-200"
+  }],
+  "title" : "Mootorsõiduki juhtimise tervisetõend",
+  "event" : [{
+    "period" : {
+      "start" : "2024-11-05T00:00:00.000+00:00",
+      "end" : "2025-11-05T00:00:00.000+00:00"
+    }
+  }],
+  "section" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+        "code" : "decision"
+      }]
+    },
+    "entry" : [{
+      "reference" : "#decision-222"
+    }]
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+        "code" : "reject-reason"
+      }]
+    },
+    "text" : {
+      "status" : "additional",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ei tunne värve</div>"
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+        "code" : "health-declaration"
+      }]
+    },
+    "entry" : [{
+      "reference" : "QuestionnaireResponse/health-declaration-200"
+    }]
+  }]
+}

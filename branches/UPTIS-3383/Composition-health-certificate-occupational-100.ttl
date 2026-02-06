@@ -1,0 +1,377 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.ee/hcert/Composition/health-certificate-occupational-100> a fhir:Composition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "health-certificate-occupational-100"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-occupational"^^xsd:anyURI ;
+       fhir:link <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-occupational>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition health-certificate-occupational-100</b></p><a name=\"health-certificate-occupational-100\"> </a><a name=\"hchealth-certificate-occupational-100\"> </a><a name=\"health-certificate-occupational-100-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ee-health-certificate-occupational.html\">Töötervishoiu tervisetõend</a></p></div><p><b>identifier</b>: <code>https://fhir.ee/hcert/health-certificate-number</code>/DOC-12345</p><p><b>status</b>: Preliminary</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 772786005}\">Medical certificate (record artifact)</span></p><p><b>category</b>: <span title=\"Codes:{https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala occupational}\">occupational</span></p><p><b>date</b>: 2024-11-05 11:45:29+0000</p><p><b>author</b>: <a href=\"#hchealth-certificate-occupational-100/author-200\">PractitionerRole</a></p><p><b>title</b>: Töötervishoiu tervisekontroll</p><h3>Events</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td>2024-11-05 00:00:00+0000 --&gt; 2025-11-05 00:00:00+0000</td></tr></table><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole #author-200</b></p><a name=\"health-certificate-occupational-100/author-200\"> </a><a name=\"hchealth-certificate-occupational-100/author-200\"> </a><a name=\"health-certificate-occupational-100/author-200-en-US\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-pract1.html\">Practitioner Paavo Lepzig </a></p><p><b>organization</b>: <a href=\"Organization-org1.html\">Organization Karulaugu Perearstikeskus</a></p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Observation #employment-800</b></p><a name=\"health-certificate-occupational-100/employment-800\"> </a><a name=\"hchealth-certificate-occupational-100/employment-800\"> </a><a name=\"health-certificate-occupational-100/employment-800-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://fhir.ee/packages/mpi/1.2.1/site/StructureDefinition-ee-mpi-socialhistory-occupation.html\">EE MPI SocialHistory Occupation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category social-history}\">Social history</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 11341-5}, {http://snomed.info/sct 184104002}\">History of Occupation</span></p><p><b>subject</b>: <a href=\"https://fhir.ee/packages/mpi/1.2.1/site/Patient-pat1.html\">Igor Bossenko (official) Male, DoB: 1973-02-10 ( https://fhir.ee/sid/pid/est/ni#Estonian Personal National Identification Code#37302102711)</a></p><p><b>effective</b>: 2013-04-02 09:30:10+0100 --&gt; (ongoing)</p><h3>Components</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 160922003}\">Job details</span></td><td><span title=\"Codes:{https://fhir.ee/CodeSystem/occupation 22122501}\">Pediaater</span></td></tr></table></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Observation #decision-200</b></p><a name=\"health-certificate-occupational-100/decision-200\"> </a><a name=\"hchealth-certificate-occupational-100/decision-200\"> </a><a name=\"health-certificate-occupational-100/decision-200-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ee-health-certificate-decision.html\">Tervisetõendi otsus</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 419183001}\">Practitioner decision status</span></p><p><b>value</b>: <span title=\"Codes:{https://fhir.ee/CodeSystem/arsti-otsus 2}\">2</span></p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Observation #restriction-200</b></p><a name=\"health-certificate-occupational-100/restriction-200\"> </a><a name=\"hchealth-certificate-occupational-100/restriction-200\"> </a><a name=\"health-certificate-occupational-100/restriction-200-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ee-health-certificate-medical-restriction.html\">Meditsiiniline piirang</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 246175000}\">Limitation</span></p><p><b>value</b>: <span title=\"Codes:{https://fhir.ee/CodeSystem/tervisetoendi-piirangud 891}\">891</span></p><p><b>note</b>: Öösel võib hulluks minna</p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Observation #riskFactor-200</b></p><a name=\"health-certificate-occupational-100/riskFactor-200\"> </a><a name=\"hchealth-certificate-occupational-100/riskFactor-200\"> </a><a name=\"health-certificate-occupational-100/riskFactor-200-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ee-health-certificate-work-related-risk-factor.html\">Tööst olenevad ohutegurid</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 80943009}\">Risk factor</span></p><p><b>value</b>: <span title=\"Codes:{https://fhir.ee/CodeSystem/toost-olenevad-ohutegurid A1}\">põrutused, üldvibratsioon ja seda põhjustavad seadmed</span></p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Observation #additional-200</b></p><a name=\"health-certificate-occupational-100/additional-200\"> </a><a name=\"hchealth-certificate-occupational-100/additional-200\"> </a><a name=\"health-certificate-occupational-100/additional-200-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ee-health-certificate-work-additional-condition.html\">Püsiva töövõime säilitamiseks vajalikud lisatingimused</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 225891002}\">Fit for work with certain limitations</span></p><p><b>value</b>: <span title=\"Codes:{https://fhir.ee/CodeSystem/tootamiseks-vajalikud-lisapiirangud personal-protective-equipment}\">personal-protective-equipment</span></p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:contained ( [
+     a fhir:PractitionerRole ;
+     fhir:id [ fhir:v "author-200" ] ;
+     fhir:practitioner [
+       fhir:link <https://fhir.ee/hcert/Practitioner/pract1> ;
+       fhir:reference [ fhir:v "Practitioner/pract1" ]
+     ] ;
+     fhir:organization [
+       fhir:link <https://fhir.ee/hcert/Organization/org1> ;
+       fhir:reference [ fhir:v "Organization/org1" ]
+     ]
+  ] [
+     a fhir:Observation ;
+     fhir:id [ fhir:v "employment-800" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "https://fhir.ee/mpi/StructureDefinition/ee-mpi-socialhistory-occupation"^^xsd:anyURI ;
+         fhir:link <https://fhir.ee/mpi/StructureDefinition/ee-mpi-socialhistory-occupation>
+       ] )
+     ] ;
+     fhir:status [ fhir:v "final" ] ;
+     fhir:category ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "social-history" ] ;
+         fhir:display [ fhir:v "Social history" ]
+       ] )
+     ] ) ;
+     fhir:code [
+       fhir:coding ( [
+         a loinc:11341-5 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "11341-5" ]
+       ] [
+         a sct:184104002 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "184104002" ]
+       ] )
+     ] ;
+     fhir:subject [
+       fhir:link <https://fhir.ee/hcert/Patient/pat1> ;
+       fhir:reference [ fhir:v "Patient/pat1" ]
+     ] ;
+     fhir:effective [
+       a fhir:Period ;
+       fhir:start [ fhir:v "2013-04-02T09:30:10+01:00"^^xsd:dateTime ]
+     ] ;
+     fhir:component ( [
+       fhir:code [
+         fhir:coding ( [
+           a sct:160922003 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "160922003" ] ;
+           fhir:display [ fhir:v "Job details" ]
+         ] )
+       ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://fhir.ee/CodeSystem/occupation"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "22122501" ] ;
+           fhir:display [ fhir:v "Pediaater" ]
+         ] )
+       ]
+     ] )
+  ] [
+     a fhir:Observation ;
+     fhir:id [ fhir:v "decision-200" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-decision"^^xsd:anyURI ;
+         fhir:link <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-decision>
+       ] )
+     ] ;
+     fhir:status [ fhir:v "final" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:419183001 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "419183001" ] ;
+         fhir:display [ fhir:v "Practitioner decision status" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/arsti-otsus"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "2" ]
+       ] )
+     ]
+  ] [
+     a fhir:Observation ;
+     fhir:id [ fhir:v "restriction-200" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-medical-restriction"^^xsd:anyURI ;
+         fhir:link <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-medical-restriction>
+       ] )
+     ] ;
+     fhir:status [ fhir:v "final" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:246175000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "246175000" ] ;
+         fhir:display [ fhir:v "Limitation" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-piirangud"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "891" ]
+       ] )
+     ] ;
+     fhir:note ( [
+       fhir:text [ fhir:v "Öösel võib hulluks minna" ]
+     ] )
+  ] [
+     a fhir:Observation ;
+     fhir:id [ fhir:v "riskFactor-200" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-work-related-risk-factor"^^xsd:anyURI ;
+         fhir:link <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-work-related-risk-factor>
+       ] )
+     ] ;
+     fhir:status [ fhir:v "final" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:80943009 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "80943009" ] ;
+         fhir:display [ fhir:v "Risk factor" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/toost-olenevad-ohutegurid"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "A1" ] ;
+         fhir:display [ fhir:v "põrutused, üldvibratsioon ja seda põhjustavad seadmed" ]
+       ] )
+     ]
+  ] [
+     a fhir:Observation ;
+     fhir:id [ fhir:v "additional-200" ] ;
+     fhir:meta [
+       fhir:profile ( [
+         fhir:v "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-work-additional-condition"^^xsd:anyURI ;
+         fhir:link <https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-work-additional-condition>
+       ] )
+     ] ;
+     fhir:status [ fhir:v "final" ] ;
+     fhir:code [
+       fhir:coding ( [
+         a sct:225891002 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "225891002" ] ;
+         fhir:display [ fhir:v "Fit for work with certain limitations" ]
+       ] )
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tootamiseks-vajalikud-lisapiirangud"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "personal-protective-equipment" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "https://fhir.ee/hcert/health-certificate-number"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "DOC-12345" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "preliminary"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:772786005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "772786005" ] ;
+       fhir:display [ fhir:v "Medical certificate (record artifact)" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "occupational" ]
+     ] )
+  ] ) ; # 
+  fhir:subject ( [
+     fhir:link <https://fhir.ee/hcert/Patient/mpi-123> ;
+     fhir:reference [ fhir:v "Patient/mpi-123" ]
+  ] ) ; # 
+  fhir:date [ fhir:v "2024-11-05T11:45:29.0437162+00:00"^^xsd:dateTime] ; # 
+  fhir:author ( [
+     fhir:reference [ fhir:v "#author-200" ]
+  ] ) ; # 
+  fhir:title [ fhir:v "Töötervishoiu tervisekontroll"] ; # 
+  fhir:event ( [
+     fhir:period [
+       fhir:start [ fhir:v "2024-11-05T00:00:00.000+00:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2025-11-05T00:00:00.000+00:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:section ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "employer" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "additional" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">10006966</div>"^^rdf:XMLLiteral
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "#employment-800" ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "decision" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "#decision-200" ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "medical-restrictions" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "#restriction-200" ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "shortened-reason" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "additional" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Arst ei usalda isiku uuringute tulemustele</div>"^^rdf:XMLLiteral
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "reject-reason" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "additional" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Raske füüsiline töö, ei sobi selja probleemide tõttu</div>"^^rdf:XMLLiteral
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "change-reason" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "additional" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Kirjavea parandus</div>"^^rdf:XMLLiteral
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "cancel-reason" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "additional" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vale otsus</div>"^^rdf:XMLLiteral
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "suspend-reason" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "additional" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ootab lisauringute tulemusi</div>"^^rdf:XMLLiteral
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "risk-factors" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "#riskFactor-200" ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "health-declaration" ]
+       ] )
+     ] ;
+     fhir:entry ( [
+       fhir:link <https://fhir.ee/hcert/QuestionnaireResponse/health-declaration-200> ;
+       fhir:reference [ fhir:v "QuestionnaireResponse/health-declaration-200" ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "work-additional-restrictions" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "additional" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tekst mis kirjeldab lisatingumusi</div>"^^rdf:XMLLiteral
+     ] ;
+     fhir:entry ( [
+       fhir:reference [ fhir:v "#additional-200" ]
+     ] )
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "employer-suggestions" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "additional" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Töötajale on vaja parem valgustus</div>"^^rdf:XMLLiteral
+     ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "employee-suggestions" ]
+       ] )
+     ] ;
+     fhir:text [
+       fhir:status [ fhir:v "additional" ] ;
+       fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Tööandja peab paigaldama uut valgustust</div>"^^rdf:XMLLiteral
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,145 @@
+{
+  "resourceType" : "Composition",
+  "id" : "500",
+  "meta" : {
+    "profile" : ["https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-driver"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Composition 500</b></p><a name=\"500\"> </a><a name=\"hc500\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ee-health-certificate-driver.html\">Mootosõidukijuhi tervisetõend</a></p></div><p><b>identifier</b>: <code>https://fhir.ee/hcert/health-certificate-number</code>/HCERT-321</p><p><b>status</b>: Preliminary</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 772786005}\">Medical certificate (record artifact)</span></p><p><b>category</b>: <span title=\"Codes:{https://fhir.ee/CodeSystem/labivaatuse-tyyp driver-group-I}\">driver-group-I</span></p><p><b>date</b>: 2024-11-05 11:45:29+0000</p><p><b>author</b>: <a href=\"#hc500/100\">PractitionerRole</a></p><p><b>title</b>: Mootorsõiduki juhtimise tervisetõend</p><h3>Events</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td>2024-11-05 00:00:00+0000 --&gt; 2025-11-05 00:00:00+0000</td></tr></table><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole #100</b></p><a name=\"500/100\"> </a><a name=\"hc500/100\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-36109255737.html\">Practitioner Paavo Lepzig </a></p><p><b>organization</b>: <a href=\"Organization-90006399.html\">Organization PÕHJA-EESTI REGIONAALHAIGLA</a></p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Observation #400</b></p><a name=\"500/400\"> </a><a name=\"hc500/400\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ee-health-certificate-decision.html\">Tervisetõendi otsus</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 419183001}\">Practitioner decision status</span></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 171353001}\">Fit to drive</span></p></blockquote><hr/><blockquote><p class=\"res-header-id\"><b>Generated Narrative: Observation #820</b></p><a name=\"500/820\"> </a><a name=\"hc500/820\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ee-health-certificate-medical-restriction.html\">Tervisetõendi meditsiiniline piirang</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 146861000181105}\">Restriction</span></p><p><b>note</b>: </p><blockquote><div><p>Vajalik käsijuhtimisseade</p>\n</div></blockquote><h3>Components</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://fhir.ee/CodeSystem/tervisetoendi-piirangud 00.98}\">00.98</span></td></tr></table></blockquote></div>"
+  },
+  "contained" : [{
+    "resourceType" : "PractitionerRole",
+    "id" : "100",
+    "practitioner" : {
+      "reference" : "Practitioner/36109255737"
+    },
+    "organization" : {
+      "reference" : "Organization/90006399"
+    }
+  },
+  {
+    "resourceType" : "Observation",
+    "id" : "400",
+    "meta" : {
+      "profile" : ["https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-decision"]
+    },
+    "status" : "final",
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "419183001",
+        "display" : "Practitioner decision status"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "171353001"
+      }]
+    }
+  },
+  {
+    "resourceType" : "Observation",
+    "id" : "820",
+    "meta" : {
+      "profile" : ["https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-medical-restriction"]
+    },
+    "status" : "final",
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "146861000181105",
+        "display" : "Restriction"
+      }]
+    },
+    "note" : [{
+      "text" : "Vajalik käsijuhtimisseade"
+    }],
+    "component" : [{
+      "code" : {
+        "coding" : [{
+          "system" : "https://fhir.ee/CodeSystem/tervisetoendi-piirangud",
+          "code" : "00.98"
+        }]
+      }
+    }]
+  }],
+  "identifier" : [{
+    "system" : "https://fhir.ee/hcert/health-certificate-number",
+    "value" : "HCERT-321"
+  }],
+  "status" : "preliminary",
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "772786005",
+      "display" : "Medical certificate (record artifact)"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "https://fhir.ee/CodeSystem/labivaatuse-tyyp",
+      "code" : "driver-group-I"
+    }]
+  }],
+  "subject" : [{
+    "reference" : "Patient/200"
+  }],
+  "date" : "2024-11-05T11:45:29.0437162+00:00",
+  "author" : [{
+    "reference" : "#100"
+  }],
+  "title" : "Mootorsõiduki juhtimise tervisetõend",
+  "event" : [{
+    "period" : {
+      "start" : "2024-11-05T00:00:00.000+00:00",
+      "end" : "2025-11-05T00:00:00.000+00:00"
+    }
+  }],
+  "section" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+        "code" : "decision"
+      }]
+    },
+    "entry" : [{
+      "reference" : "#400"
+    }]
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+        "code" : "medical-restrictions"
+      }]
+    },
+    "entry" : [{
+      "reference" : "#820"
+    }]
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+        "code" : "reject-reason"
+      }]
+    },
+    "text" : {
+      "status" : "additional",
+      "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ei tunne värve</div>"
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+        "code" : "health-declaration"
+      }]
+    },
+    "entry" : [{
+      "reference" : "QuestionnaireResponse/300"
+    }]
+  }]
+}

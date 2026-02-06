@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>API kirjeldus - Tervisetõendi teenus (HCERT) v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7.fhir.ee.tehik.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<script type="application/javascript" src="assets/js/drawio.js"></script>
+<script type="application/javascript" src="assets/js/plantuml.js"></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Tervisetõendi teenus (HCERT)</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - trial-use
+
+
+
+  <img alt="Estonia flag" src="assets/images/est.svg" height="16" title="Estonia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Esileht</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Juhend
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="profiles.html">Profiilid</a>
+      </li>
+      <li>
+        <a href="api.html">API</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefaktid</a>
+  </li>
+  <li>
+    <a href="toc.html">Sisukord</a>
+  </li>
+  <li>
+    <a href="download.html">Allalaadimised</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>API kirjeldus</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Tervisetõendi teenus (HCERT) - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://fhir.ee/hcert/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>API kirjeldus</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#olekute-diagramm" id="markdown-toc-olekute-diagramm">Olekute diagramm</a></li>
+  <li><a href="#tervisetõendi-loomine" id="markdown-toc-tervisetõendi-loomine">Tervisetõendi loomine</a></li>
+  <li><a href="#tervisetõendi-uuendamine" id="markdown-toc-tervisetõendi-uuendamine">Tervisetõendi uuendamine</a></li>
+  <li><a href="#tervisetõendi-pärimine" id="markdown-toc-tervisetõendi-pärimine">Tervisetõendi pärimine</a></li>
+  <li><a href="#tervisetõendi-ajalugu-pärimine" id="markdown-toc-tervisetõendi-ajalugu-pärimine">Tervisetõendi ajalugu pärimine</a></li>
+  <li><a href="#tervisetõendi-kustutamine" id="markdown-toc-tervisetõendi-kustutamine">Tervisetõendi kustutamine</a></li>
+  <li><a href="#tervisetõendi-peatamine" id="markdown-toc-tervisetõendi-peatamine">Tervisetõendi peatamine</a></li>
+  <li><a href="#tervisetõendi-tühistamine" id="markdown-toc-tervisetõendi-tühistamine">Tervisetõendi tühistamine</a></li>
+  <li><a href="#tervisetõendi-otsing" id="markdown-toc-tervisetõendi-otsing">Tervisetõendi otsing</a></li>
+  <li><a href="#tervisetõendi-ligipääsu-pärimine" id="markdown-toc-tervisetõendi-ligipääsu-pärimine">Tervisetõendi ligipääsu pärimine</a></li>
+  <li><a href="#tervisetõendi-ligipääsu-muutmine" id="markdown-toc-tervisetõendi-ligipääsu-muutmine">Tervisetõendi ligipääsu muutmine</a></li>
+</ul>
+
+</div>
+<p>Käesolevas juhendis kirjeldatakse HCERT teenuse poolt toetatud FHIR otspunktid ja operatsioonid. Toodud näidispäringud ja näidisvastused ei kajasta reaalseid andmeid aga vastavad oodatud/toetatud
+ressursi struktuurile.</p>
+
+<p>Masinloetav FHIR serveri API kirjeldus ehk FHIR CapabilityStatement on kättesaadav <strong>URL</strong>: <code class="language-plaintext highlighter-rouge">GET [base]/metadata</code> kaudu.</p>
+
+<h3 id="olekute-diagramm">Olekute diagramm</h3>
+
+<p>Diarammil on toodud lubatud liigutused Tervisetõendi olekute vahel, FHIR ressursi staatused ning HTTP operatsioonid.</p>
+
+<pre><code class="language-plantuml">@startuml
+
+[*] --&gt; Mustand: POST /Composition
+[*] --&gt; Lõpetatud: POST /Composition
+Lõpetatud --&gt; Lõpetatud: PUT /Composition/{id} with change reason
+Mustand --&gt; Kustutatud: DELETE /Composition/{id}
+Mustand --&gt; Mustand: PUT /Composition/{id}
+Mustand --&gt; Lõpetatud: PUT /Composition/{id}
+Lõpetatud --&gt; Peatatud: POST /Composition/{id}/$suspend with suspend reason
+Lõpetatud --&gt; Tühistatud: POST /Composition/{id}/$cancel with cancel reason
+Peatatud --&gt; Tühistatud: POST /Composition/{id}/$cancel with cancel reason
+
+Lõpetatud: FHIR status: final
+Mustand : FHIR status: preliminary
+Kustutatud: soft delete
+Kustutatud: FHIR status unchanged
+Peatatud: FHIR status: cancelled
+Tühistatud: FHIR status: entered-in-error
+
+@enduml
+</code></pre>
+
+<h3 id="tervisetõendi-loomine">Tervisetõendi loomine</h3>
+
+<p>Tervisetõendi loomine on kasutusala spetsiifiline, vastavalt kasutusalale tuleb saata Composition ressurss õige <a href="profiles.html">profiiliga</a>.
+Profiil määrab mis ressursi väljad on kohustuslikud, nende eesmärki ja struktuuri.</p>
+
+<p><a href="artifacts.html">Artifaktide</a> leheküljel on toodud ka ressurside <a href="artifacts.html#example-example-instances">näidised</a>.</p>
+
+<h4 id="päring">Päring</h4>
+
+<p><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">POST [base]/Composition</code></p>
+
+<pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition">resourceType</a>" : "Composition",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.id">id</a>" : "500",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-ee-health-certificate-driver.html" style="color: Maroon">&#x1F517;</a> "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-driver"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Composition 500&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ee-health-certificate-driver.html\&quot;&gt;Mootosõidukijuhi tervisetõend&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://fhir.ee/hcert/health-certificate-number&lt;/code&gt;/HCERT-321&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Preliminary&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 772786005}\&quot;&gt;Medical certificate (record artifact)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala driver-group-I}\&quot;&gt;driver-group-I&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2024-11-05 11:45:29+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\&quot;#hc500/100\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: Mootorsõiduki juhtimise tervisetõend&lt;/p&gt;&lt;h3&gt;Events&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;2024-11-05 00:00:00+0000 --&amp;gt; 2025-11-05 00:00:00+0000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole #100&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500/100\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500/100\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500/100-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-36109255737.html\&quot;&gt;Practitioner Paavo Lepzig &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;Organization-90006399.html\&quot;&gt;Organization PÕHJA-EESTI REGIONAALHAIGLA&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation #400&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500/400\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500/400\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500/400-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ee-health-certificate-decision.html\&quot;&gt;Tervisetõendi otsus&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 419183001}\&quot;&gt;Practitioner decision status&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://fhir.ee/CodeSystem/arsti-otsus 1}\&quot;&gt;1&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole">contained</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.id">id</a>" : "100",
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+        <a href="Practitioner-36109255737.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/36109255737"
+      },
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+        <a href="Organization-90006399.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Organization/90006399"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/observation.html">resourceType</a>" : "Observation",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.id">id</a>" : "400",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.meta">meta</a>" : {
+        "<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>" : [
+          <a href="StructureDefinition-ee-health-certificate-decision.html" style="color: Maroon">&#x1F517;</a> "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-decision"
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.status">status</a>" : "final",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "419183001",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a>" : "Practitioner decision status"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.value[x]">valueCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/arsti-otsus",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "1"
+          }
+        ]
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.system">system</a>" : "https://fhir.ee/hcert/health-certificate-number",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.value">value</a>" : "HCERT-321"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.status">status</a>" : "preliminary",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.type">type</a>" : {
+    "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "772786005",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a>" : "Medical certificate (record artifact)"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "driver-group-I"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.subject">subject</a>" : [
+    {
+      <a href="Patient-200.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Patient/200"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.date">date</a>" : "2024-11-05T11:45:29.0437162+00:00",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.author">author</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "#100"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.title">title</a>" : "Mootorsõiduki juhtimise tervisetõend",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.event">event</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.event.period">period</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.start">start</a>" : "2024-11-05T00:00:00.000+00:00",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.end">end</a>" : "2025-11-05T00:00:00.000+00:00"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section">section</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "decision"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "#400"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "reject-reason"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "additional",
+        "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Ei tunne värve&lt;/div&gt;"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "health-declaration"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          <a href="QuestionnaireResponse-300.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "QuestionnaireResponse/300"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+<h4 id="vastus">Vastus</h4>
+
+<ul>
+  <li><strong>HTTP status</strong>: 201 Created</li>
+  <li><strong>Sisu</strong>: Päringu päise parameetri <code class="language-plaintext highlighter-rouge">Prefer: return=representation</code> korral tagastatakse loodud tervisetõend (Composition ressurss) vastuse kehas.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 201 Created
+Location: [base]/Composition/500/_history/1
+</code></pre></div></div>
+
+<h3 id="tervisetõendi-uuendamine">Tervisetõendi uuendamine</h3>
+
+<h4 id="päring-1">Päring</h4>
+
+<p><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">PUT [base]/Composition/500</code></p>
+
+<pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition">resourceType</a>" : "Composition",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.id">id</a>" : "500",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-ee-health-certificate-driver.html" style="color: Maroon">&#x1F517;</a> "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-driver"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Composition 500&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ee-health-certificate-driver.html\&quot;&gt;Mootosõidukijuhi tervisetõend&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://fhir.ee/hcert/health-certificate-number&lt;/code&gt;/HCERT-321&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Preliminary&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 772786005}\&quot;&gt;Medical certificate (record artifact)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala driver-group-I}\&quot;&gt;driver-group-I&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2024-11-05 11:45:29+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\&quot;#hc500/100\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: Mootorsõiduki juhtimise tervisetõend&lt;/p&gt;&lt;h3&gt;Events&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;2024-11-05 00:00:00+0000 --&amp;gt; 2025-11-05 00:00:00+0000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole #100&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500/100\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500/100\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500/100-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-36109255737.html\&quot;&gt;Practitioner Paavo Lepzig &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;Organization-90006399.html\&quot;&gt;Organization PÕHJA-EESTI REGIONAALHAIGLA&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation #400&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500/400\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500/400\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500/400-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ee-health-certificate-decision.html\&quot;&gt;Tervisetõendi otsus&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 419183001}\&quot;&gt;Practitioner decision status&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://fhir.ee/CodeSystem/arsti-otsus 1}\&quot;&gt;1&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole">contained</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.id">id</a>" : "100",
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+        <a href="Practitioner-36109255737.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/36109255737"
+      },
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+        <a href="Organization-90006399.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Organization/90006399"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/observation.html">resourceType</a>" : "Observation",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.id">id</a>" : "400",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.meta">meta</a>" : {
+        "<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>" : [
+          <a href="StructureDefinition-ee-health-certificate-decision.html" style="color: Maroon">&#x1F517;</a> "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-decision"
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.status">status</a>" : "final",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "419183001",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a>" : "Practitioner decision status"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.value[x]">valueCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/arsti-otsus",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "1"
+          }
+        ]
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.system">system</a>" : "https://fhir.ee/hcert/health-certificate-number",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.value">value</a>" : "HCERT-321"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.status">status</a>" : "preliminary",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.type">type</a>" : {
+    "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "772786005",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a>" : "Medical certificate (record artifact)"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "driver-group-I"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.subject">subject</a>" : [
+    {
+      <a href="Patient-200.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Patient/200"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.date">date</a>" : "2024-11-05T11:45:29.0437162+00:00",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.author">author</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "#100"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.title">title</a>" : "Mootorsõiduki juhtimise tervisetõend",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.event">event</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.event.period">period</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.start">start</a>" : "2024-11-05T00:00:00.000+00:00",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.end">end</a>" : "2025-11-05T00:00:00.000+00:00"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section">section</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "decision"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "#400"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "reject-reason"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "additional",
+        "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Ei tunne värve&lt;/div&gt;"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "health-declaration"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          <a href="QuestionnaireResponse-300.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "QuestionnaireResponse/300"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+<h4 id="vastus-1">Vastus</h4>
+
+<ul>
+  <li><strong>HTTP status</strong>: 200 OK</li>
+  <li><strong>Sisu</strong>: Päringu päise parameetri <code class="language-plaintext highlighter-rouge">Prefer: return=representation</code> korral tagastatakse uuendatud tervisetõend (Composition ressurss) vastuse kehas.</li>
+</ul>
+
+<pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition">resourceType</a>" : "Composition",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.id">id</a>" : "500",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-ee-health-certificate-driver.html" style="color: Maroon">&#x1F517;</a> "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-driver"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Composition 500&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ee-health-certificate-driver.html\&quot;&gt;Mootosõidukijuhi tervisetõend&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://fhir.ee/hcert/health-certificate-number&lt;/code&gt;/HCERT-321&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Preliminary&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 772786005}\&quot;&gt;Medical certificate (record artifact)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala driver-group-I}\&quot;&gt;driver-group-I&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2024-11-05 11:45:29+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\&quot;#hc500/100\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: Mootorsõiduki juhtimise tervisetõend&lt;/p&gt;&lt;h3&gt;Events&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;2024-11-05 00:00:00+0000 --&amp;gt; 2025-11-05 00:00:00+0000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole #100&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500/100\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500/100\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500/100-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-36109255737.html\&quot;&gt;Practitioner Paavo Lepzig &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;Organization-90006399.html\&quot;&gt;Organization PÕHJA-EESTI REGIONAALHAIGLA&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation #400&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500/400\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500/400\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500/400-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ee-health-certificate-decision.html\&quot;&gt;Tervisetõendi otsus&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 419183001}\&quot;&gt;Practitioner decision status&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://fhir.ee/CodeSystem/arsti-otsus 1}\&quot;&gt;1&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole">contained</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.id">id</a>" : "100",
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+        <a href="Practitioner-36109255737.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/36109255737"
+      },
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+        <a href="Organization-90006399.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Organization/90006399"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/observation.html">resourceType</a>" : "Observation",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.id">id</a>" : "400",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.meta">meta</a>" : {
+        "<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>" : [
+          <a href="StructureDefinition-ee-health-certificate-decision.html" style="color: Maroon">&#x1F517;</a> "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-decision"
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.status">status</a>" : "final",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "419183001",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a>" : "Practitioner decision status"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.value[x]">valueCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/arsti-otsus",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "1"
+          }
+        ]
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.system">system</a>" : "https://fhir.ee/hcert/health-certificate-number",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.value">value</a>" : "HCERT-321"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.status">status</a>" : "preliminary",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.type">type</a>" : {
+    "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "772786005",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a>" : "Medical certificate (record artifact)"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "driver-group-I"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.subject">subject</a>" : [
+    {
+      <a href="Patient-200.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Patient/200"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.date">date</a>" : "2024-11-05T11:45:29.0437162+00:00",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.author">author</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "#100"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.title">title</a>" : "Mootorsõiduki juhtimise tervisetõend",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.event">event</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.event.period">period</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.start">start</a>" : "2024-11-05T00:00:00.000+00:00",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.end">end</a>" : "2025-11-05T00:00:00.000+00:00"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section">section</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "decision"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "#400"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "reject-reason"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "additional",
+        "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Ei tunne värve&lt;/div&gt;"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "health-declaration"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          <a href="QuestionnaireResponse-300.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "QuestionnaireResponse/300"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+<h3 id="tervisetõendi-pärimine">Tervisetõendi pärimine</h3>
+
+<h4 id="päring-2">Päring</h4>
+
+<p><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">GET [base]/Composition/500</code></p>
+
+<h4 id="vastus-2">Vastus</h4>
+
+<ul>
+  <li><strong>HTTP status</strong>: 200 OK</li>
+</ul>
+
+<pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition">resourceType</a>" : "Composition",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.id">id</a>" : "500",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-ee-health-certificate-driver.html" style="color: Maroon">&#x1F517;</a> "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-driver"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Composition 500&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ee-health-certificate-driver.html\&quot;&gt;Mootosõidukijuhi tervisetõend&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://fhir.ee/hcert/health-certificate-number&lt;/code&gt;/HCERT-321&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Preliminary&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 772786005}\&quot;&gt;Medical certificate (record artifact)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala driver-group-I}\&quot;&gt;driver-group-I&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2024-11-05 11:45:29+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\&quot;#hc500/100\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: Mootorsõiduki juhtimise tervisetõend&lt;/p&gt;&lt;h3&gt;Events&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;2024-11-05 00:00:00+0000 --&amp;gt; 2025-11-05 00:00:00+0000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole #100&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500/100\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500/100\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500/100-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-36109255737.html\&quot;&gt;Practitioner Paavo Lepzig &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;Organization-90006399.html\&quot;&gt;Organization PÕHJA-EESTI REGIONAALHAIGLA&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation #400&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500/400\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500/400\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500/400-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ee-health-certificate-decision.html\&quot;&gt;Tervisetõendi otsus&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 419183001}\&quot;&gt;Practitioner decision status&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://fhir.ee/CodeSystem/arsti-otsus 1}\&quot;&gt;1&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole">contained</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.id">id</a>" : "100",
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+        <a href="Practitioner-36109255737.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/36109255737"
+      },
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+        <a href="Organization-90006399.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Organization/90006399"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/observation.html">resourceType</a>" : "Observation",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.id">id</a>" : "400",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.meta">meta</a>" : {
+        "<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>" : [
+          <a href="StructureDefinition-ee-health-certificate-decision.html" style="color: Maroon">&#x1F517;</a> "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-decision"
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.status">status</a>" : "final",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "419183001",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a>" : "Practitioner decision status"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.value[x]">valueCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/arsti-otsus",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "1"
+          }
+        ]
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.system">system</a>" : "https://fhir.ee/hcert/health-certificate-number",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.value">value</a>" : "HCERT-321"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.status">status</a>" : "preliminary",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.type">type</a>" : {
+    "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "772786005",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a>" : "Medical certificate (record artifact)"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "driver-group-I"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.subject">subject</a>" : [
+    {
+      <a href="Patient-200.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Patient/200"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.date">date</a>" : "2024-11-05T11:45:29.0437162+00:00",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.author">author</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "#100"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.title">title</a>" : "Mootorsõiduki juhtimise tervisetõend",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.event">event</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.event.period">period</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.start">start</a>" : "2024-11-05T00:00:00.000+00:00",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.end">end</a>" : "2025-11-05T00:00:00.000+00:00"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section">section</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "decision"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "#400"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "reject-reason"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "additional",
+        "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Ei tunne värve&lt;/div&gt;"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "health-declaration"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          <a href="QuestionnaireResponse-300.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "QuestionnaireResponse/300"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+<h3 id="tervisetõendi-ajalugu-pärimine">Tervisetõendi ajalugu pärimine</h3>
+
+<h4 id="päring-3">Päring</h4>
+
+<p><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">GET [base]/Composition/500/_history/1</code></p>
+
+<h4 id="vastus-3">Vastus</h4>
+
+<ul>
+  <li><strong>HTTP status</strong>: 200 OK</li>
+</ul>
+
+<pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition">resourceType</a>" : "Composition",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.id">id</a>" : "500",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>" : [
+      <a href="StructureDefinition-ee-health-certificate-driver.html" style="color: Maroon">&#x1F517;</a> "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-driver"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Composition 500&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ee-health-certificate-driver.html\&quot;&gt;Mootosõidukijuhi tervisetõend&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;https://fhir.ee/hcert/health-certificate-number&lt;/code&gt;/HCERT-321&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Preliminary&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 772786005}\&quot;&gt;Medical certificate (record artifact)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala driver-group-I}\&quot;&gt;driver-group-I&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2024-11-05 11:45:29+0000&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\&quot;#hc500/100\&quot;&gt;PractitionerRole&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: Mootorsõiduki juhtimise tervisetõend&lt;/p&gt;&lt;h3&gt;Events&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;2024-11-05 00:00:00+0000 --&amp;gt; 2025-11-05 00:00:00+0000&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: PractitionerRole #100&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500/100\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500/100\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500/100-en-US\&quot;&gt; &lt;/a&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;Practitioner-36109255737.html\&quot;&gt;Practitioner Paavo Lepzig &lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;Organization-90006399.html\&quot;&gt;Organization PÕHJA-EESTI REGIONAALHAIGLA&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;hr/&gt;&lt;blockquote&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Observation #400&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;500/400\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hc500/400\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;500/400-en-US\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-ee-health-certificate-decision.html\&quot;&gt;Tervisetõendi otsus&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://snomed.info/sct 419183001}\&quot;&gt;Practitioner decision status&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: &lt;span title=\&quot;Codes:{https://fhir.ee/CodeSystem/arsti-otsus 1}\&quot;&gt;1&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole">contained</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.id">id</a>" : "100",
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+        <a href="Practitioner-36109255737.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/36109255737"
+      },
+      "<a href="http://hl7.org/fhir/R5/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+        <a href="Organization-90006399.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Organization/90006399"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/observation.html">resourceType</a>" : "Observation",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.id">id</a>" : "400",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.meta">meta</a>" : {
+        "<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>" : [
+          <a href="StructureDefinition-ee-health-certificate-decision.html" style="color: Maroon">&#x1F517;</a> "https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-decision"
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.status">status</a>" : "final",
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "419183001",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a>" : "Practitioner decision status"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/observation.html#Observation.value[x]">valueCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/arsti-otsus",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "1"
+          }
+        ]
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.system">system</a>" : "https://fhir.ee/hcert/health-certificate-number",
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.value">value</a>" : "HCERT-321"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.status">status</a>" : "preliminary",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.type">type</a>" : {
+    "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "772786005",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.display">display</a>" : "Medical certificate (record artifact)"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+          "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "driver-group-I"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.subject">subject</a>" : [
+    {
+      <a href="Patient-200.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "Patient/200"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.date">date</a>" : "2024-11-05T11:45:29.0437162+00:00",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.author">author</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "#100"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.title">title</a>" : "Mootorsõiduki juhtimise tervisetõend",
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.event">event</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.event.period">period</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.start">start</a>" : "2024-11-05T00:00:00.000+00:00",
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.end">end</a>" : "2025-11-05T00:00:00.000+00:00"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section">section</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "decision"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "#400"
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "reject-reason"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.text">text</a>" : {
+        "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a>" : "additional",
+        "<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;Ei tunne värve&lt;/div&gt;"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>" : "https://fhir.ee/CodeSystem/tervisetoendi-sektsioon",
+            "<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a>" : "health-declaration"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R5/composition.html#Composition.section.entry">entry</a>" : [
+        {
+          <a href="QuestionnaireResponse-300.html" style="color: Maroon">&#x1F517;</a> "<a href="http://hl7.org/fhir/R5/references.html#Reference#Reference.reference">reference</a>" : "QuestionnaireResponse/300"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+
+<h3 id="tervisetõendi-kustutamine">Tervisetõendi kustutamine</h3>
+
+<p>Tõendi kustutamine on võimalik vaid <strong>Mustand</strong> olekust. Kustutatud ressurss on kättesaadav ajaloost aga id järgi laadides ega otsinguga pole kättesaadav.</p>
+
+<h4 id="päring-4">Päring</h4>
+
+<p><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">DELETE [base]/Composition/500</code></p>
+
+<h4 id="vastus-4">Vastus</h4>
+
+<ul>
+  <li><strong>HTTP status</strong>: 204 No Content</li>
+</ul>
+
+<h3 id="tervisetõendi-peatamine">Tervisetõendi peatamine</h3>
+
+<p>Tõendi peatamine tehakse <a href="OperationDefinition-ee-health-certificate-suspend.html">$suspend</a> operatsiooniga.</p>
+
+<h3 id="tervisetõendi-tühistamine">Tervisetõendi tühistamine</h3>
+
+<p>Tõendi tühistamine tehakse <a href="OperationDefinition-ee-health-certificate-suspend.html">$cancel</a> operatsiooniga.</p>
+
+<h3 id="tervisetõendi-otsing">Tervisetõendi otsing</h3>
+
+<p>Otsing on implementeeritud FHIR standardi järgi: https://hl7.org/fhir/search.html</p>
+
+<h4 id="toetatud-otsinguparameetrid">Toetatud otsinguparameetrid</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameeter</th>
+      <th>Kirjeldus</th>
+      <th>Väärtustatud näidis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>_count</td>
+      <td>Mitu tulemust tagastada lehel, vaikimisi 10. Ülemine piir on 100</td>
+      <td>_count=5</td>
+    </tr>
+    <tr>
+      <td>_page</td>
+      <td>Lehe number mida tagastada</td>
+      <td>_page=1</td>
+    </tr>
+    <tr>
+      <td>_sort</td>
+      <td>Väli mille järgi sorteerida ja suund, võib olla mitu</td>
+      <td>_sort=-date</td>
+    </tr>
+    <tr>
+      <td>subject:Patient.identifier</td>
+      <td>Patsiendi identifikaator kujul "system|value", eraldaja sümbol peab olema URL encode-itud. Võimalusel kasutada <em>subject</em></td>
+      <td>subject:Patient.identifier=https://fhir.ee/sid/pid/est/ni%7C37412251234</td>
+    </tr>
+    <tr>
+      <td>subject</td>
+      <td>MPI patsiendi id. Eelisatud variant patsiendi identifitseerimiseks otsingus</td>
+      <td>subject=Patient/123</td>
+    </tr>
+    <tr>
+      <td>status</td>
+      <td>Tõendi staatus</td>
+      <td>status=final</td>
+    </tr>
+    <tr>
+      <td>category</td>
+      <td>Tervisetõendi kasutusala</td>
+      <td>category=driver-group-I</td>
+    </tr>
+    <tr>
+      <td>section-code-text</td>
+      <td>Tööandja asutus. Lubatud formaat employer$XXXXXX, kus XXXXXX on asutuse Äriregistri kood</td>
+      <td>section-code-text=employer$16978044</td>
+    </tr>
+    <tr>
+      <td>author:PractitionerRole.practitioner</td>
+      <td>Autori isikukoodi</td>
+      <td>author:PractitionerRole.practitioner=Practitioner/38912042211</td>
+    </tr>
+    <tr>
+      <td>author:PractitionerRole.organization</td>
+      <td>Autori asutuse kood (Äriregistri kood)</td>
+      <td>author:PractitionerRole.organization=Organization/1234567</td>
+    </tr>
+    <tr>
+      <td>entry</td>
+      <td>Tervisedeklaratsiooni id</td>
+      <td>entry=QuestionnaireResponse/1234</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="päring-5">Päring</h4>
+
+<p><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">GET [base]/Composition?{param1}={value1}&amp;...</code></p>
+
+<h4 id="vastus-5">Vastus</h4>
+
+<ul>
+  <li><strong>HTTP status</strong>: 200 OK</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"searchset"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"self"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[base]/Composition?subject=Patient/582278&amp;_sort=-date&amp;_page=1"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"first"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[base]/Composition?subject=Patient/582278&amp;_sort=-date&amp;_page=1"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"last"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[base]/Composition?subject=Patient/582278&amp;_sort=-date&amp;_page=4"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[base]/Composition?subject=Patient/582278&amp;_sort=-date&amp;_page=2"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Composition/20695"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Composition"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20695"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"versionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"lastUpdated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-05-19T10:24:51.113+03:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-driver"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"contained"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="err">...</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+        </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/582278/_history/1"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-05-19T03:00:00+03:00"</span><span class="p">,</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Composition/20700"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Composition"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20700"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"versionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"lastUpdated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-05-19T20:24:51.113+03:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-occupational"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"contained"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="err">...</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+        </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/582278/_history/1"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-05-19T03:00:00+03:00"</span><span class="p">,</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="tervisetõendi-ligipääsu-pärimine">Tervisetõendi ligipääsu pärimine</h3>
+
+<p>Tõendi ligipääsu pärimine tehakse <a href="OperationDefinition-ee-health-certificate-get-consent.html">$get-consent</a> operatsiooniga.</p>
+
+<h3 id="tervisetõendi-ligipääsu-muutmine">Tervisetõendi ligipääsu muutmine</h3>
+
+<p>Tõendi ligipääsu muutmine tehakse <a href="OperationDefinition-ee-health-certificate-set-consent.html">$set-consent</a> operatsiooniga.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://tehik.ee">TEHIK</a>.  Package ee.fhir.hcert#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, May 23, 2025 09:21+0000">2025-05-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

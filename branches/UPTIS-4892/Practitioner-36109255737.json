@@ -1,0 +1,17 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "36109255737",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 36109255737</b></p><a name=\"36109255737\"> </a><a name=\"hc36109255737\"> </a><p><b>identifier</b>: <code>https://fhir.ee/sid/pro/est/pho</code>/D12345</p><p><b>active</b>: true</p><p><b>name</b>: Paavo Lepzig </p></div>"
+  },
+  "identifier" : [{
+    "system" : "https://fhir.ee/sid/pro/est/pho",
+    "value" : "D12345"
+  }],
+  "active" : true,
+  "name" : [{
+    "family" : "Lepzig",
+    "given" : ["Paavo"]
+  }]
+}

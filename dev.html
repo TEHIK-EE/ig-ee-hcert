@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Juhend arendajale - Tervisetõendi teenus (HCERT) v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7.fhir.ee.tehik.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<script type="application/javascript" src="assets/js/drawio.js"></script>
+<script type="application/javascript" src="assets/js/plantuml.js"></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Tervisetõendi teenus (HCERT)</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - trial-use
+
+
+
+  <img alt="Estonia flag" src="assets/images/est.svg" height="16" title="Estonia"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Esileht</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Juhend
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="profiles.html">Profiilid</a>
+      </li>
+      <li>
+        <a href="dev.html">Juhend arendajale</a>
+      </li>
+      <li>
+        <a href="permissions.html">Õigused API otspunktidele</a>
+      </li>
+      <li>
+        <a href="api.html">API</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artefaktid</a>
+  </li>
+  <li>
+    <a href="toc.html">Sisukord</a>
+  </li>
+  <li>
+    <a href="download.html">Allalaadimised</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Juhend arendajale</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Tervisetõendi teenus (HCERT) - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.ee/hcert/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Juhend arendajale</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#ligipääsud" id="markdown-toc-ligipääsud">Ligipääsud</a></li>
+  <li><a href="#autoriseerimine" id="markdown-toc-autoriseerimine">Autoriseerimine</a></li>
+  <li><a href="#päised-http-headers" id="markdown-toc-päised-http-headers">Päised (HTTP headers)</a></li>
+  <li><a href="#api" id="markdown-toc-api">API</a></li>
+  <li><a href="#aeg-ja-ajatsoon" id="markdown-toc-aeg-ja-ajatsoon">Aeg ja ajatsoon</a></li>
+</ul>
+
+</div>
+<p>Antud juhend selgitab põhireeglid HCERT andmete pärimiseks ja sõnumite koostamiseks.</p>
+
+<p>Testimiseks laadige alla Postman <a href="HCERT%20X-Road.postman_collection.json">kollektsiooni</a> näidetega. Postman kollektsioonis on ka mõned juhised ja muutujate selgitused.</p>
+
+<p>Mõned olulisemad muutujad:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Muutuja</th>
+      <th>Teie X-tee alamsüsteemi seadistus</th>
+      <th>Näidis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>X_ROAD_SERVER_URL</td>
+      <td>Oma x-tee turvaseveris aadress</td>
+      <td>https://10.0.10.10</td>
+    </tr>
+    <tr>
+      <td>X_ROAD_ENV</td>
+      <td>x-tee keskkond</td>
+      <td>ee-test</td>
+    </tr>
+    <tr>
+      <td>X_ROAD_CLIENT</td>
+      <td>Oma x-tee klient, näiteks</td>
+      <td>GOV/70009770/tto-tis-klient</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ligipääsud">Ligipääsud</h3>
+
+<blockquote>
+  <p>Kollektsiooni proovimiseks klient peab tellima õigused X-tee teenustele <strong>GOV/70009770/tis/fhir</strong> ja <strong>GOV/70009770/tis/auth</strong> ee-test keskkonnas (kliendile
+mis on
+määratud X_ROAD_CLIENT muutujaga).</p>
+</blockquote>
+
+<h3 id="autoriseerimine">Autoriseerimine</h3>
+
+<p>Autoriseerimine on protsess, mille käigus kasutaja saab õigusi/privileege teatud ressursidele.
+Autoriseerimise käigus valideeritakse kasutaja väidetav roll ning kuuluvus asutusele, mille alt tehakse päringuid.</p>
+
+<p><strong>Token-is kodeeritud kasutaja isikukood ja nimi kasutatakse audit logides, mis kuvatakse ka patsiendile Andmejälgijas!</strong></p>
+
+<h4 id="tokeni-pärimine">Tokeni pärimine</h4>
+
+<p>Postman kollektsioonis "… token …" päringud AUTH teenuse pihta.</p>
+
+<p>Näiteks arsti autoriseerimise päring: POST <code class="language-plaintext highlighter-rouge">/v2/token</code> järgmise "application/json" sisuga</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"personalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"49909090014"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"organization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"70009770"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"doctor"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"application"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tto-tis-client-application"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Päringu kehas tuleb määrata kasutja roll, isikukood ja oma asutuse kood. Antud kombinatsioon valideeritakse erinevate registrite vastu.
+Token-i küsimusel rakenduse nimi ("application" väli) peab kajastama kasutatud tarkvara, suvaline tekst ilma tühikudeta.</p>
+
+<p>Vastus:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"accessToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJSUz..."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"expiresIn"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"tokenType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Autoriseerimise detailne juhend on leitav <a href="https://teabekeskus.tehik.ee/et/teenused/tis-teenused/tis-andmevahetus/autoriseerimise-teenus">teabekeskusest</a>.</strong></p>
+
+<h4 id="tokeni-cache-mine">Tokeni cache-mine</h4>
+
+<p>Tokeni eluiga on on N sekundit (token päringu vastuses väli expiresIn), kliendirakendus võib tokeni cache-da kuni N sekundit ja taaskasutada erinevates
+päringutes.
+<strong>NB! Token on kasutajapõhine, kliendirakendus ei tohi jagada sama tokeni mitme erineva kasutaja vahel!</strong></p>
+
+<h4 id="tokeni-kasutamine">Tokeni kasutamine</h4>
+
+<p>Tokeni tuleb kasutatada <code class="language-plaintext highlighter-rouge">Authorization</code> päises <code class="language-plaintext highlighter-rouge">Bearer </code> prefiksiga. Näiteks</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiA....
+</code></pre></div></div>
+
+<h4 id="api-otspunkti-õigused">API otspunkti õigused</h4>
+
+<p>Iga FHIR API otspunkt kontrollib õigusi, mis on rollipõhised. Rollide kohta saab
+lugeda <a href="https://teabekeskus.tehik.ee/et/teenused/tis-teenused/tis-andmevahetus/autoriseerimise-teenuse-kasutajate-rollid">siin</a>.
+Õiguste maatriks asub <a href="permissions.html">siin</a>.</p>
+
+<h3 id="päised-http-headers">Päised (HTTP headers)</h3>
+
+<p>Igas päringus tuleb määrata REST päringu päises mitmed tunnused:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Päise nimi</th>
+      <th>Võimalikud väärtused</th>
+      <th>Kommentaar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Accept</td>
+      <td>application/json või application/xml või application/fhir+json või application/fhir+xml</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Content-Type</td>
+      <td>application/json või application/xml või application/fhir+json või application/fhir+xml</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Authorization</td>
+      <td>Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiA….</td>
+      <td>Auth teenuse poolt saadud token</td>
+    </tr>
+    <tr>
+      <td>x-road-id</td>
+      <td> </td>
+      <td>Unikaalne päringu id</td>
+    </tr>
+    <tr>
+      <td>x-road-issue</td>
+      <td> </td>
+      <td>Tekstiline selgitus miks antud päring on tehtud, teatud päringutel on kohustuslik. <br />Tekst kuvatakse Andmejälgijas. Päis edastatakse alampäringute puhul teistesse süsteemidesse.</td>
+    </tr>
+    <tr>
+      <td>x-road-client</td>
+      <td>Sama mis X_ROAD_CLIENT muutuja väärtus</td>
+      <td>X-tee rest kliendi määrav identifikaator, vt https://www.x-tee.ee/docs/live/xroad/pr-rest_x-road_message_protocol_for_rest.html#43-use-of-http-headers</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="api">API</h3>
+
+<p>Vaata <a href="api.html">API kirjeldust</a>.</p>
+
+<h3 id="aeg-ja-ajatsoon">Aeg ja ajatsoon</h3>
+
+<p>Ressurside vastuvõtmisel HCERT FHIR liides toetab ajad erinevates ajatsoonides, näiteks UTC <code class="language-plaintext highlighter-rouge">1974-12-25T23:00:00Z</code> või offset'iga <code class="language-plaintext highlighter-rouge">1974-12-26T01:00:00+02:00</code>.
+Vaata formaati <a href="http://hl7.org/fhir/datatypes.html#dateTime">spetsifikatsioonist</a>.
+Kui ajatsooni offset pole määratud, näiteks <em>date</em> tüüpi puhul, siis arvestatakse et aeg on Eesti ajatsoonis ehk <code class="language-plaintext highlighter-rouge">Europe/Tallinn</code>. FHIR vastuses olevad ajad on
+alati toodud Eesti ajatsoonis.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://tehik.ee">TEHIK</a>.  Package ee.fhir.hcert#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Fri, Feb 6, 2026 08:35+0000">2026-02-06</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

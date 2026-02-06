@@ -1,0 +1,22 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://fhir.ee/hcert/ValueSet/ee-health-certificate-driver-category",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "EEHealthCertificateDriverCategoryVS",
+      "title" : "Mootosõidukijuhi tervisetõend kasutusala",
+      "description" : "Tervisetõend kasutusala mis on mõeldud kasutamiseks mootosõidukijuhi tervisetõendis",
+      "systems" : ["https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala"]
+    },
+    {
+      "url" : "https://fhir.ee/hcert/ValueSet/ee-health-certificate-status",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "EEHealthCertificateStatusVS",
+      "title" : "Tervisetõendi staatus",
+      "description" : "Staatuste loend millega opereerib HCERT teenus",
+      "systems" : ["http://hl7.org/fhir/composition-status"]
+    }
+  ]
+}

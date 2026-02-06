@@ -1,0 +1,13 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://fhir.ee/hcert/ValueSet/ee-health-certificate-driver-category",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "EEHealthCertificateDriverCategoryVS",
+      "title" : "Mootosõidukijuhi tervisetõend kasutusala",
+      "description" : "Tervisetõendi kasutusala mis on mõeldud kasutamiseks mootosõidukijuhi tervisetõendis",
+      "systems" : ["https://fhir.ee/CodeSystem/labivaatuse-tyyp"]
+    }
+  ]
+}

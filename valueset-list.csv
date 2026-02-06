@@ -1,0 +1,2 @@
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+https://fhir.ee/hcert/ValueSet/ee-health-certificate-driver-category,1.0.0,active,,EEHealthCertificateDriverCategoryVS,Mootosõidukijuhi tervisetõend kasutusala,"Tervisetõendi kasutusala mis on mõeldud kasutamiseks mootosõidukijuhi tervisetõendis",,"Other"
