@@ -1,5 +1,6 @@
-Alias: $HDC = https://fhir.ee/CodeSystem/labivaatuse-tyyp
-Alias: $HDC_VS = https://fhir.ee/ValueSet/labivaatuse-tyyp
+Alias: CertificateCategoryCS = https://fhir.ee/CodeSystem/labivaatuse-tyyp
+Alias: CertificateCategoryVS = https://fhir.ee/ValueSet/labivaatuse-tyyp
+Alias: DriverCategoryVS = https://fhir.ee/ValueSet/mootorsoidukijuhi-labivaatuse-tyyp
 Alias: $SCT = http://snomed.info/sct
 
 Alias: MpiPatientVerified = https://fhir.ee/mpi/StructureDefinition/ee-mpi-patient-verified

@@ -4,7 +4,7 @@ Id: ee-health-certificate-occupational
 Title: "Töötervishoiu tervisekontrolli otsus"
 Description: "Töötervishoiu tervisekontrolli otsuse baasprofiil"
 * ^experimental = false
-* category = $HDC#occupational
+* category = CertificateCategoryCS#occupational
 * event.period ^short = "Töötervishoiu tervisekontrolli otsuse kehtivus"
 * section contains riskFactors 0..1 and employer 0..1 and additionalConditions 0..1 and employerSuggestions 0..1 and employeeSuggestions 0..1
 * section[riskFactors] ^short = "Töölaadi ja töökeskkonnaga seotud ohutegurid"

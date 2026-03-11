@@ -26,7 +26,7 @@ Usage: #example
   * system = "https://fhir.ee/hcert/health-certificate-number"
   * value = "HCERT-321"
 * status = StatusCS#preliminary
-* category = $HDC#driver-group-I
+* category = CertificateCategoryCS#driver-group-I
 * type.coding = $SCT#772786005 "Medical certificate (record artifact)"
 * subject = Reference(PatientExample)
 * date = "2024-11-05T11:45:29.0437162+00:00"
