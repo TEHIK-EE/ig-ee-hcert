@@ -4,7 +4,7 @@ Id: ee-health-certificate-driver
 Title: "Mootosõidukijuhi tervisetõend"
 Description: "Mootosõidukijuhi tervisetõend"
 * ^experimental = false
-* category from EEHealthCertificateDriverCategoryVS (required)
+* category from DriverCategoryVS (required)
 * event.period ^short = "Mootosõidukijuhi tervisetõendi kehtivus"
 * contained[medicalRestriction] ^short = "Meditsiinilised piirangud"
 * contained[medicalRestriction].component.code from DriverMedicalRestrictionVS (required)
