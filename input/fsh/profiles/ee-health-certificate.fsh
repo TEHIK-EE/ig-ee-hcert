@@ -21,7 +21,7 @@ Description: "Tervisetõendi baasprofiil"
 * type.coding = $SCT#772786005 "Medical certificate (record artifact)"
 * category 1..1
 * category ^short = "Tervisekontrolli kasutusala"
-* category from CertificateCategoryCS (required)
+* category from CertificateCategoryVS (required)
 * subject only Reference(Patient)
 * subject ^type.targetProfile = MpiPatientVerified
 * subject 1..1

@@ -1,4 +1,5 @@
 Alias: CertificateCategoryCS = https://fhir.ee/CodeSystem/labivaatuse-tyyp
+Alias: CertificateCategoryVS = https://fhir.ee/ValueSet/labivaatuse-tyyp
 Alias: DriverCategoryVS = https://fhir.ee/ValueSet/mootorsoidukijuhi-labivaatuse-tyyp
 Alias: $SCT = http://snomed.info/sct
 
