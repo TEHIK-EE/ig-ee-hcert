@@ -1,0 +1,52 @@
+# ee.fhir.hcert#1.0.0: Tervisetõendi teenus (HCERT)
+
+## Pages
+
+* [Sissejuhatus](index.md)
+* [Allalaadimised](download.md)
+* [Juhend arendajale](dev.md)
+* [Profiilid](profiles.md)
+* [Artifacts Summary](artifacts.md)
+* [API kirjeldus](api.md)
+* [Õigused API otspunktidele](permissions.md)
+
+## Resources
+
+### ValueSets
+
+* [Mootosõidukijuhi tervisetõend kasutusala](ValueSet-ee-health-certificate-driver-category.md)
+
+### Resource Profiles
+
+* [Tervisetõendi contained Observation](StructureDefinition-ee-health-certificate-contained-observation.md)
+* [Tervisetõendi otsus](StructureDefinition-ee-health-certificate-decision.md)
+* [Mootosõidukijuhi tervisetõend](StructureDefinition-ee-health-certificate-driver.md)
+* [Tervisetõendi meditsiiniline piirang](StructureDefinition-ee-health-certificate-medical-restriction.md)
+* [Töötervishoiu tervisetõend tööandjale](StructureDefinition-ee-health-certificate-occupational-employer.md)
+* [Töötervishoiu tervisetõendi patsiendi töötamine](StructureDefinition-ee-health-certificate-occupational-employment.md)
+* [Töötervishoiu tervisetõend](StructureDefinition-ee-health-certificate-occupational.md)
+* [Püsiva töövõime säilitamiseks vajalikud lisatingimused](StructureDefinition-ee-health-certificate-work-additional-condition.md)
+* [Töölaadi ja töökeskkonnaga seotud ohutegurid](StructureDefinition-ee-health-certificate-work-related-risk-factor.md)
+* [Tervisetõend](StructureDefinition-ee-health-certificate.md)
+
+### ImplementationGuides
+
+* [Tervisetõendi teenus (HCERT)](index.md)
+
+### OperationDefinitions
+
+* [Tervisetõendi tühistamine](OperationDefinition-ee-health-certificate-cancel.md)
+* [Tervisetõendi ligipääsude päring](OperationDefinition-ee-health-certificate-get-consent.md)
+* [Tervisetõendi PDF genereerimine](OperationDefinition-ee-health-certificate-pdf.md)
+* [Tervisetõendi ligipääsude muutmine](OperationDefinition-ee-health-certificate-set-consent.md)
+* [Tervisetõendi peatamine](OperationDefinition-ee-health-certificate-suspend.md)
+
+### Examples
+
+* [Töötervishoiu tervisekontroll (Composition)](Composition-1100.md)
+* [Mootorsõiduki juhtimise tervisetõend (Composition)](Composition-500.md)
+* [PÕHJA-EESTI REGIONAALHAIGLA (Organization)](Organization-90006399.md)
+* [200 (Patient)](Patient-200.md)
+* [36109255737 (Practitioner)](Practitioner-36109255737.md)
+* [100 (PractitionerRole)](PractitionerRole-100.md)
+* [300 (QuestionnaireResponse)](QuestionnaireResponse-300.md)

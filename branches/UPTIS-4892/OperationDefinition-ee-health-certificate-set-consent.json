@@ -1,0 +1,58 @@
+{
+  "resourceType" : "OperationDefinition",
+  "id" : "ee-health-certificate-set-consent",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition ee-health-certificate-set-consent</b></p><a name=\"ee-health-certificate-set-consent\"> </a><a name=\"hcee-health-certificate-set-consent\"> </a><p>URL: [base]/Composition/[id]/$set-consent</p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>doctor</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R5/datatypes.html#string\">string</a></td><td/><td><div><p>Konfidentsiaalsus arstile</p>\n</div></td></tr><tr><td>IN</td><td>representative</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R5/datatypes.html#string\">string</a></td><td/><td><div><p>Konfidentsiaalsus eestkostjale</p>\n</div></td></tr></table></div>"
+  },
+  "url" : "https://fhir.ee/hcert/OperationDefinition/ee-health-certificate-set-consent",
+  "version" : "1.0.0",
+  "name" : "EEHealthCertificateSetConsent",
+  "title" : "Tervisetõendi ligipääsude muutmine",
+  "status" : "active",
+  "kind" : "operation",
+  "experimental" : false,
+  "date" : "2026-01-13T14:26:25+00:00",
+  "publisher" : "TEHIK",
+  "contact" : [{
+    "name" : "TEHIK",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://tehik.ee"
+    },
+    {
+      "system" : "email",
+      "value" : "abi@tehik.ee"
+    }]
+  }],
+  "description" : "Tervisetõendi ligipääsude muutmine. Ühe operatsiooniga saab muuta ligipääsu kas arstile (doctor) ja/või esindajale (representative). Lubatud väärtused on 'closed' või 'open'.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "EE",
+      "display" : "Estonia"
+    }]
+  }],
+  "affectsState" : false,
+  "code" : "set-consent",
+  "resource" : ["Composition"],
+  "system" : false,
+  "type" : false,
+  "instance" : true,
+  "parameter" : [{
+    "name" : "doctor",
+    "use" : "in",
+    "min" : 0,
+    "max" : "1",
+    "documentation" : "Konfidentsiaalsus arstile",
+    "type" : "string"
+  },
+  {
+    "name" : "representative",
+    "use" : "in",
+    "min" : 0,
+    "max" : "1",
+    "documentation" : "Konfidentsiaalsus eestkostjale",
+    "type" : "string"
+  }]
+}
