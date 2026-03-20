@@ -84,4 +84,9 @@ Id: ee-health-certificate-occupational-employer
 Title: "Töötervishoiu tervisekontrolli otsus tööandjale"
 Description: "Töötervishoiu tervisekontrolli otsuse profiil tööandjale kuvamiseks"
 * ^experimental = true
+* subject.identifier 1..1
+* subject.identifier ^short = "Patsiendi Eesti isikukoodi identifikaator"
+* subject.identifier.use 0..0
+* subject.identifier.system = "https://fhir.ee/sid/pid/est/ni"
+* subject.identifier.value ^short = "Patsiendi Eesti isikukoodi väärtus"
 * section[employeeSuggestions] ..0
