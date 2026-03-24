@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="ee-health-certificate-cancel"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: OperationDefinition ee-health-certificate-cancel</b></p><a name="ee-health-certificate-cancel"> </a><a name="hcee-health-certificate-cancel"> </a><a name="ee-health-certificate-cancel-en-US"> </a><p>URL: [base]/Composition/[id]/$cancel</p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>reason</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R5/datatypes.html#string">string</a></td><td/><td><div><p>Tühistamise põhjus</p>
+</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R5/composition.html">Composition</a></td><td/><td><div><p>Uuendatud ressurss</p>
+</div></td></tr></table></div>
+  </text>
+  <url value="https://fhir.ee/hcert/OperationDefinition/ee-health-certificate-cancel"/>
+  <version value="1.0.0"/>
+  <name value="EEHealthCertificateCancel"/>
+  <title value="Tervisetõendi tühistamine"/>
+  <status value="active"/>
+  <kind value="operation"/>
+  <experimental value="false"/>
+  <date value="2025-05-12T11:46:38+00:00"/>
+  <publisher value="TEHIK"/>
+  <contact>
+    <name value="TEHIK"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://tehik.ee"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="abi@tehik.ee"/>
+    </telecom>
+  </contact>
+  <description value="Tervisetõendi tühistamise operatsioon"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="EE"/>
+      <display value="Estonia"/>
+    </coding>
+  </jurisdiction>
+  <affectsState value="true"/>
+  <code value="cancel"/>
+  <resource value="Composition"/>
+  <system value="false"/>
+  <type value="false"/>
+  <instance value="true"/>
+  <parameter>
+    <name value="reason"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="Tühistamise põhjus"/>
+    <type value="string"/>
+  </parameter>
+  <parameter>
+    <name value="return"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="Uuendatud ressurss"/>
+    <type value="Composition"/>
+  </parameter>
+</OperationDefinition>

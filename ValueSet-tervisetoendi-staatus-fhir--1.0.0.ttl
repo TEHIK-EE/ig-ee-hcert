@@ -1,0 +1,150 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.ee/hcert/ValueSet/tervisetoendi-staatus-fhir--1.0.0> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "tervisetoendi-staatus-fhir--1.0.0"] ; # 
+  fhir:language [ fhir:v "et"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xml:lang=\"et\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"et\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet tervisetoendi-staatus-fhir--1.0.0</b></p><a name=\"tervisetoendi-staatus-fhir--1.0.0\"> </a><a name=\"hctervisetoendi-staatus-fhir--1.0.0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: et</p></div><p>This value set contains 4 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (et)</b></td><td><b>Definition</b></td></tr><tr><td><a name=\"tervisetoendi-staatus-fhir--1.0.0-http://hl7.org/fhir/composition-status-preliminary\"> </a><code>http://hl7.org/fhir/composition-status</code></td><td style=\"white-space:nowrap\">  <a href=\"http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-preliminary\">preliminary</a></td><td>Mustand</td><td>Verified early results are available, but not all results are final.</td></tr><tr><td><a name=\"tervisetoendi-staatus-fhir--1.0.0-http://hl7.org/fhir/composition-status-entered-in-error\"> </a><code>http://hl7.org/fhir/composition-status</code></td><td style=\"white-space:nowrap\">  <a href=\"http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-entered-in-error\">entered-in-error</a></td><td>Tühistatud</td><td>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</td></tr><tr><td><a name=\"tervisetoendi-staatus-fhir--1.0.0-http://hl7.org/fhir/composition-status-final\"> </a><code>http://hl7.org/fhir/composition-status</code></td><td style=\"white-space:nowrap\">  <a href=\"http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-final\">final</a></td><td>Lõpetatud</td><td>This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.</td></tr><tr><td><a name=\"tervisetoendi-staatus-fhir--1.0.0-http://hl7.org/fhir/composition-status-cancelled\"> </a><code>http://hl7.org/fhir/composition-status</code></td><td style=\"white-space:nowrap\">  <a href=\"http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-cancelled\">cancelled</a></td><td>Peatatud</td><td>The composition is unavailable because the measurement was not started or not completed (also sometimes called \"aborted\").</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/web-source"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/web-source>
+     ] ;
+     fhir:value [
+       a fhir:Url ;
+       fhir:v "https://akk.tehik.ee/classifier/fhir/ValueSet/tervisetoendi-staatus-fhir"^^xsd:anyURI ;
+       fhir:l <https://akk.tehik.ee/classifier/fhir/ValueSet/tervisetoendi-staatus-fhir>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "https://fhir.ee/StructureDefinition/version-description"^^xsd:anyURI ;
+       fhir:l <https://fhir.ee/StructureDefinition/version-description>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Korrigeeritud eestikeelseid nimetusi ning lisatud juurde uus väärtus"
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "https://fhir.ee/ValueSet/tervisetoendi-staatus-fhir"^^xsd:anyURI ;
+     fhir:l <https://fhir.ee/ValueSet/tervisetoendi-staatus-fhir>
+  ] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:versionAlgorithm [
+     a fhir:String ;
+     fhir:v "semver"
+  ] ; # 
+  fhir:name [ fhir:v "TervisetoendiStaatusFHIR"] ; # 
+  fhir:title [ fhir:v "Tervisetõendi staatus (FHIR)"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-03-13T12:30:53.817303Z"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "TEHIK"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "TEHIK" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://tehik.ee" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "abi@tehik.ee" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Tervisetõendi teenuses kasutatavad staatused. Kasutatakse ainult FHIR teenuses."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ;
+         fhir:l <urn:iso:std:iso:3166>
+       ] ;
+       fhir:code [ fhir:v "EE" ] ;
+       fhir:display [ fhir:v "Estonia" ]
+     ] )
+  ] ) ; # 
+  fhir:effectivePeriod [
+     fhir:start [ fhir:v "2026-02-16T00:00:00Z"^^xsd:dateTime ]
+  ] ; # 
+  fhir:author ( [
+     fhir:name [ fhir:v "TEHIK" ]
+  ] ) ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/composition-status"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/composition-status>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "cancelled" ] ;
+         fhir:display [ fhir:v "Peatatud" ] ;
+         fhir:designation ( [
+           fhir:language [ fhir:v "en" ] ;
+           fhir:value [ fhir:v "cancelled" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "final" ] ;
+         fhir:display [ fhir:v "Lõpetatud" ] ;
+         fhir:designation ( [
+           fhir:language [ fhir:v "en" ] ;
+           fhir:value [ fhir:v "final" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "preliminary" ] ;
+         fhir:display [ fhir:v "Mustand" ] ;
+         fhir:designation ( [
+           fhir:language [ fhir:v "en" ] ;
+           fhir:value [ fhir:v "preliminary" ]
+         ] )
+       ] [
+         fhir:code [ fhir:v "entered-in-error" ] ;
+         fhir:display [ fhir:v "Tühistatud" ] ;
+         fhir:designation ( [
+           fhir:language [ fhir:v "en" ] ;
+           fhir:value [ fhir:v "entered-in-error" ]
+         ] )
+       ] )
+     ] )
+  ] ; # 
+  fhir:expansion [
+     fhir:total [ fhir:v 4 ] ;
+     fhir:contains ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/composition-status"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/composition-status>
+       ] ;
+       fhir:code [ fhir:v "preliminary" ] ;
+       fhir:display [ fhir:v "Mustand" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/composition-status"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/composition-status>
+       ] ;
+       fhir:code [ fhir:v "entered-in-error" ] ;
+       fhir:display [ fhir:v "Tühistatud" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/composition-status"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/composition-status>
+       ] ;
+       fhir:code [ fhir:v "final" ] ;
+       fhir:display [ fhir:v "Lõpetatud" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/composition-status"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/composition-status>
+       ] ;
+       fhir:code [ fhir:v "cancelled" ] ;
+       fhir:display [ fhir:v "Peatatud" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

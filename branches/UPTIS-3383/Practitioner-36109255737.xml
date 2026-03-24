@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="36109255737"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner 36109255737</b></p><a name="36109255737"> </a><a name="hc36109255737"> </a><a name="36109255737-en-US"> </a><p><b>identifier</b>: <code>https://fhir.ee/sid/pro/est/pho</code>/D12345</p><p><b>active</b>: true</p><p><b>name</b>: Paavo Lepzig </p></div>
+  </text>
+  <identifier>
+    <system value="https://fhir.ee/sid/pro/est/pho"/>
+    <value value="D12345"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <family value="Lepzig"/>
+    <given value="Paavo"/>
+  </name>
+</Practitioner>

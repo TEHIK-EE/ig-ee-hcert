@@ -1,0 +1,19 @@
+{
+  "url" : "https://fhir.ee/hcert/ImplementationGuide/ee.fhir.hcert",
+  "name" : "HCERT",
+  "title" : "Tervisetõendi teenus (HCERT)",
+  "description" : null,
+  "status" : "active",
+  "package-id" : "ee.fhir.hcert",
+  "ig-ver" : "1.0.0",
+  "date" : "Fri, 23 May, 2025 09:21:44 +0000",
+  "dateISO8601" : "2025-05-23T09:21:44+00:00",
+  "errs" : 18,
+  "warnings" : 213,
+  "hints" : 15,
+  "suppressed-hints" : 18,
+  "suppressed-warnings" : 40,
+  "version" : "5.0.0",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 1341462688
+}

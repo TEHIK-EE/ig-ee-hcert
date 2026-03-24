@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="6c8495f5-a2f0-487c-8908-6d7fc9a22605"/>
+  <meta>
+    <lastUpdated value="2025-03-27T11:00:05.324+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="https://fhir.ee/hcert/ValueSet/ee-health-certificate-status"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p class="res-header-id">
+              <b>ValueSet </b>
+            </p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
+              <a href="http://hl7.org/fhir/R5/codesystem-composition-status.html">codesystem Composition Status v5.0.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 4 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display (en-US)</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/composition-status-preliminary"> </a>  
+                  <a href="http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-preliminary">preliminary</a>
+                </td>
+                <td>http://hl7.org/fhir/composition-status</td>
+                <td>Mustand</td>
+                <td>
+                  <div>
+                    <p>Verified early results are available, but not all results are final.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/composition-status-final"> </a>  
+                  <a href="http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-final">final</a>
+                </td>
+                <td>http://hl7.org/fhir/composition-status</td>
+                <td>Lõpetatud</td>
+                <td>
+                  <div>
+                    <p>This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/composition-status-cancelled"> </a>  
+                  <a href="http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-cancelled">cancelled</a>
+                </td>
+                <td>http://hl7.org/fhir/composition-status</td>
+                <td>Peatatud</td>
+                <td>
+                  <div>
+                    <p>The composition is unavailable because the measurement was not started or not completed (also sometimes called &quot;aborted&quot;).</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.org/fhir/composition-status-entered-in-error"> </a>  
+                  <a href="http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-entered-in-error">entered-in-error</a>
+                </td>
+                <td>http://hl7.org/fhir/composition-status</td>
+                <td>Tühistatud</td>
+                <td>
+                  <div>
+                    <p>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://fhir.ee/hcert/ValueSet/ee-health-certificate-status"/>
+        <version value="1.0.0"/>
+        <name value="EEHealthCertificateStatusVS"/>
+        <title value="Tervisetõendi staatus"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2025-03-27T10:59:22+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="EE"/>
+            <display value="Estonia"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:23b30b1f-c459-4794-b17b-2359852ee79a"/>
+          <timestamp value="2025-03-27T11:00:46+00:00"/>
+          <total value="4"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="displayLanguage"/>
+            <valueCode value="en-US"/>
+          </parameter>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://hl7.org/fhir/composition-status|5.0.0"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/composition-status"/>
+            <code value="preliminary"/>
+            <display value="Mustand"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/composition-status"/>
+            <code value="final"/>
+            <display value="Lõpetatud"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/composition-status"/>
+            <code value="cancelled"/>
+            <display value="Peatatud"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/composition-status"/>
+            <code value="entered-in-error"/>
+            <display value="Tühistatud"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

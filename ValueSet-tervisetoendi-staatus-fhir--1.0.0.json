@@ -1,0 +1,111 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "tervisetoendi-staatus-fhir--1.0.0",
+  "language" : "et",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"et\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"et\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet tervisetoendi-staatus-fhir--1.0.0</b></p><a name=\"tervisetoendi-staatus-fhir--1.0.0\"> </a><a name=\"hctervisetoendi-staatus-fhir--1.0.0\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: et</p></div><p>This value set contains 4 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (et)</b></td><td><b>Definition</b></td></tr><tr><td><a name=\"tervisetoendi-staatus-fhir--1.0.0-http://hl7.org/fhir/composition-status-preliminary\"> </a><code>http://hl7.org/fhir/composition-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-preliminary\">preliminary</a></td><td>Mustand</td><td>Verified early results are available, but not all results are final.</td></tr><tr><td><a name=\"tervisetoendi-staatus-fhir--1.0.0-http://hl7.org/fhir/composition-status-entered-in-error\"> </a><code>http://hl7.org/fhir/composition-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-entered-in-error\">entered-in-error</a></td><td>Tühistatud</td><td>The composition or document was originally created/issued in error, and this is an amendment that marks that the entire series should not be considered as valid.</td></tr><tr><td><a name=\"tervisetoendi-staatus-fhir--1.0.0-http://hl7.org/fhir/composition-status-final\"> </a><code>http://hl7.org/fhir/composition-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-final\">final</a></td><td>Lõpetatud</td><td>This version of the composition is complete and verified by an appropriate person and no further work is planned. Any subsequent updates would be on a new version of the composition.</td></tr><tr><td><a name=\"tervisetoendi-staatus-fhir--1.0.0-http://hl7.org/fhir/composition-status-cancelled\"> </a><code>http://hl7.org/fhir/composition-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R5/codesystem-composition-status.html#composition-status-cancelled\">cancelled</a></td><td>Peatatud</td><td>The composition is unavailable because the measurement was not started or not completed (also sometimes called &quot;aborted&quot;).</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/web-source",
+    "valueUrl" : "https://akk.tehik.ee/classifier/fhir/ValueSet/tervisetoendi-staatus-fhir"
+  },
+  {
+    "url" : "https://fhir.ee/StructureDefinition/version-description",
+    "valueString" : "Korrigeeritud eestikeelseid nimetusi ning lisatud juurde uus väärtus"
+  }],
+  "url" : "https://fhir.ee/ValueSet/tervisetoendi-staatus-fhir",
+  "version" : "1.0.0",
+  "versionAlgorithmString" : "semver",
+  "name" : "TervisetoendiStaatusFHIR",
+  "title" : "Tervisetõendi staatus (FHIR)",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-13T12:30:53.817303Z",
+  "publisher" : "TEHIK",
+  "contact" : [{
+    "name" : "TEHIK",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://tehik.ee"
+    },
+    {
+      "system" : "email",
+      "value" : "abi@tehik.ee"
+    }]
+  }],
+  "description" : "Tervisetõendi teenuses kasutatavad staatused. Kasutatakse ainult FHIR teenuses.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "EE",
+      "display" : "Estonia"
+    }]
+  }],
+  "effectivePeriod" : {
+    "start" : "2026-02-16T00:00:00Z"
+  },
+  "author" : [{
+    "name" : "TEHIK"
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/composition-status",
+      "concept" : [{
+        "code" : "cancelled",
+        "display" : "Peatatud",
+        "designation" : [{
+          "language" : "en",
+          "value" : "cancelled"
+        }]
+      },
+      {
+        "code" : "final",
+        "display" : "Lõpetatud",
+        "designation" : [{
+          "language" : "en",
+          "value" : "final"
+        }]
+      },
+      {
+        "code" : "preliminary",
+        "display" : "Mustand",
+        "designation" : [{
+          "language" : "en",
+          "value" : "preliminary"
+        }]
+      },
+      {
+        "code" : "entered-in-error",
+        "display" : "Tühistatud",
+        "designation" : [{
+          "language" : "en",
+          "value" : "entered-in-error"
+        }]
+      }]
+    }]
+  },
+  "expansion" : {
+    "total" : 4,
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/composition-status",
+      "code" : "preliminary",
+      "display" : "Mustand"
+    },
+    {
+      "system" : "http://hl7.org/fhir/composition-status",
+      "code" : "entered-in-error",
+      "display" : "Tühistatud"
+    },
+    {
+      "system" : "http://hl7.org/fhir/composition-status",
+      "code" : "final",
+      "display" : "Lõpetatud"
+    },
+    {
+      "system" : "http://hl7.org/fhir/composition-status",
+      "code" : "cancelled",
+      "display" : "Peatatud"
+    }]
+  }
+}

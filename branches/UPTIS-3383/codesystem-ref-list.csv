@@ -1,0 +1,2 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+http://hl7.org/fhir/composition-status,5.0.0,active,"2.16.840.1.113883.4.642.4.242,2.16.840.1.113883.4.642.2.123,2.16.840.1.113883.4.642.1.237",CompositionStatus,Composition Status,"The workflow/clinical status of the composition.","ValueSet/ee-health-certificate-status"

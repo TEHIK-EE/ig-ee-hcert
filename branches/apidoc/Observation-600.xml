@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="600"/>
+  <meta>
+    <profile value="https://fhir.ee/hcert/StructureDefinition/ee-health-certificate-occupational-employment"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation 600</b></p><a name="600"> </a><a name="hc600"> </a><a name="600-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ee-health-certificate-occupational-employment.html">Töötervishoiu tervisetõendi patsiendi töötamine</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 184104002}">Patient occupation</span></p><p><b>performer</b>: Suurepärane OÜ (Identifier: <code>https://fhir.ee/sid/org/est/br</code>/12345678)</p><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 160922003}">Job details</span></p><p><b>value</b>: <span title="Codes:{https://fhir.ee/CodeSystem/occupation 22122501}">Pediaater</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 224374003}">Regularity of work</span></p><p><b>value</b>: 0.75 1<span style="background: LightGoldenRodYellow"> (Details: UCUM  code1 = '1')</span></p></blockquote></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="184104002"/>
+      <display value="Patient occupation"/>
+    </coding>
+  </code>
+  <performer>
+    <identifier>
+      <system value="https://fhir.ee/sid/org/est/br"/>
+      <value value="12345678"/>
+    </identifier>
+    <display value="Suurepärane OÜ"/>
+  </performer>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="160922003"/>
+        <display value="Job details"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="https://fhir.ee/CodeSystem/occupation"/>
+        <code value="22122501"/>
+        <display value="Pediaater"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="224374003"/>
+        <display value="Regularity of work"/>
+      </coding>
+    </code>
+    <valueQuantity>
+      <value value="0.75"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="1"/>
+    </valueQuantity>
+  </component>
+</Observation>

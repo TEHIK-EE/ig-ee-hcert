@@ -1,0 +1,11 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.ee/ValueSet/tervisetoendi-staatus-fhir",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "TervisetoendiStaatusFHIR",
+    "title" : "Tervisetõendi staatus (FHIR)",
+    "description" : "Tervisetõendi teenuses kasutatavad staatused. Kasutatakse ainult FHIR teenuses.",
+    "systems" : ["http://hl7.org/fhir/composition-status"]
+  }]
+}

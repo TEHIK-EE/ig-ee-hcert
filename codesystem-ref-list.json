@@ -1,0 +1,74 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/composition-status",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "CompositionStatus",
+    "title" : "Composition Status",
+    "description" : "The workflow/clinical status of the composition.",
+    "oids" : ["2.16.840.1.113883.4.642.4.242",
+    "2.16.840.1.113883.4.642.2.123",
+    "2.16.840.1.113883.4.642.1.237"],
+    "uses" : {
+    },
+    "ValueSet-tervisetoendi-staatus-fhir--1.0.0.html" : "Tervisetõendi staatus (FHIR)"
+  },
+  {
+    "url" : "https://fhir.ee/CodeSystem/ametite-klassifikaator",
+    "version" : "2025-03-27",
+    "status" : "active",
+    "name" : "AmetiteKlassifikaator",
+    "title" : "Ametite klassifikaator",
+    "description" : "„Ametite klassifikaator“ (AK) on Eesti-sisene klassifikaator, mis põhineb Rahvusvahelise Tööorganisatsiooni (ILO) hallataval klassifikaatoril International Standard Classification of Occupations ISCO-08.\nKlassifikaatorit kasutatakse selleks, et esitada, võrrelda ja vahetada statistilisi ja administratiivandmeid nii Eestis, Euroopa Liidus kui ka laiemal rahvusvahelisel tasemel.\nAmetite klassifikaatoris on ametid liigitatud selgelt määratletud rühmadesse töö sisu, tööga seotud ülesannete ja nõutava kvalifikatsiooni alusel.\nHierarhilises klassifikaatoris on viis taset. Esimene kuni neljas tase järgivad täpselt rahvusvahelist alusklassifikaatorit, kus iga ametirühma kohta on esitatud lühikirjeldus ja peamiste tööülesannete lühike loetelu. Viies tase, mis sisaldab ametinimetusi, on loodud Eesti vajadustest lähtudes ja täieneb pidevalt.\nKlassifikaatori struktuur:\n1. tase — 10 pearühma;\n2. tase — 43 allpearühma;\n3. tase — 131 allrühma;\n4. tase — 436 ametirühma;\n5. tase — pidevalt täienev ametinimetuste loend.\n\nKlassifikaator on leitav [Statistikaameti kodulehelt](https://klassifikaatorid.stat.ee/item/stat.ee/b8fdb2b9-8269-41ca-b29e-5454df555147/57)",
+    "oids" : ["1.3.6.1.4.1.28284.6.2.3.1", "1.3.6.1.4.1.28284.6.2.3.1.4"],
+    "uses" : {
+    },
+    "https://akk.tehik.ee/classifier/fhir/ValueSet/ametite-klassifikaator" : "Ametite klassifikaator"
+  },
+  {
+    "url" : "https://fhir.ee/CodeSystem/labivaatuse-tyyp",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "LabivaatuseTyyp",
+    "title" : "Läbivaatuse tüüp",
+    "description" : "Kasutatakse tervisedeklaratsioonil ja tervisetõenditel, läbivaatuse tüübi määramiseks",
+    "uses" : {
+    },
+    "https://akk.tehik.ee/classifier/fhir/ValueSet/labivaatuse-tyyp" : "Läbivaatuse tüüp",
+    "https://akk.tehik.ee/classifier/fhir/ValueSet/mootorsoidukijuhi-labivaatuse-tyyp" : "Mootorsõidukijuhi läbivaatuse tüüp"
+  },
+  {
+    "url" : "https://fhir.ee/CodeSystem/tervisetoendi-piirangud",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "TervisetoendiPiirangud",
+    "title" : "Tervisetõendi piirangud",
+    "description" : "Tervisetõendite teenuses kasutatavad mootorsõidukijuhi meditsiinilised ning töötervishoiu tervisetõendi piirangud",
+    "uses" : {
+    },
+    "https://akk.tehik.ee/classifier/fhir/ValueSet/tootervishoiu-tt-piirangud" : "Töötervishoiu tervisetõendi piirangud",
+    "https://akk.tehik.ee/classifier/fhir/ValueSet/mootorsoidukijuhi-medits-piirang" : "Mootorsõidukijuhi meditsiinilised piirangud"
+  },
+  {
+    "url" : "https://fhir.ee/CodeSystem/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "ToolaadiJaTookeskkonnagaSeotudOhutegurid",
+    "title" : "Töölaadi ja töökeskkonnaga seotud ohutegurid",
+    "description" : "Kasutatakse töötervishoiu tervisetõendil töölaadi ja töökeskkonnaga seotud ohutegurite valimiseks ning deklaratsioonil välja kuvamiseks",
+    "uses" : {
+    },
+    "https://akk.tehik.ee/classifier/fhir/ValueSet/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid" : "Töölaadi ja töökeskkonnaga seotud ohutegurid"
+  },
+  {
+    "url" : "https://fhir.ee/CodeSystem/tootamiseks-vajalikud-lisatingimused",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "TootamiseksVajalikudLisatingimused",
+    "title" : "Töötamiseks vajalikud lisatingimused",
+    "description" : "Loendit kasutatakse töötervishoiu tervisetõendil lisatingimuste märkimiseks",
+    "uses" : {
+    },
+    "https://akk.tehik.ee/classifier/fhir/ValueSet/tootamiseks-vajalikud-lisatingimused" : "Töötamiseks vajalikud lisatingimused"
+  }]
+}
