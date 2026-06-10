@@ -90,3 +90,19 @@ Description: "Töötervishoiu tervisekontrolli otsuse profiil tööandjale kuvam
 * subject.identifier.system = "https://fhir.ee/sid/pid/est/ni"
 * subject.identifier.value ^short = "Patsiendi Eesti isikukoodi väärtus"
 * section[employeeSuggestions] ..0
+
+* contained[author].practitioner.identifier 1..1
+* contained[author].practitioner.identifier ^short = "Tervishoiutöötaja äriline identifikaator"
+* contained[author].practitioner.identifier.use 0..0
+* contained[author].practitioner.identifier.system 1..1
+* contained[author].practitioner.identifier.system = "https://fhir.ee/sid/pro/est/pho"
+* contained[author].practitioner.identifier.value 1..1
+* contained[author].practitioner.identifier.value ^short = "Tervishoiutöötaja THT/D-kood"
+
+* contained[author].organization.identifier 1..1
+* contained[author].organization.identifier ^short = "Tervishoiuteenuse osutaja äriline identifikaator"
+* contained[author].organization.identifier.use 0..0
+* contained[author].organization.identifier.system 1..1
+* contained[author].organization.identifier.system = "https://fhir.ee/sid/org/est/br"
+* contained[author].organization.identifier.value 1..1
+* contained[author].organization.identifier.value ^short = "Tervishoiuteenuse osutaja äriregistrikood"

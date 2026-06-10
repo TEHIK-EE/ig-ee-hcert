@@ -67,6 +67,10 @@ RuleSet: OccupationalHealthCertificateBase
 * event.period.start = "2024-05-05T00:00:00.000+00:00"
 * event.period.end = "2025-11-05T00:00:00.000+00:00"
 * contained[author] = PractitionerRoleExample
+* contained[author].practitioner.identifier.system = "https://fhir.ee/sid/pro/est/pho"
+* contained[author].practitioner.identifier.value = "D04766"
+* contained[author].organization.identifier.system = "https://fhir.ee/sid/org/est/br"
+* contained[author].organization.identifier.value = "90006399"
 * contained[employment] = EmploymentExample
 * contained[+] = DecisionExample
 * contained[+] = MedicalRestrictionExample1
